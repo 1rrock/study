@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="1rrock">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy, 1rrcok">
+    <title>1rrock | Parallax Effect </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="1rrock" />
+    <meta property="og:url" content="https://zxcv1685.github.io/dothome1/" />
+    <meta property="og:image" content="http://zxcv1685.dothome.co.kr/assets/ico/icon.jpg" />
+    <meta property="og:site_name" content="1rrock" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@1rrock" />
+    <meta name="twitter:title" content="1rrock" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">1rrock &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://1rrock.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/zxcv1685/">Codepen</a></li>
+                    <li><a href="https://github.com/zxcv1685/dothome1">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>Parallax Effect Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://zxcv1685.github.io/dothome1/" target="_blank">1rrock</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-12" role="main">
+                <!-- 배너 광고 1140 -->
+                <script src="https://ads-partners.coupang.com/g.js"></script>
+                <script>
+                    new PartnersCoupang.G({
+                        id: 348402
+                    });
+                </script>
+                <!-- //배너 광고 1140 -->
+
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">parallax Effect01</h2>
+                    <p class="bs-callout bs-callout-info">패럴랙스 이펙트(제이쿼리/자바스크립트)</p>
+                    <iframe width="100%" height="600" src="parallax01-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home1" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile1" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home1">
+<pre class="line-numbers language-js"><code>$(window).scroll(function(){
+    const scrollTop = $(window).scrollTop() + $(window).height()/2;
+    $(".scrollTop").text(parseInt(scrollTop));
+
+    $(".content-item").each(function(num){
+        $(".s"+(num+1)+"OffsetTop").text( parseInt($("#section"+(num+1)).offset().top) );
+    
+        if(scrollTop > $(this).offset().top){
+            $(".s"+(num+1)+"OffsetTop").css("color","red");
+            $(this).addClass("show");
+        } else {
+            $(".s"+(num+1)+"OffsetTop").css("color","white");
+            $(this).removeClass("show");
+        }
+    });
+});
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile1">
+<pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
+    let pageYOffset = window.pageYOffset;
+
+    // 출력용
+    document.querySelector(".pageYOffset").innerText = pageYOffset;
+    document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+    document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+    document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+    document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+    document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+    document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+    document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+    document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+    document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+    for(i=1; i<=9; i++){
+        document.querySelector(".s"+i+"OffsetTop").innerText = document.getElementById("section"+i).offsetTop;
+    }
+
+    //출력용 글씨색
+    if( pageYOffset > document.getElementById("section1").offsetTop ){
+        document.querySelector(".s1OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s1OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section2").offsetTop ){
+        document.querySelector(".s2OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s2OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section3").offsetTop ){
+        document.querySelector(".s3OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s3OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section4").offsetTop ){
+        document.querySelector(".s4OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s4OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section5").offsetTop ){
+        document.querySelector(".s5OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s5OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section6").offsetTop ){
+        document.querySelector(".s6OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s6OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section7").offsetTop ){
+        document.querySelector(".s7OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s7OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section8").offsetTop ){
+        document.querySelector(".s8OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s8OffsetTop").style.color = "black";
+    }
+    if( pageYOffset > document.getElementById("section9").offsetTop ){
+        document.querySelector(".s9OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s9OffsetTop").style.color = "black";
+    }
+});
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">parallax Effect02</h2>
+                    <p class="bs-callout bs-callout-info">패럴랙스 이펙트(제이쿼리/자바스크립트)</p>
+                    <iframe width="100%" height="600" src="parallax02-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home2" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpane2" class="tab-pane active" id="home2">
+<pre class="line-numbers language-js"><code>$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
+    // each()
+    $(".content-item").each(function(e,i){
+        let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+        let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+
+        $(this).find(".content-item-desc").css({transform: "translateY("+ -offset2+"px)"})
+        $(this).find(".content-item-num").css({transform: "translateY("+offset1+"px)"})
+        $(this).find(".content-item-img").css({transform: "translateY("+offset2+"px)"})
+    })
+
+    // 출력용
+    $(".scrollTop").text(scrollTop);
+});
+</code></pre>
+                            </div>
+                            <div role="tabpane2" class="tab-pane" id="profile2">
+<pre class="line-numbers language-js"><code>window.addEventListener("scroll",() => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+    // forEach
+    document.querySelectorAll(".content-item").forEach((elem) => {
+        let target = elem.childNodes[7];
+        let offset = (pageYOffset - elem.offsetTop) * 0.2;
+        target.style.transform = "translateY("+ -offset +"px)";
+    });
+});
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">parallax Effect03</h2>
+                    <p class="bs-callout bs-callout-info">패럴랙스 이펙트(제이쿼리/자바스크립트)</p>
+                    <iframe width="100%" height="600" src="parallax03-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home3" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile3" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpane3" class="tab-pane active" id="home3">
+<pre class="line-numbers language-js"><code>// 움직임효과
+$(document).mousemove(function(e){
+    gsap.to(".cursor", {duration: 0.4, left: e.pageX - 10, top: e.pageY - 10, ease: power4.out})
+});
+
+// 오버효과
+$(".contents em").hover(function(){
+    $(".cursor").addClass("active");
+}, function(){
+    $(".cursor").removeClass("active");
+});
+
+// 출력용
+$(".info.bottom li").click(function(){
+    const text = $(this).text();
+    // alert(text);
+    $(".info.bottom li").removeClass("active");
+    $(this).addClass("active");
+    $(".cursor").css("mix-blend-mode", text);
+});
+
+// 제목에 마우스오버했을때
+$(".info.left h1").hover(function(){
+    $(".cursor").addClass("h1over");
+}, function(){
+    $(".cursor").removeClass("h1over");
+});
+</code></pre>
+                            </div>
+                            <div role="tabpane3" class="tab-pane" id="profile3">
+<pre class="line-numbers language-js"><code>let pageYOffset = window.pageYOffset;
+const scroll = () => {
+const newPageYOffset = window.pageYOffset;
+const different = newPageYOffset - pageYOffset;
+
+console.log("pageYOffset : " + pageYOffset);
+console.log("newPageYOffset : " + newPageYOffset);
+console.log("different : " + different);
+
+let target = document.querySelectorAll(".content-item-img");
+
+gsap.to(".content-item-imgWrap", {duration: 0.6, rotate: different * 3, ease: Power4.ease});
+gsap.to(".content-item-num", {duration: 0.6, x: different * 3, ease: Power1.ease});
+gsap.to(".content-item-desc", {duration: 0.6, skewX: different * 3, ease: Power3.ease});
+
+pageYOffset = newPageYOffset;
+requestAnimationFrame(scroll);
+}
+scroll();
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">parallax Effect04</h2>
+                    <p class="bs-callout bs-callout-info">패럴랙스 이펙트(제이쿼리/자바스크립트)</p>
+                    <iframe width="100%" height="600" src="parallax04-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home4" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile4" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpane4" class="tab-pane active" id="home4">
+<pre class="line-numbers language-js"><code>// 글자 쪼개기
+$(".content-item-desc").each(function(){
+    let text = $(this).text();
+    let split = text.split("").join("</span><span aria-hidden='true'>");
+    split = "<span aria-hidden='true'>" + split + "</span>";
+    $(this).html(split).attr("aria-label", text);
+});
+
+//나타나기
+$(window).scroll(function(){
+    //한글자씩 나오게 하기 (한번에) 
+    $(".content-item").each(function(){
+        if( $(window).scrollTop() > $(this).offset().top ){
+            gsap.to($(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y:0, stagger: 0.05, ease: Power1.ease});
+        }
+    });
+});
+</code></pre>
+                            </div>
+                            <div role="tabpane4" class="tab-pane" id="profile4">
+<pre class="line-numbers language-js"><code>document.querySelectorAll(".content-item-desc").forEach(elem => {
+    let text = elem.innerText;
+    let splitText = text.split("").join("&lt;/span&gt;&lt;span aria-hidden='true'&gt;");
+    splitText = "&lt;span aria-hidden='true'&gt;" + splitText + "&lt;/span&gt;";
+
+    elem.innerHTML = splitText;
+    elem.setAttribute("aria-label", text);
+}); 
+
+window.addEventListener("scroll", () => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset > document.getElementById("section1").offsetTop ){
+        document.querySelectorAll("#section1 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section2").offsetTop ){
+        document.querySelectorAll("#section2 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section3").offsetTop ){
+        document.querySelectorAll("#section3 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section4").offsetTop ){
+        document.querySelectorAll("#section4 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section5").offsetTop ){
+        document.querySelectorAll("#section5 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section6").offsetTop ){
+        document.querySelectorAll("#section6 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section7").offsetTop ){
+        document.querySelectorAll("#section7 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section8").offsetTop ){
+        document.querySelectorAll("#section8 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section9").offsetTop ){
+        document.querySelectorAll("#section9 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+
+});
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">parallax Effect05</h2>
+                    <p class="bs-callout bs-callout-info">패럴랙스 이펙트(제이쿼리/자바스크립트)</p>
+                    <iframe width="100%" height="600" src="parallax05-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home5" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile5" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpane5" class="tab-pane active" id="home5">
+<pre class="line-numbers language-js"><code>$("a[href^='#']").click(function(e){
+    e.preventDefault();
+    let target = $( $(this).attr("href") );
+    $("html,body").animate({scrollTop : target.offset().top},800, "easeInOutQuint");
+});
+</code></pre>
+                            </div>
+                            <div role="tabpane5" class="tab-pane" id="profile5">
+<pre class="line-numbers language-js"><code>document.querySelectorAll("a[href^='#']").forEach(elem => {
+    elem.addEventListener("click", e => {
+        e.preventDefault();
+        document.querySelector(elem.getAttribute('href')).scrollIntoView({
+            behavior : 'smooth'
+        })
+    });
+});
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">parallax Effect06</h2>
+                    <p class="bs-callout bs-callout-info">패럴랙스 이펙트(제이쿼리/자바스크립트)</p>
+                    <iframe width="100%" height="600" src="parallax06-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home6" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile6" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpane6" class="tab-pane active" id="home6">
+<pre class="line-numbers language-js"><code>$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
+    // if ( scrollTop > $("#section2").offset().top ) {
+    //     $("#section2").addClass("show");
+    // }
+    $(".reveal").each(function(){
+        if( scrollTop + $(window).height()/2 > $(this).offset().top ){
+            $(this).addClass("show");
+        }
+    });
+});
+</code></pre>
+                            </div>
+                            <div role="tabpane6" class="tab-pane" id="profile6">
+<pre class="line-numbers language-js"><code>window.addEventListener("scroll", () => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+    let wHeight = window.innerHeight;
+    document.querySelectorAll(".reveal").forEach((elem) => {
+        if (pageYOffset + wHeight / 2 > elem.parentElement.offsetTop) {
+            elem.classList.add("show");
+        }
+        console.log(elem)
+    });
+});
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro6 -->
+
+            </div>
+            <!-- //col-md-12 -->
+        
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+
+</html>

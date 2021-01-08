@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clover_05</title>
+    <style>
+        /* reset */
+        body, div, ul, li, ol, dl, dd, dt, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, tr, td, textarea, button, form {margin: 0; padding: 0;}
+        a {text-decoration: none; color: #000;}
+        a:hover {color: #fff;}
+        ul, ol, li {list-style: none;}
+        img {vertical-align: top;}
+        button {border:none; cursor: pointer;}
+        div {display: block;}
+
+        /* font */
+        h1, h2, h3, h4, h5, h6, a, body, li, p, span {font-family: 'NanumSquare', sans-serif !important;}
+        
+        /* ir효과 */
+        .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
+
+        /* header */
+        header {width: 100%; height: 85px; background: #fff;}
+        #header {position: fixed; z-index: 10000; border-bottom: 0.4px solid #dfdfdf;}
+        #header .container {position: relative; display: flex; align-items: center;}
+        #header .header_logo {
+            position: absolute; left: -3px; top: 30px;
+            background: url(img/sp_svg_icon.png);
+            width: 150px; height: 30px;
+            background-position: 0 -60px;
+        }
+        #header ul {margin-left: 300px; margin-right: 80px; width: 600px; height: 85px; display: flex; align-items: center;}
+        #header ul li {width: 20%; text-align: center; font-size: 15px; font-weight: bold; color: rgba(0,0,0,0.6);}
+        #header .btn {display: flex; font-size: 12px;}
+        #header .btn_1 {border: 1px solid rgba(0,0,0,0.3); padding: 9px 13px; margin-right: 8px; border-radius: 3px;}
+        #header .btn_2 {border: 1px solid rgba(0,0,0,0.3); padding: 9px 13px; border-radius: 3px;}
+
+        /* banner */
+        #banner {
+            width: 100%; height: 670px;
+        }
+        #banner .container {
+            position: relative; width: 100%;
+        }
+        #banner .container .bg_wrap {
+            position: absolute;
+            width: 100%; height: inherit;
+            background: rgba(0,0,0,0.4);
+            z-index: 90;
+        }
+        #banner .container .bg3 {
+            width: 100%; height: inherit; 
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_3.png); 
+            background-size: cover;
+            position: absolute;
+            animation: animate 15s ease-in-out 10s infinite;
+            opacity: 1;
+        }
+        #banner .container .bg {
+            width: 100%; height: inherit; 
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_2.png); 
+            background-size: cover;
+            position: absolute;
+            animation: animate 15s ease-in-out 5s infinite;
+            opacity: 0;
+        }
+        #banner .container .bg2 {
+            width: 100%; height: inherit; 
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_1.png); 
+            background-size: cover;
+            position: absolute;
+            animation: animate 15s ease-in-out 0s infinite;
+            opacity: 0;
+        }
+        @keyframes animate {
+            0% {opacity: 0;}
+            10% {opacity: 1;}
+            20% {opacity: 1;}
+            30% {opacity: 1;}
+            40% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+
+        #banner .container .ban_txt {
+            position: absolute; left: 20.5%; top: 35%;
+            z-index: 100;
+        }
+        #banner .container .ban_txt .txt_1 {margin: 10px; color: #fff; font-size: 52px; font-weight: 300; z-index: 100;}
+        #banner .container .ban_txt .txt_2 {margin: 10px; color: #dfdfdf; font-size: 18px; line-height: 30px; font-weight: 100; z-index: 100;} 
+
+        /* content */
+        #content .cont1 {width: 100%;}
+        #content .cont1 .cont1_btn1 {padding-top: 40px; text-align: right; font-size: 13px;}
+        #content .cont1 .cont1_btn1 .en {border: 1px solid rgb(157, 157, 157); padding: 8px 14px; margin: -4px; background: #d0d0d0; color: #888;} 
+        #content .cont1 .cont1_btn1 .ko {border: 1px solid rgb(157, 157, 157); padding: 8px 14px; margin: 0; color: #888;}
+        #content .cont2 {padding-bottom: 70px; font-family: arial;}
+        #content .cont2 .cont2_item {border-bottom: 1px solid #e8e8e8;}
+        #content .cont2 .cont2_item .cont2_btn {
+            position: relative;
+            width: 100%;
+            height: 94px;
+            background: 0 0;
+            border: 0;
+            line-height: 27px;
+            letter-spacing: .7px;
+            text-align-last: left;
+            color: #000;
+            font-size: 19px;
+        }
+        #content .cont2 .cont2_item .cont2_btn .a {
+            position: absolute;
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_icon.png) no-repeat;
+            background-size: 680px 617px;
+            background-position: -654px -256px;
+            width: 20px; height: 12px;
+            top: 50%; right: 20px;
+            margin-top: -6px;
+        }
+        #content .cont2 .cont2_item .cont2_btn .a.btnActive {
+            background-position: -614px -282px;
+        }
+        /* #content .cont2 .cont2_item .cont2_btn::after {
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_icon.png) no-repeat;
+            background-size: 680px 617px;
+            background-position: -654px -256px;
+            width: 20px; height: 12px;
+            position: absolute;
+            top: 50%; right: 20px;
+            margin-top: -6px;
+            content: '';
+        } */
+        /* list_box */
+        #content .cont2 .cont2_item .cont2_box {
+            padding: 60px 50px 70px;
+            border: 1px solid #e8e8e8;
+            border-bottom: 0;
+            display: none;
+            transition: display 0.4s ease;
+        }
+        #content .cont2 .cont2_item .cont2_box.active {
+            display: block;
+        }
+        #content .cont2 .cont2_item .cont2_box h3 {
+            padding-bottom: 14px;
+            font-size: 17px;
+            line-height: 24px;
+            color: #2ebc76;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_1 {
+            padding-bottom: 43px; font-weight: 200;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_1 li {
+            position: relative;
+            font-size: 15px;
+            line-height: 23px;
+            padding: 0 0 8px 15px;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_1 > li:before {
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 2px;
+            background: #333;
+            content: '';
+        }
+        #content .cont2 .cont2_item .cont2_box .list_h4 {
+            padding-top: 19px;
+            padding-bottom: 0;
+            line-height: 23px;
+            color: #000;
+            font-weight: 600;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_h4_2 {
+            padding-bottom: 0;
+            line-height: 23px;
+            color: #000;
+            font-weight: 600;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_2 {
+            font-size: 16px;
+            line-height: 23px;
+            color: #333;
+            font-weight: 200;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_2 li {
+            position: relative;
+            padding: 8px 0 0 10px;
+            font-size: 16px;
+            line-height: 23px;
+            color: #333;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_2 li:before {
+            position: absolute;
+            content: '-';
+            left: 0;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_3 {
+            padding-bottom: 43px; font-weight: 200;
+        }
+        #content .cont2 .cont2_item .cont2_box .list_3 .l3_li-1 {
+            font-size: 15px;
+            line-height: 23px;
+            padding: 8px 0 8px 15px;
+        }
+        #content .cont2 .cont2_item .cont2_box .boxWrap {
+            margin-top: 2px;
+            padding: 31px 35px 8px;
+            background: #f8f8f8;
+        }
+        #content .cont2 .cont2_item .cont2_box .boxWrap h5 {
+            font-size: 16px;
+            padding-top: 0;
+            padding-bottom: 2px;
+            line-height: 24px;
+            color: #000;
+            font-weight: bold;
+
+        }
+        #content .cont2 .cont2_item .cont2_box .boxWrap .boxWrap_list {
+            padding-bottom: 20px;
+        }
+        #content .cont2 .cont2_item .cont2_box .boxWrap .boxWrap_list li {
+            font-size: 14px;
+            position: relative;
+            padding: 3px 0 0 10px;
+            line-height: 25px;
+            color: #333;
+        }
+        #content .cont2 .cont2_item .cont2_box .boxWrap .boxWrap_list li:before {
+            position: absolute;
+            content: '-';
+            left: 0;
+        }
+        #content .cont2 .cont2_btnWrap {
+            height: 60px;
+            padding-top: 50px;
+            text-align: center;
+        }
+        #content .cont2 .cont2_btnWrap a {
+            font-size: 19px;
+            display: inline-block;
+            width: 200px;
+            height: 60px;
+            border-radius: 4px;
+            background: #36d488;
+            font-weight: 500;
+            line-height: 63px;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        /* footer */
+        #footer {width: 100%; height: 120px; background: #252322; color: #686868; font-size: 12px; font-weight: 300;}
+        .footer_top {width: 100%; height: 70px; position: relative;}
+        .footer_top span {background: url(img/sp_svg_icon.png); width: 150px; height: 33px; background-position: 0 -30px; position: absolute; left: 0; top: 35px;}
+        .footer_top .adress {position: absolute; right: 0; top: 35px;}
+        .footer_top a:nth-child(1) {background: url(img/sp_svg_icon.png); background-position: -200px -120px; width: 30px; height: 20px; left: -100px;}
+        .footer_top a:nth-child(2) {background: url(img/sp_svg_icon.png); background-position: -160px -215px; width: 30px; height: 20px; left: -50px; top: -3px;}
+        .footer_top a:nth-child(3) {background: url(img/sp_svg_icon.png); background-position: -185px -215px; width: 30px; height: 20px; left: 0px; top: -3px;}
+        .footer_top a:nth-child(4) {background: url(img/sp_svg_icon.png); background-position: -200px -147px; width: 30px; height: 20px; left: 50px;}
+        .footer_bottom {display: flex; position: relative;}
+        .footer_bottom .list_1 {margin-left: 3px; display: flex; width: 70%;}
+        .footer_bottom .list_1 li {margin-right: 20px;}
+        .footer_bottom span {position: absolute; left: 50%; top: 50%; transform: translate(-30%, -50%);}
+        .footer_bottom .list_2 {display: flex; position: absolute; right: -80px; top: 0;}
+        .footer_bottom .list_2 li {margin: 0 10px;}
+
+
+        /* container */
+        .container {width: 1200px; height: inherit;  margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <a href="#" class="header_logo"></a>
+                <ul>
+                    <li>기술 · 솔루션</li>
+                    <li>제품</li>
+                    <li>플랫폼</li>
+                    <li>파트너</li>
+                    <li>리서치</li>
+                </ul>
+                <div class="btn">
+                    <a href="#" class="btn_1">Biz Start</a>  
+                    <a href="#" class="btn_2">비즈니스 문의</a> 
+                </div>
+            </div> 
+        </header>
+        <!-- //header -->
+
+        <article id="banner">
+            <div class="container">
+                <div class="bg_wrap"></div>
+                <div class="bg2"></div>
+                <div class="bg3"></div>
+                <div class="bg"></div>
+                <div class="ban_txt">
+                    <p class="txt_1">Careers</p>
+                    <p class="txt_2">
+                        클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 <br>
+                        우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </article>
+        <!-- //banner -->
+
+        <div id="content">
+            <div class="container">
+                <div class="cont1">
+                    <div class="cont1_btn1">
+                        <a href="#" class="en">English</a>
+                        <a href="#" class="ko">Korean</a>
+                    </div>
+                </div>
+                <!-- cont2-1 -->
+                <div class="cont2">
+                    <div class="cont2_item">
+                        <button class="cont2_btn">상시채용<a href="#1" class="a"></a></button>
+                        <div class="cont2_box">
+                            <h3>소개</h3>
+                            <ul class="list_1">
+                                <li>CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</li>
+                                <li>CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.</li>
+                                <li>글로벌 팀이므로 공용언어는 영어를 사용합니다.</li>
+                            </ul>
+                            <h3>지원자격</h3>
+                            <ul class="list_1">
+                                <li>
+                                    CLOVA의 성능향상을 위한 AI 선행 기술 연구가 가능한 인력 <br>
+                                    (자연어처리, 컴퓨터비전, 추천 등을 포함한 기계학습기반 AI기술 전 분야)
+                                    <h4 class="list_h4">선행기술 연구 전문가 (Research Scientist)</h4>
+                                    <ul class="list_2">
+                                        <li>최신 AI 연구 기술에 대한 이해 , 우수한 연구 역량 및 실적</li>
+                                        <li>프로젝트를 리딩하고 연구방향을 제시할 수 있는 강력한 연구개발 리더십</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>우대</h3>
+                            <ul class="list_3">
+                                <li class="l3_li-1">
+                                    <h4 class="list_h4_2">선행기술 연구 전문가</h4>
+                                    <ul class="list_2">
+                                        <li>AI관련분야(기계학습, 자연어처리, 컴퓨터비전, 응용수학 등) 박사학위 소지자 혹은 이에 준하는 역량/경력 소유자</li>
+                                        <li>AI관련 분야 Top-tier 학회 논문의 저자(NIPS, ICML, ICLR, CVPR, ACL, EMNLP, ICCV, AAAI, IJCAI, KDD 등)</li>
+                                        <li>우수한 영어작문 및 커뮤니케이션 역량 보유자</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>채용하고 싶은 사람</h3>
+                            <ul class="list_1">
+                                <li>열정을 갖고 자기주도적으로 업무를 수행하시는 분</li>
+                                <li>오픈 마인드를 갖고 적극적으로 커뮤니케이션 하고 협력하시는 분</li>
+                                <li>국적은 무관함</li>
+                            </ul>
+                            <div class="boxWrap">
+                                <h5>전형절차 및 기타사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>서류전형 > 1차면접 > 2차면접 > 입사</li>
+                                    <li>전형절차는 일정 및 상황에 따라 변동될 수 있습니다.</li>
+                                    <li>진행일정은 확정되는 대로 지원자 분들에게 개별 안내 예정입니다.</li>
+                                </ul>
+                                <h5>안내사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.</li>
+                                    <li>국가유공자 및 장애인 등 취업보호대상자는 관계법령에 따라 우대합니다.</li>
+                                    <li>문의사항은 NAVER 채용 홈페이지 > 지원문의로 접수해주시기 바랍니다.</li>
+                                    <li>본 채용은 상시모집 채용으로 인재 선발 완료 시 공고가 조기 마감 될 수 있습니다.</li>
+                                </ul>
+                            </div>
+                            <div class="cont2_btnWrap">
+                                <a href="#">지원하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //cont2 -->
+
+                <!-- cont2-2 -->
+                <div class="cont2">
+                    <div class="cont2_item">
+                        <button class="cont2_btn">인턴십<a href="#1" class="a"></a></button>
+                        <div class="cont2_box">
+                            <h3>소개</h3>
+                            <ul class="list_1">
+                                <li>CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</li>
+                                <li>CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.</li>
+                                <li>글로벌 팀이므로 공용언어는 영어를 사용합니다.</li>
+                            </ul>
+                            <h3>지원자격</h3>
+                            <ul class="list_1">
+                                <li>
+                                    CLOVA의 성능향상을 위한 AI 선행 기술 연구가 가능한 인력 <br>
+                                    (자연어처리, 컴퓨터비전, 추천 등을 포함한 기계학습기반 AI기술 전 분야)
+                                    <h4 class="list_h4">선행기술 연구 전문가 (Research Scientist)</h4>
+                                    <ul class="list_2">
+                                        <li>최신 AI 연구 기술에 대한 이해 , 우수한 연구 역량 및 실적</li>
+                                        <li>프로젝트를 리딩하고 연구방향을 제시할 수 있는 강력한 연구개발 리더십</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>우대</h3>
+                            <ul class="list_3">
+                                <li class="l3_li-1">
+                                    <h4 class="list_h4_2">선행기술 연구 전문가</h4>
+                                    <ul class="list_2">
+                                        <li>AI관련분야(기계학습, 자연어처리, 컴퓨터비전, 응용수학 등) 박사학위 소지자 혹은 이에 준하는 역량/경력 소유자</li>
+                                        <li>AI관련 분야 Top-tier 학회 논문의 저자(NIPS, ICML, ICLR, CVPR, ACL, EMNLP, ICCV, AAAI, IJCAI, KDD 등)</li>
+                                        <li>우수한 영어작문 및 커뮤니케이션 역량 보유자</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>채용하고 싶은 사람</h3>
+                            <ul class="list_1">
+                                <li>열정을 갖고 자기주도적으로 업무를 수행하시는 분</li>
+                                <li>오픈 마인드를 갖고 적극적으로 커뮤니케이션 하고 협력하시는 분</li>
+                                <li>국적은 무관함</li>
+                            </ul>
+                            <div class="boxWrap">
+                                <h5>전형절차 및 기타사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>서류전형 > 1차면접 > 2차면접 > 입사</li>
+                                    <li>전형절차는 일정 및 상황에 따라 변동될 수 있습니다.</li>
+                                    <li>진행일정은 확정되는 대로 지원자 분들에게 개별 안내 예정입니다.</li>
+                                </ul>
+                                <h5>안내사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.</li>
+                                    <li>국가유공자 및 장애인 등 취업보호대상자는 관계법령에 따라 우대합니다.</li>
+                                    <li>문의사항은 NAVER 채용 홈페이지 > 지원문의로 접수해주시기 바랍니다.</li>
+                                    <li>본 채용은 상시모집 채용으로 인재 선발 완료 시 공고가 조기 마감 될 수 있습니다.</li>
+                                </ul>
+                            </div>
+                            <div class="cont2_btnWrap">
+                                <a href="#">지원하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //cont2 -->
+
+                <!-- cont2-3 -->
+                <div class="cont2">
+                    <div class="cont2_item">
+                        <button class="cont2_btn">박사 후 연구원<a href="#1" class="a"></a></button>
+                        <div class="cont2_box">
+                            <h3>소개</h3>
+                            <ul class="list_1">
+                                <li>CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</li>
+                                <li>CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.</li>
+                                <li>글로벌 팀이므로 공용언어는 영어를 사용합니다.</li>
+                            </ul>
+                            <h3>지원자격</h3>
+                            <ul class="list_1">
+                                <li>
+                                    CLOVA의 성능향상을 위한 AI 선행 기술 연구가 가능한 인력 <br>
+                                    (자연어처리, 컴퓨터비전, 추천 등을 포함한 기계학습기반 AI기술 전 분야)
+                                    <h4 class="list_h4">선행기술 연구 전문가 (Research Scientist)</h4>
+                                    <ul class="list_2">
+                                        <li>최신 AI 연구 기술에 대한 이해 , 우수한 연구 역량 및 실적</li>
+                                        <li>프로젝트를 리딩하고 연구방향을 제시할 수 있는 강력한 연구개발 리더십</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>우대</h3>
+                            <ul class="list_3">
+                                <li class="l3_li-1">
+                                    <h4 class="list_h4_2">선행기술 연구 전문가</h4>
+                                    <ul class="list_2">
+                                        <li>AI관련분야(기계학습, 자연어처리, 컴퓨터비전, 응용수학 등) 박사학위 소지자 혹은 이에 준하는 역량/경력 소유자</li>
+                                        <li>AI관련 분야 Top-tier 학회 논문의 저자(NIPS, ICML, ICLR, CVPR, ACL, EMNLP, ICCV, AAAI, IJCAI, KDD 등)</li>
+                                        <li>우수한 영어작문 및 커뮤니케이션 역량 보유자</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>채용하고 싶은 사람</h3>
+                            <ul class="list_1">
+                                <li>열정을 갖고 자기주도적으로 업무를 수행하시는 분</li>
+                                <li>오픈 마인드를 갖고 적극적으로 커뮤니케이션 하고 협력하시는 분</li>
+                                <li>국적은 무관함</li>
+                            </ul>
+                            <div class="boxWrap">
+                                <h5>전형절차 및 기타사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>서류전형 > 1차면접 > 2차면접 > 입사</li>
+                                    <li>전형절차는 일정 및 상황에 따라 변동될 수 있습니다.</li>
+                                    <li>진행일정은 확정되는 대로 지원자 분들에게 개별 안내 예정입니다.</li>
+                                </ul>
+                                <h5>안내사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.</li>
+                                    <li>국가유공자 및 장애인 등 취업보호대상자는 관계법령에 따라 우대합니다.</li>
+                                    <li>문의사항은 NAVER 채용 홈페이지 > 지원문의로 접수해주시기 바랍니다.</li>
+                                    <li>본 채용은 상시모집 채용으로 인재 선발 완료 시 공고가 조기 마감 될 수 있습니다.</li>
+                                </ul>
+                            </div>
+                            <div class="cont2_btnWrap">
+                                <a href="#">지원하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //cont2 -->
+
+                <!-- cont2-4 -->
+                <div class="cont2">
+                    <div class="cont2_item">
+                        <button class="cont2_btn">글로벌 레지던시<a href="#1" class="a"></a></button>
+                        <div class="cont2_box">
+                            <h3>소개</h3>
+                            <ul class="list_1">
+                                <li>CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</li>
+                                <li>CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.</li>
+                                <li>글로벌 팀이므로 공용언어는 영어를 사용합니다.</li>
+                            </ul>
+                            <h3>지원자격</h3>
+                            <ul class="list_1">
+                                <li>
+                                    CLOVA의 성능향상을 위한 AI 선행 기술 연구가 가능한 인력 <br>
+                                    (자연어처리, 컴퓨터비전, 추천 등을 포함한 기계학습기반 AI기술 전 분야)
+                                    <h4 class="list_h4">선행기술 연구 전문가 (Research Scientist)</h4>
+                                    <ul class="list_2">
+                                        <li>최신 AI 연구 기술에 대한 이해 , 우수한 연구 역량 및 실적</li>
+                                        <li>프로젝트를 리딩하고 연구방향을 제시할 수 있는 강력한 연구개발 리더십</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>우대</h3>
+                            <ul class="list_3">
+                                <li class="l3_li-1">
+                                    <h4 class="list_h4_2">선행기술 연구 전문가</h4>
+                                    <ul class="list_2">
+                                        <li>AI관련분야(기계학습, 자연어처리, 컴퓨터비전, 응용수학 등) 박사학위 소지자 혹은 이에 준하는 역량/경력 소유자</li>
+                                        <li>AI관련 분야 Top-tier 학회 논문의 저자(NIPS, ICML, ICLR, CVPR, ACL, EMNLP, ICCV, AAAI, IJCAI, KDD 등)</li>
+                                        <li>우수한 영어작문 및 커뮤니케이션 역량 보유자</li>
+                                    </ul>
+                                    <h4 class="list_h4">AI SW 엔지니어</h4>
+                                    <ul class="list_2">
+                                        <li>Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                        <li>멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                        <li>머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                        <li>최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3>채용하고 싶은 사람</h3>
+                            <ul class="list_1">
+                                <li>열정을 갖고 자기주도적으로 업무를 수행하시는 분</li>
+                                <li>오픈 마인드를 갖고 적극적으로 커뮤니케이션 하고 협력하시는 분</li>
+                                <li>국적은 무관함</li>
+                            </ul>
+                            <div class="boxWrap">
+                                <h5>전형절차 및 기타사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>서류전형 > 1차면접 > 2차면접 > 입사</li>
+                                    <li>전형절차는 일정 및 상황에 따라 변동될 수 있습니다.</li>
+                                    <li>진행일정은 확정되는 대로 지원자 분들에게 개별 안내 예정입니다.</li>
+                                </ul>
+                                <h5>안내사항</h5>
+                                <ul class="boxWrap_list">
+                                    <li>지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.</li>
+                                    <li>국가유공자 및 장애인 등 취업보호대상자는 관계법령에 따라 우대합니다.</li>
+                                    <li>문의사항은 NAVER 채용 홈페이지 > 지원문의로 접수해주시기 바랍니다.</li>
+                                    <li>본 채용은 상시모집 채용으로 인재 선발 완료 시 공고가 조기 마감 될 수 있습니다.</li>
+                                </ul>
+                            </div>
+                            <div class="cont2_btnWrap">
+                                <a href="#">지원하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //cont2 -->
+            </div>
+            <!-- //content -->
+        </div>
+        
+        <footer id="footer">
+            <div class="container">
+                <div class="footer_top">
+                    <span class="ir_so">logo</span>
+                    <div class="adress">
+                        <a href="#" class="ir_so">blog</a>
+                        <a href="#" class="ir_so">facebook</a>
+                        <a href="#" class="ir_so">instar</a>
+                        <a href="#" class="ir_so">youtube</a>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <ul class="list_1">
+                        <li>고객센터 1833-5387 </li>
+                        <li>09:00 - 18:00 (주말, 공휴일 휴무) </li>
+                    </ul>
+                    <span>Powered by <strong>Naver·LINE</strong></span>
+                    <ul class="list_2">
+                        <li>공지사항</li>
+                        <li>이용약관</li>
+                        <li>CLOVA 채용안내</li>
+                        <li>CLOVA JP</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // #content .cont2 .cont2_item .cont2_box
+        // btnActive
+        const content = $(".cont2");
+        const btn = $(".cont2_btn");
+
+        btn.click(function(){
+            $(this).next().toggleClass("active");
+            $(this).find(".a").toggleClass("btnActive");
+        });
+
+        
+        
+    </script>
+</body>
+</html>

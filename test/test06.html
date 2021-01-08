@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test06</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,li,dl,dt,dd,ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        a:hover {
+            color: red;
+        }
+
+        /* header */
+        #header_wrap {
+            width: 100%;
+            height: 140px;
+            background-color: #ffebee;
+        }
+
+        /* banner */
+        #banner_wrap {
+            width: 100%;
+            height: 750px;
+            background-color: #ffcdd2;
+        }
+
+        /* contents */
+        .cont_1 {
+            height: 800px;
+            background-color: #ef9a9a;
+        }
+
+        .cont_2 {
+            height: 530px;
+            background-color: #e57373;
+        }
+
+        .cont_3 {
+            height: 950px;
+            background-color: #ef5350;
+        }
+
+        .cont_4 {
+            height: 950px;
+            background-color: #f44336;
+        }
+
+        .cont_5 {
+            height: 500px;
+            background-color: #fff;
+        }
+
+
+        /* 게시판 */
+        .cont_5 h3 {
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+        .cont_5 .container {
+            overflow: hidden;
+            background-color: rgba(255,255,255,0);
+        }
+
+        .cont_5 .notice_1 {
+            margin: 80px 0 0 10px;
+            float: left;
+            width: 47%;
+            position: relative;
+        }
+
+        .cont_5 .notice_1 span.more {
+            position: absolute; right: 0px; top: 5px;
+        }
+
+        .cont_5 .notice_1 ul {
+            margin: 20px 0 0 10px;
+            border: 1px solid #ccc;
+        }
+
+        .cont_5 .notice_1 li {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 30px;
+            overflow: hidden;
+        }
+        .cont_5 .notice_1 li:last-child {
+            border-bottom: none;
+        }
+
+        .cont_5 .notice_1 li a {
+            width: 70%;
+            float: left;
+            white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+        }
+
+        .cont_5 .notice_1 li span {
+            width: 30%;
+            float: left;
+            text-align: right;
+        }
+
+        .cont_5 .notice_2 {
+            margin: 80px 10px 0 40px;
+            float: left;
+            width: 48%;
+            position: relative;
+        }
+
+        .cont_5 .notice_2 span.more {
+            position: absolute; right: 0px; top: 5px;
+        }
+
+        .cont_5 .notice_2 ul {
+            margin: 20px 0 0 10px;
+            border: 1px solid #ccc;
+        }
+
+        .cont_5 .notice_2 li {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 30px;
+            overflow: hidden;
+        }
+        .cont_5 .notice_2 li:last-child {
+            border-bottom: none;
+        }
+
+        .cont_5 .notice_2 li a {
+            width: 70%;
+            float: left;
+            white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+        }
+
+        .cont_5 .notice_2 li span {
+            width: 30%;
+            float: left;
+            text-align: right;
+        }
+
+        /* footer */
+        .foot_1 {
+            height: 70px;
+            background-color: #d32f2f;
+        }
+
+        .foot_2 {
+            height: 190px;
+            background-color: #c62828;
+        }
+
+        .foot_3 {
+            height: 65px;
+            background-color: #b71c1c;
+        }
+
+        /* container */
+        .container {
+            width: 1400px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="container"></div>
+        </div>
+        <div id="banner_wrap">
+            <div class="container"></div>
+        </div>
+        <div id="contents_wrap">
+            <div class="cont_1">
+                <div class="container"></div>
+            </div>
+            <div class="cont_2">
+                <div class="container"></div>
+            </div>
+            <div class="cont_3">
+                <div class="container"></div>
+            </div>
+            <div class="cont_4">
+                <div class="container"></div>
+            </div>
+            <div class="cont_5">
+                <div class="container">
+                    <div class="notice_1">
+                        <h3>펀드공시</h3>
+                        <span class="more">더보기</span>
+                        <ul>
+                            <li><a href="#">미래에셋 코스피200인덱스증권투자신탁1호(주식-파생형)...</a><span>2020.10.12</span></li>
+                            <li><a href="#">고유재상 투자펀드의 의무투자기간 종료안내</a><span>2020.10.05</span></li>
+                            <li><a href="#">소규모펀드 공시의 건(2020년 9월)</a><span>2020.10.05</span></li>
+                        </ul>
+                    </div>
+                    <div class="notice_2">
+                        <h3>펀드뉴스</h3>
+                        <span class="more">더보기</span>
+                        <ul>
+                            <li><a href="#">펀드 기준가격 컷오프제도 시행 안내</a><span>2020.09.28</span></li>
+                            <li><a href="#">주문관리시스템 재구축 프로젝트 입찰 공고</a><span>2020.09.23</span></li>
+                            <li><a href="#">미래에셋 전략배분 TDF는 특별합니다.</a><span>2020.09.02</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer_wrap">
+            <div class="foot_1">
+                <div class="container"></div>
+            </div>
+            <div class="foot_2">
+                <div class="container"></div>
+            </div>
+            <div class="foot_3">
+                <div class="container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

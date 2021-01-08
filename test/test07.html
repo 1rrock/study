@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test07</title>
+    <style>
+        /* reset */
+        * {margin: 0; padding: 0;}
+        img {vertical-align: top;}
+        a {text-decoration: none; color: #000}
+        ul,ol,dl,li,dt {list-style: none;}
+        body {font-family: 'nanumgothic';}
+
+        /* wrap */
+        #wrap {width: 100%;}
+        #header_wrap {width: 100%; height: 72px; background-color: #fff;}
+        #baner_wrap {width: 100%; height: 500px;}
+        #footer_wrap {width: 100%; height: 312px; background-color: #1e1e1e;}
+
+        /* header */
+        #header_wrap .container {display: flex;}
+        .logo {width: 60%; background: url(./img/bi.png) no-repeat; position: relative; left: 50px; top: 23px;}
+        .logo a h1 {text-indent: -9999px;}
+        .menu {width: 40%;}
+        .menu ul {display: flex;}
+        .menu ul li {width: 20%; height: 72px; line-height: 72px;}
+        .menu ul li a {font-weight: bold; font-size: 17px; width: 100%; height: inherit;}
+
+        /* banner */
+        .bg {width: 100%; height: 100%; background: url(./img/top-visual-retailfinance.jpg) no-repeat center;}
+        .banner {width: 100%;}
+        .banner h2 {padding: 425px 0 0 50px; color: #fff; font-size: 36px; font-weight: bold;}
+        /* contents */
+        #cont1 {height: 360px; background: #fff;}
+        #cont1 .container .content1 {padding: 100px 0 0 50px;  position: relative;}
+        #cont1 .container .content1 h3 {font-size: 40px; font-weight: bold;}
+        #cont1 .container .content1 p {margin-top: 50px; line-height: 26px; color: #666;}
+        #cont1 .container .content1 img {position: absolute; right: 0; bottom: 0;}
+
+        #cont2 {display: flex; position: relative; background: #fafafa;}
+        #cont2 .cont2_img {width: 50%; height: 498px;}
+        #cont2 .cont2_img img {width: 957x; height: inherit; position: absolute; left: 0; top: 0;}
+        #cont2 .cont2_txt {width: 50%; height: inherit; padding-top: 160px; margin-left: 160px;}
+        #cont2 .cont2_txt h3 {font-size: 30px;}
+        #cont2 .cont2_txt p {margin-top: 30px; font-size: 19px;line-height: 26px; color: #666;}
+        #cont3 {height: 544px; background: #fff;}
+        #cont3 .container {position: relative;}
+        #cont3 .cont3_txt {padding-top: 200px; width: 41%;}
+        #cont3 .cont3_txt h3 {font-size: 30px;}
+        #cont3 .cont3_txt p {margin-top: 30px; font-size: 19px; line-height: 26px; color: #666;}
+        #cont3 .cont3_txt img {position: absolute; right: 10%; bottom: 0;}
+
+        /* footer  */
+        .col1 {padding-top: 30px;}
+        .col1 ul {display: flex; width: 60%; text-align: center;}
+        .col1 ul li {width: auto; padding: 0 40px 0 0; position: relative;}
+        .col1 ul li::before {
+            content: '';
+            width: 1px; height: 10px; background: #666;
+            position: absolute; left: -17px; top: 7px;
+        }
+        .col1 ul li:first-child::before{width: 0; height: 0;}
+        .col1 ul li:last-child {padding-right: 0;}
+        .col1 ul li a {font-size: 14px; color: #666;}
+        .col2 {margin-top: 110px; display: flex;}
+        .col2 .secu {width: 50%; position: relative; display: flex;}
+        .col2 .secu img {position: absolute; left: 0; right: 0;}
+        .col2 .secu .adr {width: 62%;}
+        .col2 .secu .adr span {color: #666; font-size: 13px; display: block; padding-top: 35px; line-height: 18px; position: relative;}
+        .col2 .secu .adr span::before {
+            content: '';
+            width: 1px; height: 45px; background: #666;
+            position: absolute; right: 0; top: 40px;
+        }
+        .col2 .secu .faq {width: 38%; padding: 33px 0 0 10px;}
+        .col2 .secu .faq span {color: #666; font-size: 14px;}
+        .col2 address {width: 50%; text-align: right; margin-top: 80px; font-size: 15px; color: #666; font-style: normal;}
+
+
+        /* container */
+        .container {width: 1140px; height: inherit; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><h1>kakaopay securities</h1></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">비즈니스</a></li>
+                        <li><a href="#">경영정보</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">채용정보</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="baner_wrap">
+            <div class="bg">
+                <div class="container">
+                    <div class="banner">
+                        <h2>개인금융 서비스</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contents_wrap">
+            <div id="cont1">
+                <div class="container">
+                    <div class="content1">
+                        <h3>카카오 플랫폼을 활용한 생활금융 투자 서비스</h3>
+                        <p>
+                            오직 카카오 플랫폼을 통해서만 투자서비스를 제공합니다. <br>
+                            사용자의 생활에 필요한 모든 금융 영역을 하나로 연결하고 라이프스타일 <br>
+                            특성을 반영해 가장 적합한 맞춤형 종합자산관리를 추구합니다.
+                        </p>
+                        <img src="./img/kakao-bi-black.png" alt="kakaopay증권">
+                    </div>
+                </div>
+            </div> 
+            <div id="cont2">
+                <div class="cont2_img">
+                    <img src="./img/pic-retailfinance1.jpg" alt="이미지1">
+                </div>
+                <div class="cont2_txt">
+                    <h3>쉽고 재미있는 투자</h3>
+                    <p> 소비 생활속에서도 다양한 투자 기회를 발굴합니다. <br>
+                        복잡한 가입과정이나 큰돈 없이도 투자할 수 있습니다. <br>
+                        상품선택의 수고로움을 덜기 위해 소수의 좋은 상품만을 제안합니다. <br>
+                        카카오톡만 있다면 투자실행부터 투자상품 관리까지 한번에 해결됩니다.</p>
+                </div>
+            </div> 
+            <div id="cont3">
+                <div class="container">
+                    <div class="cont3_txt">
+                        <h3>믿을 수 있는 상품</h3>
+                        <p>
+                            어떤 시장 환경에서도, 언제든지, 얼마의 금액을 투자하더라도
+                            많은 곳에 나눠져 안정적이고 전문가에 의해 운용되어 오랫동안
+                            믿고 맡길 수 있는 상품만을 엄선해 제공합니다.
+                        </p>
+                        <img src="./img/pic-retailfinance2.png" alt="이미지2">
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div id="footer_wrap">
+            <div class="container">
+                <div class="col1">
+                    <ul>
+                        <li><a href="#">이용약관 </a></li>
+                        <li><a href="#">보호금융상품등록부 </a></li>
+                        <li><a href="#">개인정보 처리방침 </a></li>
+                        <li><a href="#">고객권리안내문 </a></li>
+                        <li><a href="#">신용정보 활용체제 공시</a></li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <div class="secu">
+                        <img src="./img/bi-footer.png" alt="kakaopay securities">
+                        <div class="adr">
+                            <span>
+                                경기도 성남시 분당구 판교역로 146번길 20 Office H 12층 <br>
+                                강남오피스: 서울시 강남구 테헤란로 512 신안빌딩 3층 <br>
+                                여의도오피스: 서울시 영등포구 의사당대로1길 34
+                            </span>
+                        </div>
+                        <div class="faq">
+                            <span>
+                                고객센터: 1600-8515 
+                            </span>
+                        </div>
+                    </div>
+                    <address>
+                        &copy; 2020 CopyRight kakaopay securities corp.
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

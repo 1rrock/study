@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream-1Thin';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream-2ExtraLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream-6Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream-7ExtraBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Abel';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Abel Regular'), local('Abel-Regular'), url(https://fonts.gstatic.com/s/abel/v12/MwQ5bhbm2POE2V9BPbh5uGM.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        body {
+            background: radial-gradient(ellipse farthest-corner at center bottom, #69D2FB 0%, #20438E 100%);
+        }
+
+        /* nav */
+        #nav {
+            position: absolute;
+            left: -300px;
+            top: 0;
+            width: 300px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.4);
+            font-family: 'Abel';
+            /* 	transition: left 1s; */
+        }
+
+        #nav.open {
+            left: 0;
+        }
+
+        #nav h1 {
+            padding: 60px 10px;
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #nav ul {}
+
+        #nav li {}
+
+        #nav li a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            border-left: 5px solid transparent;
+        }
+
+        #nav li.active a {
+            background: rgba(255, 255, 255, 0.4);
+            border-left: 5px solid rgba(255, 255, 255, 0.8);
+        }
+
+        #nav .navBtn {
+            position: absolute;
+            right: -60px;
+            top: 10px;
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+        }
+
+        /* contents */
+        #contents {
+            height: 100vh;
+        }
+
+        #contents h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            font-size: 8vw;
+            line-height: 10vw;
+            font-family: 'S-CoreDream-3Light';
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav">
+        <h1>1rrock's</h1>
+        <ul>
+            <li class="active"><a href="#">Menu1</a></li>
+            <li><a href="#">Menu2</a></li>
+            <li><a href="#">Menu3</a></li>
+            <li><a href="#">Menu4</a></li>
+            <li><a href="#">Menu5</a></li>
+            <li><a href="#">Menu6</a></li>
+        </ul>
+        <a href="#" class="navBtn">Open</a>
+    </nav>
+
+    <section id="contents">
+        <h2>최고에 도달하려면<br>최저에서 시작하라.</h2>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        const tabBtn = $("#tab-menu > ul > li");
+        const tabCont = $("#tab-menu > ul > li > div");
+
+        tabCont.hide().eq(0).show();
+
+        // tabBtn.eq(0).find("a").click(function(){
+        // 	tabBtn.removeClass();
+        // 	tabBtn.eq(0).addClass("active");
+        // 	tabBtn.find("div").hide();
+        // 	tabBtn.eq(0).find("div").show();
+        // });
+        // tabBtn.eq(1).find("a").click(function(){
+        // 	tabBtn.removeClass();
+        // 	tabBtn.eq(1).addClass("active");
+        // 	tabBtn.find("div").hide();
+        // 	tabBtn.eq(1).find("div").show();
+        // });
+        // tabBtn.eq(2).find("a").click(function(){
+        // 	tabBtn.removeClass();
+        // 	tabBtn.eq(2).addClass("active");
+        // 	tabBtn.find("div").hide();
+        // 	tabBtn.eq(2).find("div").show();
+        // });
+        // tabBtn.eq(3).find("a").click(function(){
+        // 	tabBtn.removeClass();
+        // 	tabBtn.eq(3).addClass("active");
+        // 	tabBtn.find("div").hide();
+        // 	tabBtn.eq(3).find("div").show();
+        // });
+        // tabBtn.eq(4).find("a").click(function(){
+        // 	tabBtn.removeClass();
+        // 	tabBtn.eq(4).addClass("active");
+        // 	tabBtn.find("div").hide();
+        // 	tabBtn.eq(4).find("div").show();
+        // });
+        // for(let i=0; i<tabBtn.length; i++){
+        // 	tabBtn.eq(i).find("a").click(function(){
+        // 		tabBtn.removeClass();
+        // 		tabBtn.eq(i).addClass("active");
+        // 		tabBtn.find("div").hide();
+        // 		tabBtn.eq(i).find("div").show();
+        // 	});
+        // }
+
+        //this를 이용
+        // tabBtn.find("a").click(function(){
+        // 	let target = $(this);
+        // 	let index = target.index();
+        // 	tabBtn.removeClass();
+        // 	tabBtn.eq(index).addClass("active");
+        // 	tabBtn.find("div").hide();
+        // 	tabBtn.eq(index).find("div").show();
+        // });
+
+        //함수를 이용해서
+        function tab() {
+            let target = $(this);
+            // let index = target.index();
+            // tabBtn.removeClass();
+            // tabBtn.eq(index).addClass("active");
+            // tabBtn.find("div").hide();
+            // tabBtn.eq(index).find("div").show();
+            target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("div")
+                .hide();
+        };
+
+        tabBtn.find("a").click(tab).focus(tab);
+    </script>
+</body>
+
+</html>

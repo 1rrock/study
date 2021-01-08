@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1rrock Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/star.css">
+    <link rel="stylesheet" href="./assets/css/planet.css">
+    <style>
+        body {
+          overflow: auto;
+        }
+        body::-webkit-scrollbar {
+          display: none;
+        }
+        body::-webkit-scrollbar-thumb {
+            display: none;
+        }
+        body::-webkit-scrollbar-track {
+            display: none;
+        }
+      </style>
+</head>
+
+<body>
+    <div id="starwrap">
+        <div class="stars"></div>
+    </div>
+
+    <div id="contents">
+        <section id="section1">
+            <div id="wrap">
+                <div class="container">
+                    <div class="logo">
+                        <img src="./assets/img/logo.png" alt="logo">
+                        <h1>PORTFOLIO</h1>
+                    </div>
+                    <div class="main_title">
+                        <a href="#section2">FRONT END WEB DEVELOPER</a>
+                    </div>
+                    <a class="down" href="#section2"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div id="wrap">
+                <div class="container">
+                    <div class="about_profile">
+                        <img src="./assets/img/profile1.png" alt="profile">
+                    </div>
+                    <div class="aboutMe">
+                        <h3>ABOUT ME</h3>
+                        <span>/*abo-ut me*/</span>
+                        <p>
+                            스펀지 같은 사람이 되겠습니다. 학원에서 배우고
+                            회사에 가게 되도 저는 아직 미숙하고 모자라겠지만
+                            항상 배우는 자세로 스펀지가 물을 흡수하듯이 빠르게
+                            배우고 실력을 향상 시키겠습니다. 쉽지 않은 일이지만
+                            그렇게 되도록 노력하고 발전하겠습니다. 그리고 실력을
+                            키워 프론트 앤드 개발자가 되어 기업성장에 도움이 되
+                            도록열심히 하겠습니다.
+                        </p>
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section3"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3">
+            <div id="wrap">
+                <div class="container">
+                    <div class="port-title">
+                        SITE
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section4"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4">
+            <div id="wrap">
+                <div class="container">
+                    <div class="site-title">
+                        WEBSTANDARD<span> SITE</span>
+                    </div>
+                    <div class="webstandard_layout">
+                        <div class="side_left">
+                            <div class="side_left_top">
+                                <span class="top_coner1" aria-hidden="true" rel="noopner"></span>
+                                <span class="top_coner2 aria-hidden=" true" rel="noopner""></span>
+                                <div class="source_1">
+                                    <h2>Layout Source</h2>
+<pre>
+        &lt;div id="wrap"&gt;
+            &lt;div id="header"&gt;&lt;/div&gt;
+            &lt;div id="contents"&gt;&lt;/div&gt;
+            &lt;div id="footer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+</pre>
+                                </div>
+                            </div>
+                            <div class=" side_left_bottom">
+                                    <span class="bottom_coner1" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner2" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner3" aria-hidden="true" rel="noopner"></span>
+                                    <div class="source_1">
+                                        <h2>IR EFFECT Source</h2>
+<pre>
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+</pre>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="middle_screen">
+                                <span class="screen_coner1"></span>
+                                <span class="screen_coner2"></span>
+                                <div class="screen_webstandard"></div>
+                            </div>
+                            <div class="middle_btn">
+                                <div class="middle_left_btn">
+                                    FIGMA
+                                </div>
+                                <div class="middle_right_btn">
+                                    SITE
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side_right">
+                            <span class="coner1"></span>
+                            <span class="coner2"></span>
+                            <span class="center_coner1"></span>
+                            <span class="center_coner2"></span>
+                            <span class="center_coner3"></span>
+                            <div class="source_1">
+                                <h2>Javascript Source</h2>
+<pre>
+        // 라이트 박스
+        $(".lightbox").lightGallery();
+
+        // 이미지 슬라이드
+        $('.slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrow: true,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true,
+            dots: true
+        });
+
+        $(".tit a.btn").click(function(event){
+            event.preventDefault();   
+            $(this).toggleClass("on");
+        });
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section5"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section4 !!webstandard -->
+        
+
+        <section id="section5">
+            <div id="wrap">
+                <div class="container">
+                    <div class="site-title">
+                        RESPONSIVE<span> SITE</span>
+                    </div>
+                    <div class="webstandard_layout">
+                        <div class="side_left">
+                            <div class="side_left_top">
+                                <span class="top_coner1" aria-hidden="true" rel="noopner"></span>
+                                <span class="top_coner2 aria-hidden=" true" rel="noopner""></span>
+                                <div class="source_1">
+                                    <h2>Layout Source</h2>
+<pre>
+        &lt;header&gt;
+            &lt;h1&gt;반응형 사이트&lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;nav&gt;
+            &lt;h2&gt;반응형 사이트 전체메뉴&lt;/h2&gt;
+        &lt;/nav&gt;
+        &lt;article&gt;
+            &lt;h2&gt;반응형 사이트 서브 타이틀&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;main&gt;
+            &lt;section&gt;
+        컨텐츠&lt;/section&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;h2&gt;반응형 사이트 푸터&lt;/h2&gt;
+        &lt;/footer&gt;
+</pre>
+                                </div>
+                            </div>
+                            <div class=" side_left_bottom">
+                                    <span class="bottom_coner1" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner2" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner3" aria-hidden="true" rel="noopner"></span>
+                                    <div class="source_1">
+                                        <h2>Mediaquery Source</h2>
+<pre>
+        @media (max-width: 1220px){}
+        @media (max-width: 1024px){}
+        @media (max-width: 960px){}
+        @media (max-width: 768px){}
+        @media (max-width: 600px){}
+        @media (max-width: 320px){}
+</pre>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="middle_screen">
+                                <span class="screen_coner1"></span>
+                                <span class="screen_coner2"></span>
+                                <div class="screen_responsive"></div>
+                            </div>
+                            <div class="middle_btn">
+                                <div class="middle_left_btn">
+                                    FIGMA
+                                </div>
+                                <div class="middle_right_btn">
+                                    SITE
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side_right">
+                            <span class="coner1"></span>
+                            <span class="coner2"></span>
+                            <span class="center_coner1"></span>
+                            <span class="center_coner2"></span>
+                            <span class="center_coner3"></span>
+                            <div class="source_1">
+                                <h2>Javascript Source</h2>
+<pre>
+        // 라이트 박스
+        $(".lightbox").lightGallery();
+
+        // 이미지 슬라이드
+        $('.slider').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: true,
+            arrows: true
+        });
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section6"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section5 !!responsive -->
+
+        <section id="section6">
+            <div id="wrap">
+                <div class="container">
+                    <div class="site-title">
+                        MEGABOX<span> SITE</span>
+                    </div>
+                    <div class="webstandard_layout">
+                        <div class="side_left">
+                            <div class="side_left_top">
+                                <span class="top_coner1" aria-hidden="true" rel="noopner"></span>
+                                <span class="top_coner2 aria-hidden=" true" rel="noopner""></span>
+                            </div>
+                            <div class=" side_left_bottom">
+                                    <span class="bottom_coner1" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner2" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner3" aria-hidden="true" rel="noopner"></span>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="middle_screen">
+                                <span class="screen_coner1"></span>
+                                <span class="screen_coner2"></span>
+                                <div class="screen_megabox"></div> 
+                            </div>
+                            <div class="middle_btn">
+                                <div class="middle_one_btn">
+                                    SITE
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side_right">
+                            <span class="coner1"></span>
+                            <span class="coner2"></span>
+                            <span class="center_coner1"></span>
+                            <span class="center_coner2"></span>
+                            <span class="center_coner3"></span>
+                        </div>
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section7"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section6 !!megabox -->
+
+        <section id="section7">
+            <div id="wrap">
+                <div class="container">
+                    <div class="site-title">
+                        REACT<span> SITE</span>
+                    </div>
+                    <div class="webstandard_layout">
+                        <div class="side_left">
+                            <div class="side_left_top">
+                                <span class="top_coner1" aria-hidden="true" rel="noopner"></span>
+                                <span class="top_coner2 aria-hidden=" true" rel="noopner""></span>
+                            </div>
+                            <div class=" side_left_bottom">
+                                    <span class="bottom_coner1" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner2" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner3" aria-hidden="true" rel="noopner"></span>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="middle_screen">
+                                <span class="screen_coner1"></span>
+                                <span class="screen_coner2"></span>
+                                <div class="screen_react"></div> 
+                            </div>
+                            <div class="middle_btn">
+                                <div class="middle_left_btn">
+                                    FIGMA
+                                </div>
+                                <div class="middle_right_btn">
+                                    SITE
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side_right">
+                            <span class="coner1"></span>
+                            <span class="coner2"></span>
+                            <span class="center_coner1"></span>
+                            <span class="center_coner2"></span>
+                            <span class="center_coner3"></span>
+                        </div>
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section8"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section7 !!react -->
+
+        <section id="section8">
+            <div id="wrap">
+                <div class="container">
+                    <div class="site-title">
+                        APPLE<span> SITE</span>
+                    </div>
+                    <div class="webstandard_layout">
+                        <div class="side_left">
+                            <div class="side_left_top">
+                                <span class="top_coner1" aria-hidden="true" rel="noopner"></span>
+                                <span class="top_coner2 aria-hidden=" true" rel="noopner""></span>
+                            </div>
+                            <div class=" side_left_bottom">
+                                    <span class="bottom_coner1" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner2" aria-hidden="true" rel="noopner"></span>
+                                    <span class="bottom_coner3" aria-hidden="true" rel="noopner"></span>
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <div class="middle_screen">
+                                <span class="screen_coner1"></span>
+                                <span class="screen_coner2"></span>
+                                <div class="screen_apple"></div> 
+                            </div>
+                            <div class="middle_btn">
+                                <div class="middle_one_btn">SITE</div>
+                            </div>
+                        </div>
+                        <div class="side_right">
+                            <span class="coner1"></span>
+                            <span class="coner2"></span>
+                            <span class="center_coner1"></span>
+                            <span class="center_coner2"></span>
+                            <span class="center_coner3"></span>
+                        </div>
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section9"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section8 !!apple -->
+
+        <section id="section9">
+            <div id="wrap">
+                <div class="container">
+                    <div class="port-title">
+                        SCRIPT
+                    </div>
+                    <a class="down" aria-hidden="true" rel="noopner" href="#section10"></a>
+                </div>
+            </div>
+        </section>
+        <!-- //section9 -->
+
+        <section id="section10">
+            <div id="wrap">
+                <div class="container">
+                    <div class="sec3-wrap">
+                        <div class="planet_wrap">
+                            <input checked='checked' class='planet4' id='mars' name='planet' type='radio'>
+                            <label class='menu mars' for='mars'>
+                                <div class='preview'></div>
+                                <div class='info'>
+                                    <h2>
+                                        <div class='pip'></div>
+                                        Game
+                                    </h2>
+                                </div>
+                            </label>
+                            <input checked='checked' class='planet3' id='earth' name='planet' type='radio'>
+                            <label class='menu earth' for='earth'>
+                                <div class='preview'></div>
+                                <div class='info'>
+                                    <h2>
+                                        <div class='pip'></div>
+                                        Slider
+                                    </h2>
+                                </div>
+                            </label>
+                            <input checked='checked' class='planet2' id='venus' name='planet' type='radio'>
+                            <label class='menu venus' for='venus'>
+                                <div class='preview'></div>
+                                <div class='info'>
+                                    <h2>
+                                        <div class='pip'></div>
+                                        Mouse
+                                    </h2>
+                                </div>
+                            </label>
+                            <input checked='checked' class='planet1' id='mercury' name='planet' type='radio'>
+                            <label class='menu mercury' for='mercury'>
+                                <div class='preview'></div>
+                                <div class='info'>
+                                    <h2>
+                                        <div class='pip'></div>
+                                        Parallax
+                                    </h2>
+                                </div>
+                            </label>
+                            <div class='solar'>
+                                <div class='solar_systm'>
+                                    <div class='planet mercury'>
+                                        <div class='planet_description mercury'>
+                                            <h1>Parallax</h1>
+                                            <label for='readMercury'>
+                                                <a>
+                                                    Read Mor
+                                                    <span>e</span>
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='solar_systm'>
+                                    <div class='planet venus'>
+                                        <div class='planet_description venus'>
+                                            <h1>Mouse</h1>
+                                            <label for='readVenus'>
+                                                <a>
+                                                    Read Mor
+                                                    <span>e</span>
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='solar_systm'>
+                                    <div class='planet earth'>
+                                        <div class='trajectory m'></div>
+                                        <div class='planet_description earth'>
+                                            <h1>Slider</h1>
+                                            <label for='readEarth'>
+                                                <a>
+                                                    Read Mor
+                                                    <span>e</span>
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='solar_systm'>
+                                    <div class='planet mars'>
+                                        <div class='trajectory d'></div>
+                                        <div class='trajectory p'></div>
+                                        <div class='planet_description mars'>
+                                            <h1>GAME</h1>
+                                            <label for='readMars'>
+                                                <a>
+                                                    Read Mor
+                                                    <span>e</span>
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+
+                                <input class='read' id='readMercury' name='mercuryRead' type='radio'>
+                                <label class='closeBig' for='closeMercury'></label>
+                                <input class='read' id='closeMercury' name='mercuryRead' type='radio'>
+                                <div class='panel'>
+                                    <h1>Mercury</h1>
+                                </div>
+                                <input class='read' id='readVenus' name='venusRead' type='radio'>
+                                <label class='closeBig' for='closeVenus'></label>
+                                <input class='read' id='closeVenus' name='venusRead' type='radio'>
+                                <div class='panel'>
+                                    <h1>Venus</h1>
+                                </div>
+                                <input class='read' id='readEarth' name='earthRead' type='radio'>
+                                <label class='closeBig' for='closeEarth'></label>
+                                <input class='read' id='closeEarth' name='earthRead' type='radio'>
+                                <div class='panel'>
+                                    <h1>Earth</h1>
+                                </div>
+                                <input class='read' id='readMars' name='marsRead' type='radio'>
+                                <label class='closeBig' for='closeMars'></label>
+                                <input class='read' id='closeMars' name='marsRead' type='radio'>
+                                <div class='panel'>
+                                    <h1>Mars</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //planet_wrap -->
+                        <div class="animation_title">
+                            <div class="port-title">
+                                ANIMATION
+                            </div>
+                        </div>
+                        <div class="ani_01">
+                            <div class="ani_bg">
+                                <span class="left-arrow"></span>
+                                <span class="right-arrow"></span>
+                                <div class="ani_screen">
+                                    <iframe src="https://zxcv1685.github.io/dothome1/effect/port/tentacle.html" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="ani_title">TENTACLE ANIMATION</div>
+                            <div class="ani_btn">code view</div>
+                        </div>
+                        <div class="ani_01">
+                            <div class="ani_bg">
+                                <span class="left-arrow"></span>
+                                <span class="right-arrow"></span>
+                                <div class="ani_screen">
+                                    <iframe src="https://zxcv1685.github.io/dothome1/effect/port/circle.html" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="ani_title">CIRCLE ANIMATION</div>
+                            <div class="ani_btn">code view</div>
+
+                        </div>
+                        <div class="ani_01">
+                            <div class="ani_bg">
+                                <span class="left-arrow"></span>
+                                <span class="right-arrow"></span>
+                                <div class="ani_screen">
+                                    <iframe src="https://zxcv1685.github.io/dothome1/effect/port/tail.html" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="ani_title">TAIL ANIMATION</div>
+                            <div class="ani_btn">code view</div>
+
+                        </div>
+                        <div class="ani_01">
+                            <div class="ani_bg">
+                                <span class="left-arrow"></span>
+                                <span class="right-arrow"></span>
+                                <div class="ani_screen">
+                                    <iframe src="https://zxcv1685.github.io/dothome1/effect/port/gsap.html" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="ani_title">GSAP ANIMATION</div>
+                            <div class="ani_btn">code view</div>
+
+                        </div>
+                        <div class="ani_01">
+                            <div class="ani_bg">
+                                <span class="left-arrow"></span>
+                                <span class="right-arrow"></span>
+                                <div class="ani_screen">
+                                    <iframe src="https://zxcv1685.github.io/dothome1/effect/port/roket.html" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="ani_title">ROKET ANIMATION</div>
+                            <div class="ani_btn">code view</div>
+                        </div>
+                        <div class="ani_01">
+                            <div class="contect">
+                                <div class="contect_logo">
+                                    <img src="./assets/img/logo.png" alt="logo">
+                                    <h1>PORTFOLIO</h1>
+                                </div>
+                                <div class="contect_title">
+                                    <a href="#section2">CONTECT ME</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+        </section>
+        <!-- //section10 -->
+
+
+
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./assets/js/efeect.js"></script>
+    <script>
+        $(window).scroll(function () {
+            let scrollTop = $(window).scrollTop();
+            const totalWidth = $(".sec3-wrap").width();
+            $("#section10").css("height", totalWidth);
+
+            if (scrollTop > $("#section10").offset().top - window.innerHeight / 2) {
+                $(".planet_wrap").css("opacity", "1");
+            } else {
+                $(".planet_wrap").css("opacity", "0");
+            }
+
+            if (scrollTop > $("#section10").offset().top) {
+                let offsetTop = (scrollTop - $("#section10").offset().top);
+                $("#section10 .container").css("left", -offsetTop);
+            } else {
+                $("#section10 .container").css("left", 0);
+            }
+        });
+    </script>
+</body>
+
+</html>

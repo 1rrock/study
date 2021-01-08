@@ -1,0 +1,20 @@
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    background: #fff;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(1);
+    transition: transform .3s ease-in-out, border-radius .2s ease-in-out, background .2s ease-in-out;
+}
+.cursor.active {
+    transform: scale(20);
+    mix-blend-mode: exclusion;
+}
+.cursor.h1over {
+    transform: scale(5) rotate(180deg);
+    border-radius: 0;
+}

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('Avenir-Roman.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+     font-family: 'Anurati-Regular';
+     src: url('Anurati-Regular.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'HeirofLightRegular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightRegular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: 'HeirofLightBold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Taviraj', serif; */

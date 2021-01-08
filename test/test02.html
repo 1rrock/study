@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 구현 test02</title>
+    <style>
+        /* font */
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+
+        /* reset */
+        * {
+            margin : 0;
+            padding: 0;
+        }
+
+        /* layout */
+        #wrap {
+            width: 100%;
+            font-size: 72px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: S-CoreDream-8Heavy;
+            text-align: center;
+        }
+        #header_wrap {
+            width: 100%;
+            height: 150px;
+            background-color: #ff9e80;
+        }
+        #banner_wrap {
+            width: 100%;
+            height: 450px;
+            background-color: #ff6e40;
+        }
+        #contents_wrap {
+            width: 100%;
+            height: 850px;
+            background-color: #ff3d00;
+        }
+        #footer_wrap {
+            width: 100%;
+            height: 150px;
+            background-color: #dd2c00;
+        }
+
+        .header {
+            width: 1200px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: #ffccbc;
+            line-height: 150px;
+        }
+        .banner {
+            width: 1200px;
+            height: 450px;
+            margin: 0 auto;
+            background-color: #ff9e80;
+            line-height: 450px;
+        }
+        .contents {
+            width: 1200px;
+            height: 850px;
+            margin: 0 auto;
+            background-color: #ff6e40;
+            line-height: 850px;
+        }
+        .footer {
+            width: 1200px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: #ff3d00;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="header">header</div>
+        </div>
+        <!-- //header -->
+        
+        <div id="banner_wrap">
+            <div class="banner">banner</div>
+        </div>
+        <!-- //banner -->
+
+        <div id="contents_wrap">
+            <div class="contents">contents</div>
+        </div>
+        <!-- //contents -->
+
+        <div id="footer_wrap">
+            <div class="footer">footer</div>
+        </div>
+        <!-- //footer -->
+
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

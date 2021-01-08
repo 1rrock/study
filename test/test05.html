@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        body,div,h1,h2,h3,h4,h5,h6,p{margin: 0; padding: 0;}
+
+        /* IR효과 */
+        .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+
+        /* 레이아웃 */
+        #header_wrap {height: 150px; background-color: #333;}
+        #banner_wrap {height: 600px; background-color: #555;}
+        #content_1 {height: 650px; background-color: #666;}
+        #content_2 {height: 596px; background-color: #777;}
+        #content_3 {height: 660px; background-color: #888;}
+        #content_4 {height: 560px; background-color: #999;}
+        #content_5 {height: 580px; background-color: #9d9d9d;}
+        #content_6 {height: 200px; background-color: #ddd;}
+        #footer_wrap {height: 250px; background-color: #3d3d3d;}
+
+        /* 컨테이너 */
+        .container {margin: 0 auto; width: 1200px; height: inherit; background: rgba(255,255,255,0.3)}
+
+        /* 게시판 */
+        #content_6 .container {overflow: hidden;}
+        .col1 {width: 550px; height: inherit; float: left; padding: 50px 0 0 50px; position: relative; border-right: 1px solid #ddd;}
+        .col1 h3 {margin-bottom:  20px;}
+        .col1 p {margin-bottom:  5px;}
+        .col1 a.ico_img {
+            position: absolute; right: 20px; top: 45px;
+            background-image: url(../webstandard/img/icon.png);
+            width: 17px; height: 17px;
+            background-position: -150px -90px;
+        }
+        .col1 a.ico_img:hover {background-position: -167px -90px;}
+        .col1 span {font-size: 12px;}
+
+        .col2 {width: 540px; height: inherit; float: left; padding: 50px 0 0 50px; position: relative;}
+        .col2 h3 {margin-bottom:  20px;}
+        .col2 p {margin-bottom:  5px;}
+        .col2 a.ico_img {
+            position: absolute; right: 20px; top: 45px;
+            background-image: url(../webstandard/img/icon.png);
+            width: 17px; height: 17px;
+            background-position: -150px -90px;
+        }
+        .col2 a.ico_img:hover {background-position: -167px -90px;}
+        .col2 span {font-size: 12px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="container"></div>
+        </div>
+        <div id="banner_wrap">
+            <div class="container"></div>
+        </div>
+        <div id="contents_wrap">
+            <div id="content_1">
+                <div class="container"></div>
+            </div>
+            <div id="content_2">
+                <div class="container"></div>
+            </div>
+            <div id="content_3">
+                <div class="container"></div>
+            </div>
+            <div id="content_4">
+                <div class="container"></div>
+            </div>
+            <div id="content_5">
+                <div class="container"></div>
+            </div>
+            <div id="content_6">
+                <div class="container">
+                    <div class="col1">
+                        <h3>공지사항</h3>
+                        <a href="#" class="ico_img ir_pm">더보기</a>
+                        <p>포인트몰 개인정보 처리방침 변경안내</p>
+                        <span>2020.09.21</span>
+                    </div>
+                    <div class="col2">
+                        <h3>당첨자 발표</h3>
+                        <a href="#" class="ico_img ir_pm">더보기</a>
+                        <p>메가박스 영화예매권 제공 이벤트</p>
+                        <span>2020.10.07</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer_wrap">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>

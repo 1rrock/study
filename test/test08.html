@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test08.html</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .container {width: 1200px; margin: 0 auto;}
+        header {height: 100px; background: #efefef;}
+        aside {height: 300px; background: #e3e3e3;}
+        section {height: 400px; background: #bbbaba; padding-top: 50px;}
+        footer {height: 100px; background: #6d6d6d;}
+        
+        section > div {width: 90%; height: 90%; margin: 0 auto;}
+        section > div > article {
+            width: 14%; height: 150px; margin: 1% 3%; 
+            float: left; background: gray; border-radius: 15%;
+        }
+        @media (max-width: 1210px){
+            .container {width: 100%;}
+            section > div > article {width: 19%;}
+            section > div > article:nth-child(5n) {display: none;}
+        }
+        @media (max-width: 900px){
+            section {height: 550px;}
+            section > div > article {width: 26.3333%;}
+            section > div > article:nth-child(5) {display: block;}
+        }
+        @media (max-width: 480px){
+            section {height: 1000px;}
+            section > div > article {width: 43%; margin: 5% 3%;}
+            section > div > article:nth-child(5n) {display: block;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <header></header>
+            <aside></aside>
+            <section>
+                <div>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </div>
+            </section>
+            <footer></footer>
+        </main>
+    </div>
+</body>
+</html>
