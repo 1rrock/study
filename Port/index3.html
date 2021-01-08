@@ -38,23 +38,36 @@
                     <li class="list_05"><a href="#" data-text="CONTACT">CONTACT</a></li>
                 </ul>
             </div>
-            <div class="aboutme">
-                <div class="about_profile"><span class="profile_line"></span></div>
-                <div class="about_text">
-                    <h2 class="about_title">ABOUTME</h2>
-                    <p class="about_subTitle">/*abo-ut me*/</p>
-                    <p class="about_desc">
-                        스펀지 같은 사람이 되겠습니다. 학원에서 배우고  <br>
-                        회사에 가게 되도 저는 아직 미숙하고 모자라겠지만  <br>
-                        항상 배우는 자세로 스펀지가 물을 흡수하듯이 빠르게  <br>
-                        배우고 실력을 향상 시키겠습니다. 쉽지 않은 일이지만  <br>
-                        그렇게 되도록 노력하고 발전하겠습니다. 그리고 실력을  <br>
-                        키워 프론트 앤드 개발자가 되어 기업성장에 도움이 되도록  <br>
+            <div class="cover" id="cover">
+                <div class="cover_wrap"></div>
+                <div class="profile_desc">
+                    <p class="profile_text1">ABOUT ME</p>
+                    <p class="profile_text2">/*abo-ut me*/</p>
+                    <p class="profile_text3">
+                        스펀지 같은 사람이 되겠습니다. 학원에서 배우고 <br>
+                        회사에 가게 되도 저는 아직 미숙하고 모자라겠지만 <br>
+                        항상 배우는 자세로 스펀지가 물을 흡수하듯이 빠르게 <br>
+                        배우고 실력을 향상 시키겠습니다. 쉽지 않은 일이지만 <br>
+                        그렇게 되도록 노력하고 발전하겠습니다. 그리고 실력을 <br>
+                        키워 프론트 앤드 개발자가 되어 기업성장에 도움이 되도록 <br>
                         열심히 하겠습니다.
                     </p>
                 </div>
-            
             </div>
+            <svg id="svg-mask">
+                <defs>
+                    <filter id="svg-mask--blur" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+                    </filter>
+                    <mask id="svg-mask--mask">
+                        <rect class="svg-mask--rect" fill="white" />
+                        <circle class="svg-mask--circle" cx="100" cy="100" r="30" fill="black"
+                            filter="url(#svg-mask--blur)" />
+                    </mask>
+                </defs>
+                <rect class="svg-mask--rect" mask="url(#svg-mask--mask)" />
+            </svg>
+            <a href="#" class="about_next_btn"><div class="about_next"></div></a>
         </div>
         <!-- //section1 -->
     </div>
@@ -66,7 +79,62 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./assets/js/efeect.js"></script>
     <script>
+        class MaskSVG {
+            constructor(obj) {
+                this.el = document.body.querySelector('#svg-mask');
+                this.rect = document.body.querySelectorAll('.svg-mask--rect');
+                this.circle = document.body.querySelectorAll('.svg-mask--circle');
+                this.clicked = false;
+                this.init();
+            }
+            init() {
+                this.handleResize();
+                this.binds();
+                this.events();
+            }
+            binds() {
+                this.handleResize = this.handleResize.bind(this);
+                this.handleMouse = this.handleMouse.bind(this);
+                this.handleClick = this.handleClick.bind(this);
+            }
+            events() {
+                window.addEventListener('resize', this.handleResize);
+                window.addEventListener('mousemove', this.handleMouse);
+                window.addEventListener('touchmove', this.handleMouse);
+                window.addEventListener('click', this.handleClick);
+            }
 
+            handleMouse(e) {
+                gsap.to(this.circle, {
+                    duration: 0.1,
+                    cx: e.clientX || e.touches[0].clientX,
+                    cy: e.clientY || e.touches[0].clientY,
+                    ease: 'power2.out'
+                });
+            }
+
+            handleResize() {
+                this.minRadius = window.innerWidth * 0.1;
+                this.maxRadius = window.innerWidth * 1.1;
+                gsap.set([this.el, this.rect], {
+                    width: `${window.innerWidth}px`,
+                    height: `${window.innerHeight}px`
+                });
+                gsap.set(this.circle, {
+                    r: `${this.minRadius}px`
+                });
+            }
+
+            handleClick() {
+                this.clicked = !this.clicked;
+                gsap.to(this.circle, {
+                    duration: 1,
+                    r: this.clicked ? this.maxRadius : this.minRadius,
+                    ease: 'power3.inOut'
+                });
+            }
+        }
+        new MaskSVG();
         setTimeout(function(){
             let tl = gsap.timeline();
             tl.to(".logo", {duration: 1, scale:1, opacity:1, ease: "power4.out"});
@@ -88,9 +156,14 @@
             tl.to(".list_03", {duration: 0.3, scale:0, opacity: 0, scale: 0, ease: "power4.out"});
             tl.to(".list_04", {duration: 0.3, scale:0, opacity: 0, scale: 0, ease: "power4.out"});
             tl.to(".list_05", {duration: 0.3, scale:0, opacity: 0, scale: 0, ease: "power4.out"});
+            tl.to("#svg-mask", {duration: .3, display:"none", scale:0, opacity:0, ease: "power4.out"}, "-=1");
+            tl.to(".cover_wrap", {duration: .3, display:"none", scale:0, opacity:0, ease: "power4.out"}, "-=1");
+            tl.to(".text2", {duration: .5, opacity:0}, "-=1");
+            tl.to(".list_01", {duration: 1, y:"0", fontSize:"3vw", opacity:0,fontFamily:"anurati", ease: "power4.out"});
             // 모든 섹션 삭제
             
             tl.to(".cont_list", {duration: 0.1, display: "none"});
+            tl.to(".text1", {duration: .5, opacity:1});
             tl.to(".title", {duration: 1, opacity: 1, scale: 1, ease: "power4.out"});
         })
 
@@ -116,9 +189,10 @@
             tl.to(".list_01", {duration: 1, y:"-160px", fontSize:"20px", opacity:0,fontFamily:"Abel", ease: "power4.out"});
             tl.to(".text1", {duration: .5, opacity:0}, "-=1");
             tl.to(".text2", {duration: .5, opacity:1}, "-=1");
-            tl.to(".about_profile", {duration: .5, width: "40vw", height: "40vw",opacity:1});
-            tl.to(".profile_line", {duration: .5, width: "4vw",opacity:1});
-
+            tl.to(".cover_wrap", {duration: .3, display:"block", scale:1, opacity:0.2, ease: "power4.out"}, "-=1");
+            tl.to(".profile_desc", {duration: .3, display:"block", opacity:1, ease: "power4.out"}, "-=1");
+            tl.to("#svg-mask", {duration: .3, display:"block", scale:1, opacity:0.5, ease: "power4.out"}, "-=1");
+            tl.to(".about_next_btn", {duration: .3, display:"block", opacity:1, ease: "power4.out"}, "-=1");
         });
     </script>
 </body>

@@ -37,6 +37,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(5);
+    z-index: 1000;
 }
 
 @keyframes pulsate {
@@ -64,6 +65,7 @@ body {
     text-transform: uppercase;
     font-family: 'Abel';
     opacity: 0;
+    z-index: 1000;
 }
 .text2 {
     top: 180px;
@@ -347,52 +349,81 @@ body {
     100% {clip: rect(29px, 9999px, 16px, 0);}
 }
 
+/* about me */
 
-/* aboutme */
-.about_text {
+
+.cover_wrap {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+    background: url(../img/profile.png) no-repeat center center;
+    background-size: cover;
+    background-blend-mode: difference;
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+}
+
+#svg-mask {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+}
+.profile_desc {
     position: absolute;
-    left: 70vw;
-    top: 52vh;
-    transform: translate(-50%, -50%);
-    color: #fff;
-}
-.about_text .about_title {
-    font-size: 1.5vw;
-    opacity: 0;
-}
-.about_text .about_subTitle {
-    font-size: 0.7vw;
-    font-family: 'avenir';
-    margin-bottom: 5px;
-    opacity: 0;
-}
-.about_text .about_desc {
-    font-size: 0.7vw;
-    font-family: 'HeirofLightRegular';
-    opacity: 0;
-}
-.aboutme .about_profile {
-    position: absolute;
-    left: 35vw;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 0vw;
-    height: 0vw;
-    border-radius: 50%;
-    background: url(../img/profile1.png) center center;
-    background-size: contain;
+    color: #fff;
     opacity: 0;
+    display: none;
 }
-.aboutme .about_profile .profile_line {
-    width: 0vw;
-    height: 1px;
-    background: #fff;
-    position: absolute;
-    right: -10%;
-    top: 45%;
-    transform: translateY(-50%) rotate(180deg);
+.profile_text1 {
+    font-size: 1.5vw;
+    font-family: 'avenir';
+}
+.profile_text2 {
+    font-size: 1vw;
+    font-family: 'avenir';
+}
+.profile_text3 {
+    font-size: 1vw;
+    font-family: 'HeirofLightRegular';
+}
+.about_next_btn {
     opacity: 0;
-} 
+    display: none;
+    z-index: 100;
+    width: 1vw;
+    height: 1vw;
+}
+.about_next {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+.about_next::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 1vw;
+    height: 1vw;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
 
 
 
@@ -403,6 +434,11 @@ body {
 
 
 /* 미디어쿼리 */
+@media (max-width: 1200px){
+    .aboutme .about_profile .profile_line{
+        left: 95%;
+    }
+}
 @media (max-width: 1030px) {
     .title a .title_desc {
         font-size: 4vw;
