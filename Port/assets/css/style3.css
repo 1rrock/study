@@ -357,7 +357,7 @@ body {
     z-index: 1;
     height: 100vh;
     overflow: hidden;
-    background: url(../img/profile.png) no-repeat center center;
+    background: url(../img/profile1.png) no-repeat center center;
     background-size: cover;
     background-blend-mode: difference;
     opacity: 0;
@@ -383,9 +383,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
-    opacity: 0;
-    display: none;
+    color: #000;
 }
 .profile_text1 {
     font-size: 1.5vw;
@@ -398,31 +396,6 @@ body {
 .profile_text3 {
     font-size: 1vw;
     font-family: 'HeirofLightRegular';
-}
-.about_next_btn {
-    opacity: 0;
-    display: none;
-    z-index: 100;
-    width: 1vw;
-    height: 1vw;
-}
-.about_next {
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-}
-.about_next::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 1vw;
-    height: 1vw;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
 }
 
 

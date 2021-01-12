@@ -39,19 +39,20 @@
                 </ul>
             </div>
             <div class="cover" id="cover">
-                <div class="cover_wrap"></div>
-                <div class="profile_desc">
-                    <p class="profile_text1">ABOUT ME</p>
-                    <p class="profile_text2">/*abo-ut me*/</p>
-                    <p class="profile_text3">
-                        스펀지 같은 사람이 되겠습니다. 학원에서 배우고 <br>
-                        회사에 가게 되도 저는 아직 미숙하고 모자라겠지만 <br>
-                        항상 배우는 자세로 스펀지가 물을 흡수하듯이 빠르게 <br>
-                        배우고 실력을 향상 시키겠습니다. 쉽지 않은 일이지만 <br>
-                        그렇게 되도록 노력하고 발전하겠습니다. 그리고 실력을 <br>
-                        키워 프론트 앤드 개발자가 되어 기업성장에 도움이 되도록 <br>
-                        열심히 하겠습니다.
-                    </p>
+                <div class="cover_wrap">
+                    <div class="profile_desc">
+                        <p class="profile_text1">ABOUT ME</p>
+                        <p class="profile_text2">/*abo-ut me*/</p>
+                        <p class="profile_text3">
+                            스펀지 같은 사람이 되겠습니다. 학원에서 배우고 <br>
+                            회사에 가게 되도 저는 아직 미숙하고 모자라겠지만 <br>
+                            항상 배우는 자세로 스펀지가 물을 흡수하듯이 빠르게 <br>
+                            배우고 실력을 향상 시키겠습니다. 쉽지 않은 일이지만 <br>
+                            그렇게 되도록 노력하고 발전하겠습니다. 그리고 실력을 <br>
+                            키워 프론트 앤드 개발자가 되어 기업성장에 도움이 되도록 <br>
+                            열심히 하겠습니다.
+                        </p>
+                    </div>
                 </div>
             </div>
             <svg id="svg-mask">
@@ -67,7 +68,6 @@
                 </defs>
                 <rect class="svg-mask--rect" mask="url(#svg-mask--mask)" />
             </svg>
-            <a href="#" class="about_next_btn"><div class="about_next"></div></a>
         </div>
         <!-- //section1 -->
     </div>
@@ -189,10 +189,8 @@
             tl.to(".list_01", {duration: 1, y:"-160px", fontSize:"20px", opacity:0,fontFamily:"Abel", ease: "power4.out"});
             tl.to(".text1", {duration: .5, opacity:0}, "-=1");
             tl.to(".text2", {duration: .5, opacity:1}, "-=1");
-            tl.to(".cover_wrap", {duration: .3, display:"block", scale:1, opacity:0.2, ease: "power4.out"}, "-=1");
-            tl.to(".profile_desc", {duration: .3, display:"block", opacity:1, ease: "power4.out"}, "-=1");
-            tl.to("#svg-mask", {duration: .3, display:"block", scale:1, opacity:0.5, ease: "power4.out"}, "-=1");
-            tl.to(".about_next_btn", {duration: .3, display:"block", opacity:1, ease: "power4.out"}, "-=1");
+            tl.to(".cover_wrap", {duration: .3, display:"block", scale:1, opacity:0.5, ease: "power4.out"}, "svg+=1");
+            tl.to("#svg-mask", {duration: .3, display:"block", scale:1, opacity:0.5, ease: "power4.out"}, "svg+=1");
         });
     </script>
 </body>
