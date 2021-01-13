@@ -153,34 +153,36 @@
                 <div class="site-title ST02"><h2>responsive <b>SITE</b></h2></div>
                 <div class="site-left_top SLT02">
                     <span class="top_conner"></span><span class="bottom_conner"></span>
-                    <h3 class="source">Layout Source</h3>
+                    <h3 class="source">MediaQuery Source</h3>
 <pre class="code">
-    &lt;div id="wrap"&gt;
-        &lt;div id="header"&gt;&lt;/div&gt;
-        &lt;div id="contents"&gt;&lt;/div&gt;
-        &lt;div id="footer"&gt;&lt;/div&gt;
-    &lt;/div&gt;
+        @media (max-width: 1220px){}
+        @media (max-width: 1024px){}
+        @media (max-width: 960px){}
+        @media (max-width: 768px){}
+        @media (max-width: 600px){}
+        @media (max-width: 320px){}
 </pre>
                 </div>
                 <div class="site-left_bottom SLB02">
                     <span class="top_conner"></span><span class="bottom_conner"></span>
-                    <h3 class="source">IR Effect Source</h3>
+                    <h3 class="source">Layout Source</h3>
 <pre class="code">
-    .ir_pm {
-        display: block;
-        overflow: hidden;
-        font-size: 0;
-        line-height: 0;
-        text-indent: -9999px;
-    }
-    .ir_so {
-        overflow: hidden;
-        position: absolute;
-        width: 0;
-        height: 0;
-        line-height: 0;
-        text-indent: -9999px;
-    }
+    &lt;header&gt;
+        &lt;h1&gt;반응형 사이트&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+        &lt;h2&gt;반응형 사이트 전체메뉴&lt;/h2&gt;
+    &lt;/nav&gt;
+    &lt;article&gt;
+        &lt;h2&gt;반응형 사이트 서브 타이틀&lt;/h2&gt;
+    &lt;/article&gt;
+    &lt;main&gt;
+        &lt;section&gt;
+    컨텐츠&lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;h2&gt;반응형 사이트 푸터&lt;/h2&gt;
+    &lt;/footer&gt;
 </pre>
                 </div>
                 <div class="site-middle SM02">
@@ -198,19 +200,10 @@
 
     // 이미지 슬라이드
     $('.slider').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        arrow: true,
-        slidesToShow: 1,
-        centerMode: true,
-        variableWidth: true,
-        dots: true
-    });
-
-    $(".tit a.btn").click(function(event){
-        event.preventDefault();   
-        $(this).toggleClass("on");
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        arrows: true
     });
 </pre>
                 </div>
@@ -354,7 +347,6 @@
     });
 </pre>
                 </div>
-                <a class="down down04" aria-hidden="true" rel="noopner" href="#"></a>
             </div>
             <!-- //react-->
 
@@ -488,7 +480,6 @@
             tl.to(".SLB03", {duration: .1, left: "0%", opacity: 0, ease: "power4.out"}, "site-remove");
             tl.to(".megabox", {duration: .001, display: "none"});
 
-            tl.to(".down04", {duration: .1, opacity: 0, display: "none", ease: "power4.out"});
             tl.to(".screen_react", {duration: 0.1, scaleY: 0, opacity: 0, ease: "power4.out"});
             tl.to(".SMR04", {duration: .1, display: "none", bottom: "0%", opacity: 0, ease: "power4.out"}, "btn-remove");
             tl.to(".SML04", {duration: .1, display: "none", bottom: "0%", opacity: 0, ease: "power4.out"}, "btn-remove");
@@ -635,22 +626,6 @@
             tl.to(".SML04", {duration: .5, display: "flex", bottom: "7%", opacity: 1, ease: "power4.out"}, "btn");
             tl.to(".SMR04", {duration: .5, display: "flex", bottom: "7%", opacity: 1, ease: "power4.out"}, "btn");
             tl.to(".screen_react", {duration: 0.5, scaleY: 1, opacity: 0.7, ease: "power4.out"}, "-=.3");
-            tl.to(".down04", {duration: 1, opacity: 1, display: "block", ease: "power4.out"});
-        });
-
-        // down04 클릭시 리액트 -> 스크립트
-        document.querySelector(".down04").addEventListener("click",()=>{
-            let tl = gsap.timeline();
-            tl.to(".down04", {duration: .1, opacity: 0, display: "none", ease: "power4.out"}, "+=.5");
-            tl.to(".screen_react", {duration: 0.1, scaleY: 0, opacity: 0, ease: "power4.out"}, "-=.3");
-            tl.to(".SMR04", {duration: .1, display: "none", bottom: "0%", opacity: 0, ease: "power4.out"}, "btn-remove");
-            tl.to(".SML04", {duration: .1, display: "none", bottom: "0%", opacity: 0, ease: "power4.out"}, "btn-remove");
-            tl.to(".SM04", {duration: .1, scaleX: 0, opacity: 0, ease: "power4.out"});
-            tl.to(".SR04", {duration: .1, right: "0%",opacity: 0, ease: "power4.out"}, "site-remove");
-            tl.to(".SLT04", {duration: .1, left: "0%", opacity: 0, ease: "power4.out"}, "site-remove");
-            tl.to(".SLB04", {duration: .1, left: "0%", opacity: 0, ease: "power4.out"}, "-=.3");
-            tl.to(".ST04", {duration: .1, top: "0%", opacity: 0, ease: "power4.out"}, "site-remove");
-            tl.to(".react", {duration: .001, display: "none"});
         });
     </script>
 </body>

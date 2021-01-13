@@ -487,7 +487,7 @@ body {
     z-index: 1;
     height: 100vh;
     overflow: hidden;
-    background: url(../img/profile1.png) no-repeat center center;
+    background: url(../img/profile.png) no-repeat center center;
     background-size: cover;
     background-blend-mode: difference;
     opacity: 0;
@@ -514,7 +514,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #000;
+    color: #fff;
 }
 
 .profile_text1 {
