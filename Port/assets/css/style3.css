@@ -607,10 +607,10 @@ body {
     position: absolute;
     left: 50%;
     top: 23%;
-    width: 0vw;
+    width: 50vw;
     height: 55vh;
     background: rgba(33, 33, 35, .7);
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(0%) scaleX(0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -921,10 +921,15 @@ body {
 
     .site-middle {
         width: 90vw;
+        height: 50vh;
+        transform: translateX(-50%) translateY(10%);
     }
 }
 
 @media (max-width: 670px) {
+    .logo {
+        width: 80px; height: 80px;
+    }
     .title_desc {
         font-size: 5vw;
     }
@@ -952,5 +957,11 @@ body {
 
     .cont_list .list_05 {
         width: 22vw;
+    }
+
+    .site-middle {
+        width: 90vw;
+        height: 40vh;
+        transform: translateX(-50%) translateY(30%);
     }
 }
