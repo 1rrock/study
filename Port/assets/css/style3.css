@@ -17,7 +17,7 @@ body {
     z-index: 1000;
 }
 
-/* 로고 */
+/* 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 로고 */
 .logo {
     width: 100px;
     height: 100px;
@@ -67,11 +67,15 @@ body {
     opacity: 0;
     z-index: 1000;
 }
+
 .text2 {
     top: 180px;
 }
+.text3 {
+    top: 180px;
+}
 
-/* title */
+/* title title title title title title title title title title title title title title title title title title title title title title title title title */
 .title {
     position: absolute;
     left: 50%;
@@ -122,13 +126,13 @@ body {
     transform: translateX(-300%);
 }
 
-/* 컨텐츠 리스트 */
+/* 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 컨텐츠 리스트 */
 .cont_list {
     position: absolute;
     left: 50%;
     top: 55%;
     transform: translate(-50%, -50%);
-    font-family: 'anurati';
+    font-family: 'Anurati';
     text-align: center;
     font-size: 3vw;
     line-height: 5vw;
@@ -175,9 +179,6 @@ body {
 }
 
 /* text */
-
-
-
 .list_01 a:hover:after {
     content: attr(data-text);
     position: absolute;
@@ -190,6 +191,7 @@ body {
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
 }
+
 .list_01 a:hover:before {
     content: attr(data-text);
     position: absolute;
@@ -215,6 +217,7 @@ body {
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
 }
+
 .list_02 a:hover:before {
     content: attr(data-text);
     position: absolute;
@@ -240,6 +243,7 @@ body {
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
 }
+
 .list_03 a:hover:before {
     content: attr(data-text);
     position: absolute;
@@ -265,6 +269,7 @@ body {
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
 }
+
 .list_04 a:hover:before {
     content: attr(data-text);
     position: absolute;
@@ -290,6 +295,7 @@ body {
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim 2s infinite linear alternate-reverse;
 }
+
 .list_05 a:hover:before {
     content: attr(data-text);
     position: absolute;
@@ -302,56 +308,180 @@ body {
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
+
 @keyframes noise-anim {
-    0% {clip: rect(9px, 9999px, 56px, 0);}
-    5% {clip: rect(4px, 9999px, 19px, 0);}
-    10% {clip: rect(64px, 9999px, 34px, 0);}
-    15% {clip: rect(43px, 9999px, 26px, 0);}
-    20% {clip: rect(83px, 9999px, 54px, 0);}
-    25% {clip: rect(91px, 9999px, 3px, 0);}
-    30% {clip: rect(61px, 9999px, 22px, 0);}
-    35% {clip: rect(37px, 9999px, 43px, 0);}
-    40% {clip: rect(87px, 9999px, 43px, 0);}
-    45% {clip: rect(90px, 9999px, 36px, 0);}
-    50% {clip: rect(80px, 9999px, 13px, 0);}
-    55% {clip: rect(22px, 9999px, 90px, 0);}
-    60% {clip: rect(8px, 9999px, 100px, 0);}
-    65% {clip: rect(89px, 9999px, 96px, 0);}
-    70% {clip: rect(50px, 9999px, 29px, 0);}
-    75% {clip: rect(81px, 9999px, 9px, 0);}
-    80% {clip: rect(47px, 9999px, 81px, 0);}
-    85% {clip: rect(36px, 9999px, 80px, 0);}
-    90% {clip: rect(26px, 9999px, 15px, 0);}
-    95% {clip: rect(20px, 9999px, 4px, 0);}
-    100% {clip: rect(57px, 9999px, 12px, 0);}
+    0% {
+        clip: rect(9px, 9999px, 56px, 0);
+    }
+
+    5% {
+        clip: rect(4px, 9999px, 19px, 0);
+    }
+
+    10% {
+        clip: rect(64px, 9999px, 34px, 0);
+    }
+
+    15% {
+        clip: rect(43px, 9999px, 26px, 0);
+    }
+
+    20% {
+        clip: rect(83px, 9999px, 54px, 0);
+    }
+
+    25% {
+        clip: rect(91px, 9999px, 3px, 0);
+    }
+
+    30% {
+        clip: rect(61px, 9999px, 22px, 0);
+    }
+
+    35% {
+        clip: rect(37px, 9999px, 43px, 0);
+    }
+
+    40% {
+        clip: rect(87px, 9999px, 43px, 0);
+    }
+
+    45% {
+        clip: rect(90px, 9999px, 36px, 0);
+    }
+
+    50% {
+        clip: rect(80px, 9999px, 13px, 0);
+    }
+
+    55% {
+        clip: rect(22px, 9999px, 90px, 0);
+    }
+
+    60% {
+        clip: rect(8px, 9999px, 100px, 0);
+    }
+
+    65% {
+        clip: rect(89px, 9999px, 96px, 0);
+    }
+
+    70% {
+        clip: rect(50px, 9999px, 29px, 0);
+    }
+
+    75% {
+        clip: rect(81px, 9999px, 9px, 0);
+    }
+
+    80% {
+        clip: rect(47px, 9999px, 81px, 0);
+    }
+
+    85% {
+        clip: rect(36px, 9999px, 80px, 0);
+    }
+
+    90% {
+        clip: rect(26px, 9999px, 15px, 0);
+    }
+
+    95% {
+        clip: rect(20px, 9999px, 4px, 0);
+    }
+
+    100% {
+        clip: rect(57px, 9999px, 12px, 0);
+    }
 }
+
 @keyframes noise-anim-2 {
-    0% {clip: rect(72px, 9999px, 27px, 0);}
-    5% {clip: rect(46px, 9999px, 28px, 0);}
-    10% {clip: rect(54px, 9999px, 81px, 0);}
-    15% {clip: rect(75px, 9999px, 3px, 0);}
-    20% {clip: rect(96px, 9999px, 45px, 0);}
-    25% {clip: rect(56px, 9999px, 18px, 0);}
-    30% {clip: rect(50px, 9999px, 93px, 0);}
-    35% {clip: rect(91px, 9999px, 53px, 0);}
-    40% {clip: rect(93px, 9999px, 83px, 0);}
-    45% {clip: rect(83px, 9999px, 83px, 0);}
-    50% {clip: rect(69px, 9999px, 81px, 0);}
-    55% {clip: rect(82px, 9999px, 60px, 0);}
-    60% {clip: rect(63px, 9999px, 46px, 0);}
-    65% {clip: rect(37px, 9999px, 84px, 0);}
-    70% {clip: rect(77px, 9999px, 48px, 0);}
-    75% {clip: rect(76px, 9999px, 68px, 0);}
-    80% {clip: rect(24px, 9999px, 67px, 0);}
-    85% {clip: rect(21px, 9999px, 30px, 0);}
-    90% {clip: rect(89px, 9999px, 64px, 0);}
-    95% {clip: rect(22px, 9999px, 34px, 0);}
-    100% {clip: rect(29px, 9999px, 16px, 0);}
+    0% {
+        clip: rect(72px, 9999px, 27px, 0);
+    }
+
+    5% {
+        clip: rect(46px, 9999px, 28px, 0);
+    }
+
+    10% {
+        clip: rect(54px, 9999px, 81px, 0);
+    }
+
+    15% {
+        clip: rect(75px, 9999px, 3px, 0);
+    }
+
+    20% {
+        clip: rect(96px, 9999px, 45px, 0);
+    }
+
+    25% {
+        clip: rect(56px, 9999px, 18px, 0);
+    }
+
+    30% {
+        clip: rect(50px, 9999px, 93px, 0);
+    }
+
+    35% {
+        clip: rect(91px, 9999px, 53px, 0);
+    }
+
+    40% {
+        clip: rect(93px, 9999px, 83px, 0);
+    }
+
+    45% {
+        clip: rect(83px, 9999px, 83px, 0);
+    }
+
+    50% {
+        clip: rect(69px, 9999px, 81px, 0);
+    }
+
+    55% {
+        clip: rect(82px, 9999px, 60px, 0);
+    }
+
+    60% {
+        clip: rect(63px, 9999px, 46px, 0);
+    }
+
+    65% {
+        clip: rect(37px, 9999px, 84px, 0);
+    }
+
+    70% {
+        clip: rect(77px, 9999px, 48px, 0);
+    }
+
+    75% {
+        clip: rect(76px, 9999px, 68px, 0);
+    }
+
+    80% {
+        clip: rect(24px, 9999px, 67px, 0);
+    }
+
+    85% {
+        clip: rect(21px, 9999px, 30px, 0);
+    }
+
+    90% {
+        clip: rect(89px, 9999px, 64px, 0);
+    }
+
+    95% {
+        clip: rect(22px, 9999px, 34px, 0);
+    }
+
+    100% {
+        clip: rect(29px, 9999px, 16px, 0);
+    }
 }
 
-/* about me */
-
-
+/* about me about me about me about me about me about me about me about me about me about me about me about me about me about me about me about me about me */
 .cover_wrap {
     position: relative;
     z-index: 1;
@@ -378,6 +508,7 @@ body {
     transform: scale(0);
     display: none;
 }
+
 .profile_desc {
     position: absolute;
     left: 50%;
@@ -385,19 +516,347 @@ body {
     transform: translate(-50%, -50%);
     color: #000;
 }
+
 .profile_text1 {
     font-size: 1.5vw;
     font-family: 'avenir';
 }
+
 .profile_text2 {
     font-size: 1vw;
     font-family: 'avenir';
 }
+
 .profile_text3 {
     font-size: 1vw;
     font-family: 'HeirofLightRegular';
 }
 
+/* site site site site site site site site site site site site site site site site site site site site site site site site site site site site site site site */
+.site {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.site-title {
+    position: absolute;
+    left: 4.5%;
+    top: 0%;
+    opacity: 0;
+    font-family: 'Avenir-Roman';
+    text-transform: uppercase;
+}
+
+.site-title h2 {
+    font-size: 1vw;
+    color: #fff;
+    height: 7vh;
+    line-height: 7vh;
+}
+
+.site-title b {
+    color: rgba(33, 33, 35);
+    font-weight: bold;
+}
+
+.site-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/arrow.png);
+    width: 7px;
+    height: 7px;
+}
+
+.site-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../img/arrow.png);
+    width: 7px;
+    height: 7px;
+    transform: rotate(180deg);
+}
+
+.site-left_top {
+    position: absolute;
+    left: 0%;
+    top: 23%;
+    width: 18vw;
+    height: 20vh;
+    opacity: 0;
+    background: rgba(33, 33, 35, .7);
+}
+
+
+.site-left_bottom {
+    position: absolute;
+    left: 0%;
+    top: 48%;
+    width: 18vw;
+    height: 45vh;
+    opacity: 0;
+    background: rgba(33, 33, 35, .7);
+}
+
+.site-middle {
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    width: 0vw;
+    height: 55vh;
+    background: rgba(33, 33, 35, .7);
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.site-middle_Lbtn {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: 24vw;
+    height: 10vh;
+    background: rgba(33, 33, 35, .7);
+    transform: translateX(-104%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Avenir-Roman';
+    text-transform: uppercase;
+    font-size: 0.7vw;
+    opacity: 0;
+}
+
+.site-middle_Rbtn {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: 24vw;
+    height: 10vh;
+    background: rgba(33, 33, 35, .7);
+    transform: translateX(4%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Avenir-Roman';
+    text-transform: uppercase;
+    font-size: 0.7vw;
+    opacity: 0;
+}
+
+.site-right {
+    position: absolute;
+    right: 0%;
+    top: 23%;
+    width: 18vw;
+    height: 70vh;
+    opacity: 0;
+    background: rgba(33, 33, 35, .7);
+}
+
+/* screen_site */
+
+.screen_webstandard {
+    width: 97%;
+    height: 95%;
+    background-image: url(../img/webstandard.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: center;
+}
+
+.screen_responsive {
+    width: 97%;
+    height: 95%;
+    background-image: url(../img/responsive.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: center;
+}
+
+.screen_megabox {
+    width: 97%;
+    height: 95%;
+    background-image: url(../img/megabox.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: center;
+}
+
+.screen_react {
+    width: 97%;
+    height: 95%;
+    background-image: url(../img/react.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: center;
+}
+
+.down {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border-top: solid 1px #fff;
+    border-right: solid 1px #fff;
+    transform: translateX(-50%) rotate(135deg);
+    opacity: 0;
+    display: none;
+}
+
+/* site 공통 */
+.top_conner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+.top_conner::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+
+.bottom_conner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+.bottom_conner::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+.center_conner1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+.center_conner1::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+.center_conner2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+.center_conner2::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+
+.screen_coner1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-top: solid 3px #fff;
+    border-left: solid 3px #fff;
+}
+
+.screen_coner1::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+}
+
+.screen_coner2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    border-bottom: solid 3px #fff;
+    border-left: solid 3px #fff;
+}
+
+.screen_coner2::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    border-bottom: solid 3px #fff;
+    border-right: solid 3px #fff;
+}
+
+.source {
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 0.9vw;
+    color: #fff;
+    font-family: 'Avenir-Roman';
+}
+.code {
+    font-family: 'Avenir-Roman';
+    font-size: 0.7vw;
+    color: #fff;
+    margin-left: 10%;
+    overflow: auto;
+}
 
 
 
@@ -407,11 +866,12 @@ body {
 
 
 /* 미디어쿼리 */
-@media (max-width: 1200px){
-    .aboutme .about_profile .profile_line{
+@media (max-width: 1200px) {
+    .aboutme .about_profile .profile_line {
         left: 95%;
     }
 }
+
 @media (max-width: 1030px) {
     .title a .title_desc {
         font-size: 4vw;
@@ -429,17 +889,38 @@ body {
         font-size: 4vw;
         line-height: 7vw;
     }
+
     /* cont_list width값 */
     .cont_list .list_02 {
         width: 9vw;
     }
-    
+
     .cont_list .list_03 {
         width: 15vw;
     }
-    
+
     .cont_list .list_05 {
         width: 18vw;
+    }
+
+    .site-left_bottom {
+        display: none;
+    }
+    .site-left_top {
+        display: none;
+    }
+    .site-right {
+        display: none;
+    }
+    .site-middle_Lbtn {
+        width: 43.5vw;
+    }
+    .site-middle_Rbtn {
+        width: 43.5vw;
+    }
+
+    .site-middle {
+        width: 90vw;
     }
 }
 
@@ -460,14 +941,15 @@ body {
         font-size: 5vw;
         line-height: 10vw;
     }
+
     .cont_list .list_02 {
         width: 11vw;
     }
-    
+
     .cont_list .list_03 {
         width: 17vw;
     }
-    
+
     .cont_list .list_05 {
         width: 22vw;
     }
