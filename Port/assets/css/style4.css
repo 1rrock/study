@@ -38,6 +38,7 @@ body {
     height: 50px;
     position: relative;
     transition: all 0.5s ease;
+    opacity: 0;
 }
 
 .hamNav .ham span {
@@ -382,4 +383,31 @@ body {
 @keyframes spin {
     0% {transform: translate(-50%, -50%) rotate(0deg);}
     100% {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+
+
+
+/* 미디어쿼리 */
+
+@media (max-width: 1480px) {
+    .text2 .text2_desc {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .text2 .text2_desc {
+        font-size: 30px;
+    }
+}
+@media (max-width: 880px) {
+    .text2 .text2_desc {
+        font-size: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .text2 .text2_desc {
+        font-size: 15px;
+    }
 }
