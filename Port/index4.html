@@ -1,59 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1rrock PORTFOLIO</title>
-    
+
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style4.css">
     <link rel="stylesheet" href="assets/css/star.css">
 </head>
+
 <body>
     <div id="starwrap">
         <div class="stars"></div>
     </div>
 
-    
+
     <div id="contents">
         <div id="section1">
+            <div class="glore"></div>
+            <div class="hamNav">
+                <a href="#" class="ham"><span></span></a>
+            </div>
             <div class="logo"></div>
             <div class="text">portfolio</div>
             <div class="text2">
-                <a href="#">
-                    <span class="text2_line"></span>
-                    <span class="text2_line2"></span>
-                    <span class="text2_desc">FRONT END WEB DEVELOPER</span>
-                </a>
+                <span class="text2_desc" data-text="FRONT END WEB DEVELOPER">FRONT END WEB DEVELOPER</span>
             </div>
-            <div class="bottom-frame"></div>
-            <div class="left-frame01"></div>
-            <div class="right-frame01"></div>
+            <div class="circle"></div>
+            <div class="hexagon"></div>
+            <div class="top-frame"></div>
+            <div class="bottom-frame">
+                <a href="#"><div class="button"></div></a>
+            </div>
+            <div class="left-frame01">
+                <svg width="3vw" height="27vh" viewBox="0 0 105 726" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M63.048 723H105V726H59.688C-19.896 490.543 -19.896 235.457 59.688 0H105V3H62.706C-15.6855 236.618 -15.5654 489.457 63.048 723V723Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <div class="right-frame01">
+                <svg width="3vw" height="27vh" viewBox="0 0 105 726" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M45.3101 726H0V723H41.95C120.567 489.457 120.686 236.617 42.29 3H0V0H45.3101C124.897 235.457 124.897 490.543 45.3101 726V726Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="105" height="726" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
         </div>
         <!-- //section1 -->
     </div>
-    
-    
+
+
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./assets/js/efeect.js"></script>
     <script>
+        setTimeout(function(){
+            let tl = gsap.timeline();
+            tl.to(".logo", {duration: 2, scale:1, opacity:.9, ease: "power4.out"});
+            tl.to(".text", {duration: 1, opacity:1});
 
-        // setTimeout(function(){
-        //     let tl = gsap.timeline();
-        //     tl.to(".logo", {duration: 2, scale:1, opacity:1, ease: "power4.out"});
-        //     tl.to(".text", {duration: 1, opacity:1});
+            tl.to(".logo", {duration: .8, top: "80px", scale: .8, ease: "power4.out"}, "someLabel");
+            tl.to(".text", {duration: .8, top: "80px", ease: "power4.out"}, "someLabel");
 
-        //     tl.to(".logo", {duration: .8, top: "100px", scale: .8, ease: "power4.out"}, "someLabel");
-        //     tl.to(".text", {duration: .8, top: "180px", ease: "power4.out"}, "someLabel");
-
-        //     tl.to(".text2_desc", {duration: 1, display: "block", scale: 1, opacity:1, ease: "power4.out"});
-        //     tl.to(".text2_line", {duration: .3, opacity:1, left: "-56.2px", width: "5vw" , ease: "power4.out"}, "title_line-=.3");
-        //     tl.to(".text2_line2", {duration: .3, opacity:1, right: "-56.2px", width: "7vw" , ease: "power4.out"}, "title_line-=.3");
-        // },2000);
+            tl.to(".left-frame01", {duration: 2, left: "20%", opacity: .5, ease: "circ.out"}, "side-frame");
+            tl.to(".right-frame01", {duration: 2, right: "20%", opacity: .5, ease: "circ.out"}, "side-frame");
+            tl.to(".top-frame", {duration: 2, top: "10%", opacity: .5, ease: "circ.out"}, "TB-frame-=1");
+            tl.to(".bottom-frame", {duration: 2, bottom: "0", opacity: .9, ease: "circ.out"}, "TB-frame-=1");
+            tl.to(".circle", {duration: 1, opacity: 1, ease: "circ.out"}, "main-center");
+            tl.to(".hexagon", {duration: 1, opacity: 1, ease: "circ.out"}, "main-center");
+            tl.to(".text2", {duration: 2, scale: 1, opacity: 1, ease: "power4.out"}, "-=.5");
+        },2000);
     </script>
 </body>
+
 </html>
