@@ -16,6 +16,118 @@ body {
     z-index: 1000;
 }
 
+/* 메뉴 */
+.menu {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transition: all 10s ease;
+}
+.menu-left-frame01 {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.menu-right-frame01 {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0;
+}
+
+/* .remove {
+    opacity: 0;
+    display: none;
+} */
+/* 
+.show {
+    opacity: 1;
+    display: block;
+} */
+
+.menu-circle {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center;
+    width: 38vw; height: 38vw;
+    border: 0.5px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    animation: spin 20s linear reverse infinite;
+    opacity: 0;
+}
+.menu-circle::before {
+    position: absolute;
+    content: '';
+    top: -6px; left: 50%;
+    background: #fff;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.menu-circle::after {
+    position: absolute;
+    content: '';
+    bottom: -6px; left: 50%;
+    background: #fff;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.menu-hexagon {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) rotate(0   deg);
+    transform-origin: center;
+    width: 40vw; height: 40vw;
+    background: url(../img/hexagon.png) center center no-repeat;
+    background-size: cover;
+    animation: spin 30s linear infinite;
+    opacity: 0;
+}
+
+@keyframes spin {
+    0% {transform: translate(-50%, -50%) rotate(0deg);}
+    100% {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+.menu-list {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    z-index: 1000;
+    opacity: 0;
+}
+.menu-list ul {
+    counter-reset: count;
+}
+.menu-list li {
+    counter-increment: count;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Anurati';
+    margin: 50px;
+    letter-spacing: 6px;
+}
+.menu-list li::before {
+    position: absolute;
+    left: 0;
+    content: "0" counter(count);
+    color: rgba(255,255,255,0.5);
+    font-family: 'Abel';
+    transform: translate(450%, -100%);
+    font-size: 20px;
+}
+
+/* 레이아웃 */
+.layout {
+    opacity: 1;
+}
 .glore {
     position: absolute;
     right: 0;
@@ -295,6 +407,8 @@ body {
     opacity: 0;
 }
 
+
+
 .top-frame {
     width: 60vw;
     height: 8vh;
@@ -327,6 +441,13 @@ body {
     background-size: contain;
     width: 100px; height: 100px;
     transform: translate(-50%, -50%);
+}
+.main_btn {
+    opacity: 1;
+}
+.about_btn {
+    opacity: 0;
+    display: none;
 }
 .button::before {
     content: '';
@@ -383,6 +504,60 @@ body {
 @keyframes spin {
     0% {transform: translate(-50%, -50%) rotate(0deg);}
     100% {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+
+/* about */ /* about */ /* about */ /* about */ /* about */ /* about */ /* about */ /* about */ /* about */ /* about */ /* about */ /* about */ 
+.about {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw; height: 40vh;
+}
+.profile {
+    position: absolute;
+    width: 170px; height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 50px; top: 0;
+    opacity: 0;
+}
+.profile img {
+    width: 100%;
+    opacity: .7;
+    margin: 0 auto;
+}
+.profile_title {
+    margin-left: 270px;
+    opacity: 0;
+}
+.profile_title h2 {
+    font-size: 15px;
+    font-family: 'Abel';
+    font-weight: bold;
+    color: #0ff;
+}
+.profile_title h3 {
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: 'anurati';
+    color: #fff;
+    line-height: 60px;
+    letter-spacing: 10px;
+}
+.profile_desc {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    opacity: 0;
 }
 
 
