@@ -48,11 +48,11 @@
                 <div class="menu-hexagon"></div>
                 <div class="menu-list">
                     <ul>
-                        <li><a href="#" class="home">HOME</a></li>
-                        <li><a href="#" class="aboutMe">ABOUT</a></li>
-                        <li><a href="#" class="site">SITE</a></li>
-                        <li><a href="#" class="ani">ANIMATION</a></li>
-                        <li><a href="#" class="contact">CONTACT</a></li>
+                        <li><a target="blank" href="#" class="home">HOME</a></li>
+                        <li><a target="blank" href="#" class="aboutMe">ABOUT</a></li>
+                        <li><a target="blank" href="#" class="site">SITE</a></li>
+                        <li><a target="blank" href="#" class="ani">ANIMATION</a></li>
+                        <li><a target="blank" href="#" class="contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -73,6 +73,9 @@
                     <a href="#" class="btn2">
                         <div class="button about_btn"></div>
                     </a>
+                    <a href="#" class="btn3">
+                        <div class="button site_down_btn"></div>
+                    </a>
                 </div>
                 <div class="left-frame01">
                     <svg width="3vw" height="30vh" viewBox="0 0 105 726" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,6 +83,7 @@
                             d="M63.048 723H105V726H59.688C-19.896 490.543 -19.896 235.457 59.688 0H105V3H62.706C-15.6855 236.618 -15.5654 489.457 63.048 723V723Z"
                             fill="white" />
                     </svg>
+                    <span class="site_left_btn left_webstandard_btn"><a href="#">webstandard</a></span>
                 </div>
                 <div class="right-frame01">
                     <svg width="3vw" height="30vh" viewBox="0 0 105 726" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,6 +98,7 @@
                             </clipPath>
                         </defs>
                     </svg>
+                    <span class="site_right_btn right_responsive_btn"><a href="#">responsive</a></span>
                 </div>
             </div>
             
@@ -129,8 +134,32 @@
                     </p>
                 </div>
             </div>
-
             <!-- //about -->
+
+            <!-- webstandard_wrap -->
+            <div class="site_wrap webstandard_wrap">
+                <div class="site_frame">
+                    <div class="webstandard"></div>
+                </div>
+                <div class="site_btn_wrap">
+                    <a target="blank" href="http://zxcv1685.dothome.co.kr/webstandard/index.html" class="site_btn"><div>site</div></a>
+                    <a target="blank" href="https://www.figma.com/proto/WH4Iufcwj676vZRXbZIPo3/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=4%3A0&viewport=86%2C171%2C0.06527312099933624&scaling=min-zoom" class="figma_btn"><div>figma</div></a>
+                </div>
+            </div>
+            <!-- //webstandard_wrap -->
+
+            <!-- responsive_wrap -->
+            <div class="site_wrap responsive_wrap">
+                <div class="site_frame">
+                    <div class="responsive"></div>
+                </div>
+                <div class="site_btn_wrap">
+                    <a target="blank" href="http://zxcv1685.dothome.co.kr/responsive/index.html" class="site_btn"><div>site</div></a>
+                    <a target="blank" href="https://www.figma.com/proto/u45DZXxYnKKlLtZ6wENExo/%EC%9B%B9%ED%91%9C%EC%A4%80-%EB%B0%98%EC%9D%91%ED%98%95-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=122%3A2&viewport=176%2C339%2C0.061064302921295166&scaling=min-zoom" class="figma_btn"><div>figma</div></a>
+                </div>
+            </div>
+            <!-- //responsive_wrap -->
+
         </div>
         <!-- //section1 -->
     </div>
@@ -160,7 +189,7 @@
             tl.to(".text2", {duration: 2, scale: 1, opacity: 1, ease: "power4.out"}, "-=.5");
         },2000);
 
-        // 아래버튼 클릭시 about
+        // 아래버튼 클릭시 main -> about
         document.querySelector(".btn1").addEventListener("click",()=>{
             let tl = gsap.timeline();
             tl.to(".main_btn", {duration: 0, opacity: 0, ease: "power4.out"}, "main-center");
@@ -174,6 +203,40 @@
             tl.to(".profile_title", {duration: 2, opacity: 1, ease: "circ.out"}, "about-profile-=1");
             tl.to(".profile_desc", {duration: 2, opacity: 1, ease: "circ.out"}, "about-profile-=1");
         });
+
+        // 아래버튼 클릭시 about -> site
+        document.querySelector(".btn2").addEventListener("click",()=>{
+            let tl = gsap.timeline();
+            tl.to(".about_btn", {duration: 0, opacity: 0, display: "none", ease: "power4.out"}, "main-center");
+            tl.to(".profile", {duration: 1, opacity: 0, ease: "circ.out"}, "about-profile");
+            tl.to(".profile_title", {duration: 1, opacity: 0, ease: "circ.out"}, "about-profile");
+            tl.to(".profile_desc", {duration: 1, opacity: 0, ease: "circ.out"}, "about-profile");
+            tl.to(".left-frame01", {duration: 2, left: "23%", ease: "circ.out"}, "about-frame");
+            tl.to(".right-frame01", {duration: 1, right: "23%", ease: "circ.out"}, "about-frame");
+            tl.to(".right_responsive_btn", {duration: 2, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".webstandard_wrap", {duration: 1.5, opacity: 1, display: "block", scale: 1, ease: "circ.out"}, "-=.5");
+        });
+
+        // responsive 클릭시 webstandard -> responsive
+        document.querySelector(".right_responsive_btn").addEventListener("click",()=>{
+            let tl = gsap.timeline();
+            tl.to(".right_responsive_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_webstandard_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".webstandard_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.5, ease: "circ.out"}, "-=.5");
+            tl.to(".responsive_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
+            tl.to(".site_down_btn", {duration: 1, opacity: 1, display: "block", ease: "power4.out"}, "about-frame");
+        });
+
+        // webstandard 클릭시 responsive -> webstandard
+        document.querySelector(".left_webstandard_btn").addEventListener("click",()=>{
+            let tl = gsap.timeline();
+            tl.to(".left_webstandard_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".right_responsive_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".responsive_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.5, ease: "circ.out"}, "-=.5");
+            tl.to(".webstandard_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
+        });
+
+
 
 
         // 메뉴클릭
@@ -235,8 +298,6 @@
             tl.to(".menu-hexagon", {duration: 1, opacity: 0, ease: "circ.out"}, "menu-main-center-=.5");
             tl.to(".menu-left-frame01", {duration: 1, left: "0%", opacity: 0, ease: "circ.out"}, "menu-side-frame-=.5");
             tl.to(".menu-right-frame01", {duration: 1, right: "0%", opacity: 0, ease: "circ.out"}, "menu-side-frame-=.5");
-
-            
         });
     </script>
 </body>

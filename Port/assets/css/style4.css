@@ -82,7 +82,7 @@ body {
 .menu-hexagon {
     position: absolute;
     left: 50%; top: 50%;
-    transform: translate(-50%, -50%) rotate(0   deg);
+    transform: translate(-50%, -50%) rotate(0deg);
     transform-origin: center;
     width: 40vw; height: 40vw;
     background: url(../img/hexagon.png) center center no-repeat;
@@ -215,16 +215,16 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(.5);
-    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
     font-family: 'Anurati';
     font-style: italic;
+    opacity: 0;
 }
 
 .text2 .text2_desc {
     position: relative;
     color: #fff;
-    font-size: 50px;
+    font-size: 2.6vw;
     text-transform: uppercase;
     margin: 0 auto;
     text-align: center;
@@ -393,18 +393,39 @@ body {
 
 .left-frame01 {
     position: absolute;
-    left: 0;
+    left: 0%;
     top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
 }
+.left-frame01 .site_left_btn {
+    position: absolute;
+    left: 80%; top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    width: 150%;
+    font-size: 1vw;
+}
 
 .right-frame01 {
     position: absolute;
-    right: 0;
+    right: 0%;
     top: 50%;
     transform: translate(50%, -50%);
     opacity: 0;
+}
+
+.right-frame01 .site_right_btn {
+    position: absolute;
+    right: 80%; top: 50%;
+    transform: translate(50%, -50%) rotate(90deg);
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    width: 150%;
+    font-size: 1vw;
 }
 
 
@@ -446,6 +467,10 @@ body {
     opacity: 1;
 }
 .about_btn {
+    opacity: 0;
+    display: none;
+}
+.site_down_btn {
     opacity: 0;
     display: none;
 }
@@ -516,7 +541,7 @@ body {
 }
 .profile {
     position: absolute;
-    width: 170px; height: 170px;
+    width: 11vw; height: 11vw;
     border-radius: 50%;
     overflow: hidden;
     left: 50px; top: 0;
@@ -528,21 +553,21 @@ body {
     margin: 0 auto;
 }
 .profile_title {
-    margin-left: 270px;
+    margin-left: 45%;
     opacity: 0;
 }
 .profile_title h2 {
-    font-size: 15px;
+    font-size: 1vw;
     font-family: 'Abel';
     font-weight: bold;
     color: #0ff;
 }
 .profile_title h3 {
-    margin-top: 20px;
-    font-size: 50px;
+    margin-top: 2%;
+    font-size: 4vw;
     font-family: 'anurati';
     color: #fff;
-    line-height: 60px;
+    line-height: 4vw;
     letter-spacing: 10px;
 }
 .profile_desc {
@@ -552,7 +577,7 @@ body {
     color: #fff;
     transform: translate(-50%, -50%);
     width: 90%;
-    font-size: 15px;
+    font-size: 1vw;
     letter-spacing: 1px;
     line-height: 25px;
     text-align: center;
@@ -560,6 +585,90 @@ body {
     opacity: 0;
 }
 
+/* site_wrap 애니메이션 */
+.webstandard_wrap {
+    opacity: 0;
+    display: none;
+}
+.responsive_wrap {
+    opacity: 0;
+    display: none;
+}
+
+/* site */
+.left_webstandard_btn {
+    opacity: 0;
+    display: none;
+}
+.right_responsive_btn {
+    opacity: 0;
+    display: none;
+}
+.site_wrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) scale(.5);
+    width: 40vw;
+    height: 60vh;
+}
+.site_wrap .site_frame {
+    margin: 0 auto;
+    width: 40vw;
+    height: 45vh;
+    background: rgba(31,205,215,.14);
+    border: 1px solid #14b7bd;
+    position: relative;
+}
+
+.site_wrap .site_frame .webstandard {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 94%;
+    height: 90%;
+    background: url(../img/webstandard.png) center top no-repeat;
+    background-size: cover;
+}
+
+.site_wrap .site_frame .responsive {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 94%;
+    height: 90%;
+    background: url(../img/responsive.png) center top no-repeat;
+    background-size: cover;
+}
+
+.site_btn_wrap {
+    margin-top: 5%;
+    display: flex;
+    text-align: center;
+    height: 10vh;
+    align-items: center;
+    font-family: 'Abel';
+    text-transform: uppercase;
+}
+.site_wrap .site_btn {
+    flex: 1 1 50%;
+    margin-right: 2%;
+    background: rgba(31,205,215,.14);
+    height: inherit;
+    font-size: 1vw;
+    border: 1px solid #14b7bd;
+    line-height: 10vh;
+    color: #fff;
+}
+
+.site_wrap .figma_btn {
+    flex: 1 1 50%; 
+    background: rgba(31,205,215,.14);
+    height: inherit;
+    font-size: 1vw;
+    border: 1px solid #14b7bd;
+    line-height: 10vh;
+    color: #fff;
+}
 
 
 
@@ -569,20 +678,125 @@ body {
     .text2 .text2_desc {
         font-size: 40px;
     }
+    .site_wrap {
+        width: 45vw;
+    }
+    .site_wrap .site_frame {
+        width: 45vw;
+    }
 }
 
 @media (max-width: 1180px) {
     .text2 .text2_desc {
         font-size: 30px;
     }
+    .site_wrap {
+        width: 50vw;
+    }
+    .site_wrap .site_frame {
+        width: 50vw;
+    }
+    .site_btn_wrap {
+        margin-top: 5%;
+        height: 9vh;
+    }
+    .site_wrap .site_btn {
+        line-height: 9vh;
+    }
+    
+    .site_wrap .figma_btn {
+        line-height: 9vh;
+    }
 }
 @media (max-width: 880px) {
     .text2 .text2_desc {
         font-size: 20px;
     }
+    .site_wrap {
+        width: 60vw;
+    }
+    .site_wrap .site_frame {
+        width: 60vw;
+    }
+    .site_btn_wrap {
+        margin-top: 5%;
+        height: 8vh;
+    }
+    .site_wrap .site_btn {
+        line-height: 8vh;
+    }
+    
+    .site_wrap .figma_btn {
+        line-height: 8vh;
+    }
 }
 @media (max-width: 600px) {
     .text2 .text2_desc {
-        font-size: 15px;
+        font-size: .5vw;
     }
+
+    .hamNav {
+        position: absolute;
+        left: 30px;
+        top: 20px;
+    }
+    .hamNav .ham {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+    
+    .hamNav .ham span {
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 20px;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+    }
+    
+    .hamNav .ham span::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -8px;
+        width: 50%;
+        height: 2px;
+        background: #fff;
+        transform-origin: left;
+    }
+    
+    .hamNav .ham span::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        width: 50%;
+        height: 2px;
+        background: #fff;
+        transform-origin: right;
+    }
+    .site_wrap {
+        top: 45%;
+        height: 20vh;
+    }
+    .site_wrap .site_frame {
+        height: 20vh;
+    }
+    .site_btn_wrap {
+        margin-top: 5%;
+        height: 5vh;
+    }
+    .site_wrap .site_btn {
+        line-height: 5vh;
+    }
+    
+    .site_wrap .figma_btn {
+        line-height: 5vh;
+    }
+    
 }
