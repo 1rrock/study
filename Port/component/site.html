@@ -152,7 +152,7 @@
             tl.to("#wrap #left-frame", {duration: 2, left: "5%", opacity: .5, ease: "circ.out"}, "side_frame");
             tl.to("#wrap #right-frame", {duration: 2, right: "5%", opacity: .5, ease: "circ.out"}, "side_frame");
             tl.to("#wrap #contents.webstandard_wrap", {duration: 2, scale: 1, opacity: 1, ease: "circ.out"}, "-=.5");
-        },0);
+        },1000);
 
         $(function () {
             let site = ['about', 'site', 'script', 'animation', 'contact'];
@@ -170,7 +170,7 @@
                     tl.to("#wrap.fadeOut #right-frame", {duration: 1, right: "0%", opacity: 0, ease: "circ.out"}, "top_bottom_frame");
                 }
                 setTimeout(function () {
-                    window.location.href = "http://zxcv1685.dothome.co.kr/Port/component/" + site[1] + ".html#";
+                    window.location.href = "http://zxcv1685.dothome.co.kr/Port/component/" + site[2] + ".html#";
                 }, 2500);
             });
         });
