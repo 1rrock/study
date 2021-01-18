@@ -554,6 +554,7 @@ body {
 }
 .profile_title {
     margin-left: 45%;
+    padding-top: 3%;
     opacity: 0;
 }
 .profile_title h2 {
@@ -563,11 +564,11 @@ body {
     color: #0ff;
 }
 .profile_title h3 {
-    margin-top: 2%;
-    font-size: 4vw;
+    margin-top: 5%;
+    font-size: 3vw;
     font-family: 'anurati';
     color: #fff;
-    line-height: 4vw;
+    line-height: 3vw;
     letter-spacing: 10px;
 }
 .profile_desc {
@@ -594,6 +595,14 @@ body {
     opacity: 0;
     display: none;
 }
+.megabox_wrap {
+    opacity: 0;
+    display: none;
+}
+.react_wrap {
+    opacity: 0;
+    display: none;
+}
 
 /* site */
 .left_webstandard_btn {
@@ -604,10 +613,30 @@ body {
     opacity: 0;
     display: none;
 }
+.left_responsive_btn {
+    opacity: 0;
+    display: none;
+}
+.right_megabox_btn {
+    opacity: 0;
+    display: none;
+}
+.left_megabox_btn {
+    opacity: 0;
+    display: none;
+}
+.right_react_btn {
+    opacity: 0;
+    display: none;
+}
+.left_react_btn {
+    opacity: 0;
+    display: none;
+}
 .site_wrap {
     position: absolute;
     left: 50%; top: 50%;
-    transform: translate(-50%, -50%) scale(.5);
+    transform: translate(-50%, -50%) scale(.8);
     width: 40vw;
     height: 60vh;
 }
@@ -637,6 +666,26 @@ body {
     width: 94%;
     height: 90%;
     background: url(../img/responsive.png) center top no-repeat;
+    background-size: cover;
+}
+
+.site_wrap .site_frame .megabox {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 94%;
+    height: 90%;
+    background: url(../img/megabox.png) center top no-repeat;
+    background-size: cover;
+}
+
+.site_wrap .site_frame .react {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 94%;
+    height: 90%;
+    background: url(../img/react.png) center top no-repeat;
     background-size: cover;
 }
 

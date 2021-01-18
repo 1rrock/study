@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1rrock PORTFOLIO</title>
+    <title>about</title>
     
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style2.css">
-    <link rel="stylesheet" href="assets/css/star.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style5.css">
+    <link rel="stylesheet" href="../assets/css/star.css">
 </head>
 <body>
     <div id="starwrap">
@@ -45,7 +45,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="./assets/js/efeect.js"></script>
+    <script src="../assets/js/efeect.js"></script>
+    <script src="../assets/js/aDelay.js"></script>
     <script>
         // setTimeout(function(){
         //     let tl = gsap.timeline();
@@ -59,25 +60,9 @@
         // },2000);
 
 
-        let site = ['about', 'site', 'script', 'animation', 'contact'];
 
         //document.querySelector(".click").addEventListener()
 
-
-
-        $(function(){
-            $(".wrap").removeClass("fadeOut");
-            $(".wrap").addClass("fadeIn");
-
-            $(".click").click(function(e){
-                $(".wrap").addClass("fadeOut");
-                e.preventDefault();
-                var link = $(this).attr("href");
-                setTimeout(function() {
-                    window.location.href = "http://zxcv1685.dothome.co.kr/Port/"+site[0]+".html#";
-                }, 2500);
-            });
-        });
 
     </script>
 </body>

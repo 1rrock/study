@@ -84,6 +84,8 @@
                             fill="white" />
                     </svg>
                     <span class="site_left_btn left_webstandard_btn"><a href="#">webstandard</a></span>
+                    <span class="site_left_btn left_responsive_btn"><a href="#">responsive</a></span>
+                    <span class="site_left_btn left_megabox_btn"><a href="#">megabox</a></span>
                 </div>
                 <div class="right-frame01">
                     <svg width="3vw" height="30vh" viewBox="0 0 105 726" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +101,8 @@
                         </defs>
                     </svg>
                     <span class="site_right_btn right_responsive_btn"><a href="#">responsive</a></span>
+                    <span class="site_right_btn right_megabox_btn"><a href="#">megabox</a></span>
+                    <span class="site_right_btn right_react_btn"><a href="#">react</a></span>
                 </div>
             </div>
             
@@ -160,6 +164,30 @@
             </div>
             <!-- //responsive_wrap -->
 
+            <!-- megabox_wrap -->
+            <div class="site_wrap megabox_wrap">
+                <div class="site_frame">
+                    <div class="megabox"></div>
+                </div>
+                <div class="site_btn_wrap">
+                    <a target="blank" href="http://zxcv1685.dothome.co.kr/megabox/index.html" class="site_btn"><div>site</div></a>
+                    <a target="blank" href="https://www.figma.com/proto/u45DZXxYnKKlLtZ6wENExo/%EC%9B%B9%ED%91%9C%EC%A4%80-%EB%B0%98%EC%9D%91%ED%98%95-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=122%3A2&viewport=176%2C339%2C0.061064302921295166&scaling=min-zoom" class="figma_btn"><div>figma</div></a>
+                </div>
+            </div>
+            <!-- //megabox_wrap -->
+
+            <!-- react_wrap -->
+            <div class="site_wrap react_wrap">
+                <div class="site_frame">
+                    <div class="react"></div>
+                </div>
+                <div class="site_btn_wrap">
+                    <a target="blank" href="http://zxcv1685.dothome.co.kr/responsive/index.html" class="site_btn"><div>site</div></a>
+                    <a target="blank" href="https://www.figma.com/proto/u45DZXxYnKKlLtZ6wENExo/%EC%9B%B9%ED%91%9C%EC%A4%80-%EB%B0%98%EC%9D%91%ED%98%95-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=122%3A2&viewport=176%2C339%2C0.061064302921295166&scaling=min-zoom" class="figma_btn"><div>figma</div></a>
+                </div>
+            </div>
+            <!-- //react_wrap -->
+
         </div>
         <!-- //section1 -->
     </div>
@@ -214,26 +242,73 @@
             tl.to(".left-frame01", {duration: 2, left: "23%", ease: "circ.out"}, "about-frame");
             tl.to(".right-frame01", {duration: 1, right: "23%", ease: "circ.out"}, "about-frame");
             tl.to(".right_responsive_btn", {duration: 2, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
-            tl.to(".webstandard_wrap", {duration: 1.5, opacity: 1, display: "block", scale: 1, ease: "circ.out"}, "-=.5");
+            tl.to(".webstandard_wrap", {duration: 1.5, opacity: 1, display: "block", scale: 1, ease: "circ.out"}, "-=1");
         });
 
+        // next
         // responsive 클릭시 webstandard -> responsive
         document.querySelector(".right_responsive_btn").addEventListener("click",()=>{
             let tl = gsap.timeline();
             tl.to(".right_responsive_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".right_megabox_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
             tl.to(".left_webstandard_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
-            tl.to(".webstandard_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.5, ease: "circ.out"}, "-=.5");
+            tl.to(".webstandard_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.8, ease: "circ.out"}, "-=.5");
             tl.to(".responsive_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
+        });
+        
+        // megabox 클릭시 responsive -> megabox
+        document.querySelector(".right_megabox_btn").addEventListener("click",()=>{
+            let tl = gsap.timeline();
+            tl.to(".right_megabox_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_webstandard_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_responsive_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".right_react_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".responsive_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.8, ease: "circ.out"}, "-=.5");
+            tl.to(".megabox_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
+        });
+
+        // react 클릭시 megabox -> react
+        document.querySelector(".right_react_btn").addEventListener("click",()=>{
+            let tl = gsap.timeline();
+            tl.to(".right_react_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_responsive_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_megabox_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".megabox_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.8, ease: "circ.out"}, "-=.5");
+            tl.to(".react_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
             tl.to(".site_down_btn", {duration: 1, opacity: 1, display: "block", ease: "power4.out"}, "about-frame");
         });
 
+        // prev
         // webstandard 클릭시 responsive -> webstandard
         document.querySelector(".left_webstandard_btn").addEventListener("click",()=>{
             let tl = gsap.timeline();
             tl.to(".left_webstandard_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
             tl.to(".right_responsive_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
-            tl.to(".responsive_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.5, ease: "circ.out"}, "-=.5");
+            tl.to(".right_megabox_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".responsive_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.8, ease: "circ.out"}, "-=.5");
             tl.to(".webstandard_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
+        });
+
+        // responsive 클릭시 megabox -> responsive
+        document.querySelector(".left_responsive_btn").addEventListener("click",()=>{
+            let tl = gsap.timeline();
+            tl.to(".right_react_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_responsive_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_webstandard_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".right_megabox_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".megabox_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.8, ease: "circ.out"}, "-=.5");
+            tl.to(".responsive_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
+        });
+
+        // megabox 클릭시 react -> megabox
+        document.querySelector(".left_megabox_btn").addEventListener("click",()=>{
+            let tl = gsap.timeline();
+            tl.to(".left_megabox_btn", {duration: 1, opacity: 0, display: "none", ease: "circ.out"}, "about-frame");
+            tl.to(".left_responsive_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".right_react_btn", {duration: 1, opacity: 1, display: "block", ease: "circ.out"}, "about-frame");
+            tl.to(".react_wrap", {duration: 1, opacity: 0, display: "none", scale: 0.8, ease: "circ.out"}, "-=.5");
+            tl.to(".megabox_wrap", {duration: 1, opacity: 1, display: "block", scale: 1, ease: "circ.out"});
+            tl.to(".site_down_btn", {duration: 1, opacity: 0, display: "none", ease: "power4.out"}, "about-frame");
         });
 
 
