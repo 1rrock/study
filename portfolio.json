@@ -9,7 +9,7 @@
         {
           "id": 1,
           "link": "https://zxcv1685.github.io/dothome/webstandard/index.html",
-          "image": "../img/port01.jpg",
+          "image": "../img/webstandard.png",
           "title": "WEB STANDARD",
           "category": "PORTFOLIO1",
           "rating": 5
@@ -17,7 +17,7 @@
         {
           "id": 2,
           "link": "https://zxcv1685.github.io/dothome/responsive/index.html",
-          "image": "../img/port02.jpg",
+          "image": "../img/responsive.png",
           "title": "RESPONSIVE SITE",
           "category": "PORTFOLIO2",
           "rating": 4.9
@@ -25,7 +25,7 @@
         {
           "id": 3,
           "link": "https://zxcv1685.github.io/dothome/megabox/index.html",
-          "image": "../img/port03.jpg",
+          "image": "../img/megabox.png",
           "title": "MEGABOX SITE",
           "category": "PORTFOLIO3",
           "rating": 5
@@ -33,7 +33,7 @@
         {
           "id": 4,
           "link": "https://zxcv1685.github.io/dothome/test/test15.html",
-          "image": "../img/port04.jpg",
+          "image": "../img/react.jpg",
           "title": "NAVER CLOVA1",
           "category": "PORTFOLIO4",
           "rating": 5
