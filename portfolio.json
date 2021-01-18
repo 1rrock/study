@@ -8,7 +8,7 @@
       "ports": [
         {
           "id": 1,
-          "link": "https://hyunseo418.github.io/dothome/webstandard/index.html",
+          "link": "https://zxcv1685.github.io/dothome/webstandard/index.html",
           "image": "../img/port01.jpg",
           "title": "WEB STANDARD",
           "category": "PORTFOLIO1",
@@ -16,7 +16,7 @@
         },
         {
           "id": 2,
-          "link": "https://hyunseo418.github.io/dothome/responsive/index.html",
+          "link": "https://zxcv1685.github.io/dothome/responsive/index.html",
           "image": "../img/port02.jpg",
           "title": "RESPONSIVE SITE",
           "category": "PORTFOLIO2",
@@ -24,7 +24,7 @@
         },
         {
           "id": 3,
-          "link": "https://hyunseo418.github.io/dothome/megabox/index.html",
+          "link": "https://zxcv1685.github.io/dothome/megabox/index.html",
           "image": "../img/port03.jpg",
           "title": "MEGABOX SITE",
           "category": "PORTFOLIO3",
@@ -32,7 +32,7 @@
         },
         {
           "id": 4,
-          "link": "https://hyunseo418.github.io/dothome/test/test15.html",
+          "link": "https://zxcv1685.github.io/dothome/test/test15.html",
           "image": "../img/port04.jpg",
           "title": "NAVER CLOVA1",
           "category": "PORTFOLIO4",
@@ -40,7 +40,7 @@
         },
         {
           "id": 5,
-          "link": "https://hyunseo418.github.io/dothome/test/test16.html",
+          "link": "https://zxcv1685.github.io/dothome/test/test16.html",
           "image": "../img/port01.jpg",
           "title": "NAVER CLOVA2",
           "category": "PORTFOLIO5",
@@ -48,7 +48,7 @@
         },
         {
           "id": 6,
-          "link": "https://hyunseo418.github.io/dothome/test/test17.html",
+          "link": "https://zxcv1685.github.io/dothome/test/test17.html",
           "image": "../img/port02.jpg",
           "title": "NAVER CLOVA3",
           "category": "PORTFOLIO6",
@@ -56,7 +56,7 @@
         },
         {
           "id": 7,
-          "link": "https://hyunseo418.github.io/dothome/test/test18.html",
+          "link": "https://zxcv1685.github.io/dothome/test/test18.html",
           "image": "../img/port04.jpg",
           "title": "NAVER CLOVA4",
           "category": "PORTFOLIO7",
@@ -64,7 +64,7 @@
         },
         {
           "id": 8,
-          "link": "https://hyunseo418.github.io/dothome/test/test19.html",
+          "link": "https://zxcv1685.github.io/dothome/test/test19.html",
           "image": "../img/port01.jpg",
           "title": "NAVER CLOVA5",
           "category": "PORTFOLIO8",
