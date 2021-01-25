@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -49,11 +49,11 @@
     <script>
         setTimeout(function(){
             let tl = gsap.timeline();
-            tl.to("#wrap #header", {duration: 2, top: "0%", opacity: 1, ease: "power4.out"}, "frame");
-            tl.to("#wrap #footer", {duration: 2, bottom: "0%", opacity: 1, ease: "power4.out"}, "frame");
-            tl.to("#wrap #left-frame", {duration: 2, left: "25%", opacity: .5, ease: "circ.out"}, "side_frame");
-            tl.to("#wrap #right-frame", {duration: 2, right: "25%", opacity: .5, ease: "circ.out"}, "side_frame");
-            tl.to("#wrap #contents", {duration: 2, scale: 1, opacity: 1, ease: "circ.out"}, "-=.5");
+            tl.to("#wrap #header", {duration: 1.5, top: "0%", opacity: 1, ease: "power4.out"}, "frame");
+            tl.to("#wrap #footer", {duration: 1.5, bottom: "0%", opacity: 1, ease: "power4.out"}, "frame");
+            tl.to("#wrap #left-frame", {duration: 1.5, left: "25%", opacity: .5, ease: "circ.out"}, "side_frame");
+            tl.to("#wrap #right-frame", {duration: 1.5, right: "25%", opacity: .5, ease: "circ.out"}, "side_frame");
+            tl.to("#wrap #contents", {duration: 1.5, scale: 1, opacity: 1, ease: "circ.out"}, "-=.5");
         },2000);
 
         $(function () {
@@ -75,7 +75,7 @@
                 }
                 setTimeout(function () {
                     window.location.href = "http://zxcv1685.dothome.co.kr/Port/component/" + site[0] + ".html#";
-                }, 2500);
+                }, 1500);
             });
         });
     </script>
