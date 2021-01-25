@@ -76,6 +76,36 @@ body {background: #000;}
     transform: rotate(180deg);
     opacity: 0;
 }
+.button {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    background: url(http://www.recursouniversum.com/src/assets/images/button-next-page2.svg) center center no-repeat;
+    background-size: contain;
+    width: 100px; height: 100px;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease-in-out;
+}
+.button:hover {
+    background: url(http://www.recursouniversum.com/src/assets/images/button-next-page2-hover.svg) center center no-repeat;
+    background-size: contain;
+    width: 100px; height: 100px;
+    transform: translate(-50%, -50%);
+}
+.button::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform:  translate(-50%, -50%) rotate(45deg);
+    width: 10px; height: 10px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: all .3s ease-in-out;
+}
+.button:hover::before {
+    transform: translate(-50%, 0%) rotate(45deg);
+    box-shadow: #fff 10px 10px 15px;
+}
 
 #left-frame {
     position: absolute;
