@@ -3,6 +3,7 @@
 
 .bottomNav {
   position: fixed;
+  flex-direction: column;
   bottom: 0;
   left: 0;
   right: 0;
@@ -12,7 +13,7 @@
   &__wrap {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: 116px;
     width: 100%;
     padding: 0 30px;
   }
@@ -27,8 +28,8 @@
     &--home {
       
       i {
-        width: 26px;
-        height: 28px;
+        width: 34px;
+        height: 87px;
         background: url(../img/button/home.png) center center no-repeat;
         background-size: contain;
 
@@ -41,8 +42,8 @@
 
     &--top100 {
       i {
-        width: 35px;
-        height: 28px;
+        width: 45px;
+        height: 36px;
         background: url(../img/button/top-100.png) center center no-repeat;
         background-size: contain;
 
@@ -55,8 +56,8 @@
 
     &--music {
       i {
-        width: 33px;
-        height: 33px;
+        width: 42px;
+        height: 43px;
         background: url(../img/button/mood-category.png) center center no-repeat;
         background-size: contain;
 
@@ -69,8 +70,8 @@
 
     &--prod {
       i {
-        width: 25px;
-        height: 36px;
+        width: 32px;
+        height: 50px;
         background: url(../img/button/producer.png) center center no-repeat;
         background-size: contain;
 
@@ -83,8 +84,8 @@
 
     &--mypage {
       i {
-        width: 32px;
-        height: 33px;
+        width: 41px;
+        height: 43px;
         background: url(../img/button/my-page.png) center center no-repeat;
         background-size: contain;
 
@@ -94,5 +95,56 @@
         }
       }
     }
+  }
+}
+
+.playbar {
+  align-items: center;
+  bottom: 98px;
+  background: linear-gradient(to left, #000 20%, #341d65);
+  display: flex;
+  width: 100vw;
+
+  &__thumb {
+    flex: 0 0 85px;
+    height: 100px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__title {
+    flex: 1 1 0;
+
+    span {
+      font-size: 22px;
+      margin-left: 36px;
+    }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 0 0 161px;
+  }
+
+  &__pause {
+    width: 28px;
+    height: 25px;
+    border: 0;
+    background: url(../img/button/pause.png) center center no-repeat;
+    background-size: contain;
+    margin-right: 50px;
+  }
+
+  &__next {
+    width: 25px;
+    height: 28px;
+    border: 0;
+    background: url(../img/button/next.png) center center no-repeat;
+    background-size: contain;
   }
 }

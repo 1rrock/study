@@ -2,7 +2,6 @@
 @import "./utils/_mixin";
 
 @import "./components/beatlist";
-@import "./components/playbar";
 
 @import "./layouts/mobile-header";
 @import "./layouts/mobile-footer";
@@ -12,7 +11,7 @@
 @import "./pages/beat-info.scss";
 
 .main {
-  padding-bottom: 185px;
+  padding-bottom: 216px;
   background-color: $theme-hd-color;
   
   &--dark {
@@ -35,13 +34,13 @@
   border-radius: 25px;
   background-color: $theme-btn-color;
   border: 0;
+  font-size: 22px;
 }
 
 .tap {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 100px;
   background-color: $theme-hd-color;
 
   a {

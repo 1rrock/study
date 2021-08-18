@@ -8,9 +8,9 @@
 }
 
 .beatlist-row {
-  height: 125px;
+  height: 140px;
   display: grid;
-  grid-template-columns: 85px 1fr 160px;
+  grid-template-columns: 100px 1fr 220px;
   align-items: center;
   border-top: 1px solid $theme-bg-color;
   padding: 0 30px;
@@ -20,8 +20,8 @@
   }
   &__thumb {
     img {
-      width: 85px;
-      height: 85px;
+      width: 100px;
+      height: 100px;
       vertical-align: top;
       border-radius: 15px;
     }
@@ -34,11 +34,11 @@
     gap: 10px;
     margin-left: 20px;
     .title {
-      font-size: 18px;
+      font-size: 22px;
     }
 
     .name {
-      font-size: 18px;
+      font-size: 22px;
     }
   }
 
@@ -46,35 +46,39 @@
     display: flex;
     align-items: center;
     .like-btn {
-      width: 31px;
-      height: 28px;
-      background: url(../img/button/btn-like-off-white.png);
+      width: 41px;
+      height: 36px;
+      background: url(../img/button/btn-like-off-white.png) center center no-repeat;
+      background-size: contain;
       border: 0;
       &.active {
-        background: url(../img/button/btn-like-on.png);
+        background: url(../img/button/btn-like-on.png) center center no-repeat;
+        background-size: contain;
       }
     }
 
     .play-btn {
-      width: 26px;
-      height: 30px;
-      background: url(../img/button/btn-play.png);
+      width: 31px;
+      height: 38px;
+      background: url(../img/button/btn-play.png) center center no-repeat;
+      background-size: contain;
       margin: 0 33px 0 38px;
       border: 0;
     }
 
     .more-btn {
-      width: 31px;
-      height: 6px;
-      background: url(../img/button/btn-option.png);
+      width: 41px;
+      height: 8px;
+      background: url(../img/button/btn-option.png) center center no-repeat;
+      background-size: contain;
       border: 0;
     }
   }
 }
 
 .button--more {
-  width: 200px;
-  height: 50px;
+  width: 234px;
+  height: 60px;
   margin: 30px auto 0;
 }
 
