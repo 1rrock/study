@@ -1,0 +1,60 @@
+@import "../utils/_variable";
+@import "../utils/_mixin";
+
+.banner {
+  background-color: $theme-hd-color;
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  &__pagenation {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    background-color: $theme-bg-color;
+    border-radius: 50%;
+
+    &.active {
+      background-color: $theme-song-color;
+    }
+  }
+}
+
+.mood-choice {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 20px;
+  padding: 30px;
+  background-color: $theme-hd-color;
+  &__btn-wrap {
+    position: relative;
+    width: 250px;
+    height: 130px;
+  }
+
+  &__btn {
+    width: 250px;
+    height: 130px;
+    border-radius: 30px;
+    border: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+
+    &.active {
+      .mood-choice__btn-wrap::before {
+        @include beforeAfterSelector($w:250px,$h:130px,$l:0,$t:0);
+        border: 5px solid $theme-song-color;
+      }
+    }
+  }
+}

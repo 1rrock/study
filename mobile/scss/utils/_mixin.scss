@@ -1,0 +1,36 @@
+/*
+    -------------
+        mixin
+    -------------
+*/
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin beforeAfterSelector($w,
+  $h,
+  $t: null,
+  $b: null,
+  $l: null,
+  $r: null) {
+  content: "";
+  width: $w;
+  height: $h;
+  position: absolute;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+}
+
+@mixin bgSize (
+  $w,
+  $h,
+  $bs: contain) {
+    width: $w;
+    height: $h;
+    background-size: $bs;
+  }

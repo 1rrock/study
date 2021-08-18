@@ -1,0 +1,31 @@
+@import "../utils/_variable";
+@import "../utils/_mixin";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0 55px;
+  gap: 30px;
+  background-color: $theme-hd-color;
+
+  &__tos {
+    color: $theme-txt-color;
+  }
+
+  &__pc-ver {
+    color: $theme-song-color;
+  }
+}
+
+.main--dark {
+  .footer {
+    background-color: #fff;
+    &__tos {
+      color: $light-font-color;
+    }
+
+    &__pc-ver {
+      color: $theme-btn-color;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "../utils/_variable";
+@import "../utils/_mixin";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 30px;
+  background-color: $theme-hd-color;
+  z-index: 100;
+
+  &__top {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: block;
+    width: 190px;
+    height: 33px;
+    background: url(../img/imgs/logo.png) center center no-repeat;
+    background-size: contain;
+  }
+
+  &__link-wrap {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__login {
+    font-size: 18px;
+  }
+
+  &__reg {
+    font-size: 18px;
+  }
+
+  &__search {
+    margin-top: 100px;
+    position: relative;
+    padding: 20px;
+    background-color: $theme-hd-color;
+    input {
+      border-radius: 30px;
+      background-color: $theme-bg-color;
+      border: 0;
+      color: $theme-txt-color;
+      height: 60px;
+      padding: 0 30px 0 72px;
+      width: 100%;
+
+      &::-webkit-input-placeholder {
+        color: $theme-txt-color;
+        font-size: 18px;
+      }
+    }
+
+    button {
+      position: absolute;
+      left: 37px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../img/icons/search-icon.png) center center no-repeat;
+      background-size: contain;
+      width: 26px;
+      height: 26px;
+      border: 0;
+    }
+  }
+}

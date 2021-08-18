@@ -1,0 +1,106 @@
+@import "../utils/_variable";
+@import "../utils/_mixin";
+
+.beatlist {
+  background-color: $theme-hd-color;
+  &__row-wrap {
+  }
+}
+
+.beatlist-row {
+  height: 125px;
+  display: grid;
+  grid-template-columns: 85px 1fr 160px;
+  align-items: center;
+  border-top: 1px solid $theme-bg-color;
+  padding: 0 30px;
+
+  &:last-child {
+    border-bottom: 1px solid $theme-bg-color;
+  }
+  &__thumb {
+    img {
+      width: 85px;
+      height: 85px;
+      vertical-align: top;
+      border-radius: 15px;
+    }
+  }
+
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 20px;
+    .title {
+      font-size: 18px;
+    }
+
+    .name {
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    .like-btn {
+      width: 31px;
+      height: 28px;
+      background: url(../img/button/btn-like-off-white.png);
+      border: 0;
+      &.active {
+        background: url(../img/button/btn-like-on.png);
+      }
+    }
+
+    .play-btn {
+      width: 26px;
+      height: 30px;
+      background: url(../img/button/btn-play.png);
+      margin: 0 33px 0 38px;
+      border: 0;
+    }
+
+    .more-btn {
+      width: 31px;
+      height: 6px;
+      background: url(../img/button/btn-option.png);
+      border: 0;
+    }
+  }
+}
+
+.button--more {
+  width: 200px;
+  height: 50px;
+  margin: 30px auto 0;
+}
+
+// dark.ver
+.main--dark {
+  .beatlist-row {
+    border-top: 1px solid $light-line-color;
+    &:last-child {
+      border-bottom: 1px solid $light-line-color;
+    }
+  }
+  .beatlist {
+    background-color: #fff;
+  }
+  .title {
+    color: $light-font-color;
+  }
+
+  .name {
+    color: $light-font-color;
+  }
+  .like-btn {
+    background: url(../img/button/btn-like-off-dark.png) center center no-repeat;
+    border: 0;
+  }
+  .more-btn {
+    background: url(../img/button/btn-option-dark.png) center center no-repeat;
+  }
+}

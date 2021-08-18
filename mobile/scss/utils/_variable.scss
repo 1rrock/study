@@ -1,0 +1,40 @@
+/*
+    --------------
+        color
+    --------------
+*/
+
+// 가장 어두운 보라색(사이드,네비)
+$theme-hd-color: #1A192C;
+// 중간어두운 보라색 (배경)
+$theme-bg-color: #28283F;
+// 옅은폰트
+$theme-txt-color: #717189;
+// 강조폰트 & 메인초록색
+$theme-song-color: #00ff9f;
+// 메인 보라색
+$theme-btn-color: #7331f6;
+
+// 라이트모드 배경색
+$light-bg-color: #f0f0f0;
+
+// line색
+$dark-B-line-color: #4c4c68;
+$dark-line-color: #282841;
+
+$light-B-line-color: #cbcbcb;
+$light-line-color: #e5e5e5;
+
+$light-font-color: #666;
+$weak-font-color: #b2b2b2;
+
+
+/*
+    --------------
+        unit
+    --------------
+*/
+
+$theme-hd-width: 360px;
+
+$font-size-base: 13px;

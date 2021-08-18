@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=0.1, user-scalable=no, maximum-scale=0.5, minimum-scale=0.5" />
+  <title>j1beatz - beat-info</title>
+</head>
+
+<!-- favicon 에러용 -->
+<link rel="shortcut icon" href="#">
+
+<!-- 공통 css -->
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../mobile/scss/j1beatz-mobile.min.css">
+<link rel="stylesheet" href="../slick/slick-theme.css">
+
+<!-- 공통 script -->
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../slick/slick.min.js"></script>
+
+<body>
+  <div class="app">
+    <main class="main main--dark">
+      <div class="beat-info">
+        <div class="beat-info-header">
+          <a href="#" class="beat-info-header__prev-btn">
+            <i></i>
+          </a>
+          <h1 class="beat-info-header__txt">비트정보</h1>
+          <a href="#" class="beat-info-header__like">
+            <i></i>
+          </a>
+          <a href="#" class="beat-info-header__playlist">
+            <i></i>
+          </a>
+          <a href="#" class="beat-info-header__share">
+            <i></i>
+          </a>
+        </div>
+        <div class="beat-info-main">
+          <figure class="beat-info-main__figure">
+            <img src="../mobile/img/ex/beat-info-thumbnail.png" alt="비트 썸네일">
+            <figcaption class="beat-info-main__figcaption">
+              <h2>Deep Dark</h2>
+              <span>제 1 형민</span>
+              <b>긴장 / Trap</b>
+            </figcaption>
+          </figure>
+          <div class="beat-info-main__lps">
+            <div class="like">
+              <i></i><span>100</span>
+            </div>
+            <div class="play">
+              <i></i><span>100</span>
+            </div>
+            <div class="down">
+              <i></i><span>100</span>
+            </div>
+          </div>
+          <!-- <div class="beat-info-main__tag beat-info-main__tag--none">
+            <span>등록된 태그가 없습니다</span>
+          </div> -->
+          <div class="beat-info-main__tag-wrap">
+            <a href="#" class="beat-info-main__tag">#외힙</a>
+            <a href="#" class="beat-info-main__tag">#외힙느낌</a>
+            <a href="#" class="beat-info-main__tag">#피아노</a>
+            <a href="#" class="beat-info-main__tag">#감성</a>
+            <a href="#" class="beat-info-main__tag">#밤</a>
+            <a href="#" class="beat-info-main__tag">#릴베이비</a>
+            <a href="#" class="beat-info-main__tag">#자이언티</a>
+            <a href="#" class="beat-info-main__tag">#창모</a>
+            <a href="#" class="beat-info-main__tag">#릴러말즈</a>
+            <a href="#" class="beat-info-main__tag">#제네더질라</a>
+            <a href="#" class="beat-info-main__tag">#폴블랑코</a>
+          </div>
+        </div>
+        <div class="beat-info-footer">
+          <div class="tap">
+            <a href="#">다운로드</a>
+            <a href="#" class="active">코멘트 (0)</a>
+          </div>
+          <!-- <div class="beat-info-footer__row-wrap">
+            <div class="beat-info-footer__row">
+              <div class="beat-info-footer__ver">
+                <b>무료 다운</b>
+                <span>FREE</span>
+              </div>
+              <button class="beat-info-footer__sell-btn beat-info-footer__sell-btn--free"></button>
+            </div>
+            <div class="beat-info-footer__row">
+              <div class="beat-info-footer__ver">
+                <b>디럭스</b>
+                <span>DELUXE</span>
+              </div>
+              <button class="beat-info-footer__sell-btn">
+                20,000 원
+              </button>
+            </div>
+            <div class="beat-info-footer__row">
+              <div class="beat-info-footer__ver">
+                <b>프로</b>
+                <span>PRO</span>
+              </div>
+              <button class="beat-info-footer__sell-btn beat-info-footer__sell-btn--none">
+                판매안함
+              </button>
+            </div>
+            <div class="beat-info-footer__row">
+              <div class="beat-info-footer__ver">
+                <b>익스클루시브</b>
+                <span>EXCLUSIVE</span>
+              </div>
+              <button class="beat-info-footer__sell-btn">
+                200,000 원
+              </button>
+            </div>
+          </div> -->
+          <!-- //row-wrap -->
+          <div class="beat-info-footer__comment-wrap">
+            <div class="beat-info-footer__comment beat-info-footer__comment--none">
+              <span>
+                코멘트가 없습니다 <br>
+                첫 번째 코멘트를 남겨보세요
+              </span>
+            </div>
+            <div class="beat-info-footer__comment-input">
+              <input type="text" placeholder="내용을 입력하세요" title="댓글입력창">
+              <button></button>
+            </div>
+          </div>
+          <!-- //comment-wrap -->
+        </div>
+      </div>
+      <!-- //footer -->
+      <div class="playbar">
+        <div class="playbar__thumb">
+          <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+        </div>
+        <div class="playbar__title">
+          <span>Deep Dark</span>
+        </div>
+        <div class="playbar__btn-wrap">
+          <button class="playbar__pause"></button>
+          <button class="playbar__next"></button>
+        </div>
+      </div>
+      <!-- //playbar -->
+      <div class="bottomNav">
+        <div class="bottomNav__wrap">
+          <a href="#" class="bottomNav__menu bottomNav__menu--home">
+            <i class="active"></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--top100">
+            <i></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--music">
+            <i></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--prod">
+            <i></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--mypage">
+            <i></i>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- //app -->
+  <script>
+  </script>
+</body>
+
+</html>

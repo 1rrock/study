@@ -1,0 +1,268 @@
+@import "../utils/_variable";
+@import "../utils/_mixin";
+
+.beat-info {
+  &-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #341d65;
+    padding: 0 30px;
+
+    &__prev-btn {
+      @include flexCenter;
+      flex: 0 0 40px;
+      padding: 0;
+
+      i {
+        width: 25px;
+        height: 28px;
+        background: url(../img/button/beatinfo-back.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &__txt {
+      flex: 1 1 0;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: left;
+      padding-left: 22px;
+    }
+
+    &__like {
+      @include flexCenter;
+      flex: 0 0 40px;
+      height: inherit;
+
+      i {
+        width: 31px;
+        height: 28px;
+        background: url(../img/button/like-white.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &__playlist {
+      @include flexCenter;
+      flex: 0 0 40px;
+      height: inherit;
+      margin: 0 20px;
+
+      i {
+        width: 27px;
+        height: 26px;
+        background: url(../img/button/play-list-white.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &__share {
+      @include flexCenter;
+      flex: 0 0 40px;
+      height: inherit;
+
+      i {
+        width: 23px;
+        height: 25px;
+        background: url(../img/button/share-white.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  &-main {
+    margin-top: 100px;
+    background: linear-gradient(to top, $theme-hd-color 45%, #341d65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__figure {
+      margin-top: 30px;
+    }
+    &__figcaption {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h2 {
+        margin-top: 37px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      span {
+        margin: 17px 0 36px;
+        font-size: 18px;
+      }
+      b {
+        font-size: 18px;
+        color: $theme-btn-color;
+      }
+    }
+
+    &__lps {
+      @include flexCenter;
+      margin-top: 55px;
+      border-top: 1px solid $dark-line-color;
+      border-bottom: 1px solid $dark-line-color;
+      gap: 75px;
+      width: 400px;
+      height: 80px;
+      .like {
+        @include flexCenter;
+        gap: 11px;
+
+        i {
+          display: block;
+          width: 17px;
+          height: 15px;
+          background: url(../img/icons/like-small.png) center center no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .play {
+        @include flexCenter;
+        gap: 12px;
+
+        i {
+          display: block;
+          width: 14px;
+          height: 15px;
+          background: url(../img/icons/play-small.png) center center no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .down {
+        @include flexCenter;
+        gap: 12px;
+
+        i {
+          display: block;
+          width: 13px;
+          height: 14px;
+          background: url(../img/icons/download-small.png) center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+    &__tag-wrap {
+      @include flexCenter;
+      width: 400px;
+      flex-wrap: wrap;
+      padding: 55px 0;
+      &--none {
+        span {
+          color: $theme-txt-color;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__tag {
+      @include flexCenter;
+      padding: 5px 10px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: $theme-btn-color;
+      font-size: 18px;
+      margin: 5px;
+    }
+
+  }
+  &-footer {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 125px;
+      background-color: #fff;
+      border-bottom: 1px solid $light-line-color;
+      padding: 0 28px 0 35px;
+    }
+    &__ver {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      b {
+        color: #000;
+        font-size: 25px;
+      }
+
+      span {
+        color: $light-font-color;
+        font-size: 18px;
+      }
+    }
+
+    &__sell-btn {
+      width: 180px;
+      height: 50px;
+      border-radius: 25px;
+      border: 0;
+      background-color: $theme-btn-color;
+      color: #fff;
+      font-size: 18px;
+      &--free {
+        background-image: url(../img/button/download-btn.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      &--none {
+        background-color: $light-line-color;
+        color: $weak-font-color;
+      }
+    }
+
+    &__comment-wrap {
+
+    }
+
+    &__comment {
+
+      &--none {
+        @include flexCenter;
+        height: 850px;
+
+        span {
+          text-align: center;
+          line-height: 1.67;
+          font-size: 18px;
+          color: $weak-font-color;
+        }
+      }
+    }
+
+    &__comment-input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 100px;
+      border-top: 1px solid $light-line-color;
+
+      input {
+        flex: 1 1 0;
+        height: 60px;
+        border-radius: 30px;
+        border: 1px solid $light-line-color;
+        padding: 0 35px;
+      }
+
+      button {
+        flex: 0 0 60px;
+        height: 60px;
+        border: 1px solid $light-line-color;
+        margin-left: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

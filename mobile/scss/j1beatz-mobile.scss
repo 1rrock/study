@@ -1,0 +1,80 @@
+@import "./utils/variable";
+@import "./utils/_mixin";
+
+@import "./components/beatlist";
+@import "./components/playbar";
+
+@import "./layouts/mobile-header";
+@import "./layouts/mobile-footer";
+@import "./layouts/mobile-bottom-nav";
+
+@import "./pages/main-page";
+@import "./pages/beat-info.scss";
+
+.main {
+  padding-bottom: 185px;
+  background-color: $theme-hd-color;
+  
+  &--dark {
+    background-color: #fff;
+  }
+}
+
+.none {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.button {
+  display: block;
+  color: #fff;
+  border-radius: 25px;
+  background-color: $theme-btn-color;
+  border: 0;
+}
+
+.tap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px;
+  background-color: $theme-hd-color;
+
+  a {
+    @include flexCenter;
+    color: $light-font-color;
+    width: 270px;
+    height: 80px;
+    font-size: 18px;
+
+    &.active {
+      background: url(../img/button/tab.png) center center no-repeat;
+      background-size: contain;
+      color: $theme-btn-color;
+    }
+  }
+}
+
+.subTap {
+  padding: 20px 0;
+  @include flexCenter;
+  gap: 20px;
+  select {
+    width: 280px;
+    height: 60px;
+    border-radius: 50px;
+    border: 0;
+    background-color: $light-bg-color;
+    background-image: url(../img/button/drop-down.png);
+    background-position: center right 30px;
+    background-repeat: no-repeat;
+    appearance:none;
+    font-size: 18px;
+    padding-left: 33px;
+    color: $light-font-color;
+  }
+}
