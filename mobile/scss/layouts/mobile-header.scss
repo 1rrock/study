@@ -32,15 +32,15 @@
 
   &__link-wrap {
     display: flex;
-    gap: 30px;
   }
 
   &__login {
-    font-size: 22px;
+    font-size: $font-size-base;
+    margin-right: 30px;
   }
 
   &__reg {
-    font-size: 22px;
+    font-size: $font-size-base;
   }
 
   &__search {
@@ -56,11 +56,11 @@
       height: 60px;
       padding: 0 30px 0 90px;
       width: 100%;
-      font-size: 22px;
+      font-size: $font-size-base;
 
       &::-webkit-input-placeholder {
         color: $theme-txt-color;
-        font-size: 22px;
+        font-size: $font-size-base;
       }
     }
 

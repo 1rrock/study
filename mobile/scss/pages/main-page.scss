@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
   }
 
   &__dot {
@@ -22,6 +21,7 @@
     height: 15px;
     background-color: $theme-bg-color;
     border-radius: 50%;
+    margin: 0 5px;
 
     &.active {
       background-color: $theme-song-color;
@@ -33,13 +33,13 @@
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
-  gap: 30px;
-  padding: 30px;
+  padding: 30px 15px;
   background-color: $theme-hd-color;
   &__btn-wrap {
     position: relative;
     width: 290px;
     height: 150px;
+    margin: 0 15px;
 
     &.active::before {
       @include beforeAfterSelector($w:285px, $h:145px, $l:50%, $t:50%);

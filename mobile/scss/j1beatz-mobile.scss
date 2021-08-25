@@ -31,10 +31,22 @@
 .button {
   display: block;
   color: #fff;
-  border-radius: 30px;
+  border-radius: 50px;
   background-color: $theme-btn-color;
   border: 0;
-  font-size: 22px;
+  font-size: $font-size-base;
+
+  &--tos {
+    width: 270px;
+    height: 70px;
+    margin: 40px auto;
+  }
+
+  &--comment {
+    width: 200px;
+    height: 70px;
+    margin-top: 30px;
+  }
 }
 
 .tap {
@@ -55,7 +67,7 @@
       color: $light-font-color;
       width: 310px;
       height: 90px;
-      font-size: 22px;
+      font-size: $font-size-base;
 
       &.active {
         background: url(../img/button/tab.png) center center no-repeat;
@@ -69,7 +81,6 @@
 .subTap {
   padding: 20px 0;
   @include flexCenter;
-  
   background-color: #fff;
   select {
     width: 280px;
@@ -84,5 +95,8 @@
     font-size: 18px;
     padding-left: 33px;
     color: $light-font-color;
+    &:first-child {
+      margin-right: 20px;
+    }
   }
 }

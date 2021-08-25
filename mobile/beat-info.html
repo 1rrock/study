@@ -43,7 +43,7 @@
         </div>
         <div class="beat-info-main">
           <figure class="beat-info-main__figure">
-            <img src="../mobile/img/ex/beat-info-thumbnail.png" alt="비트 썸네일">
+            <img src="../mobile/img/ex/beat-info-thumbnail.png" srcset="../mobile/img/ex/beat-info-thumbnail.png 1x, ../mobile/img/ex/beat-info-thumbnail@2x.png 2x, ../mobile/img/ex/beat-info-thumbnail@3x.png 3x" alt="비트 썸네일">
             <figcaption class="beat-info-main__figcaption">
               <h2>Deep Dark</h2>
               <span>제 1 형민</span>
@@ -79,14 +79,14 @@
           </div>
           <div class="tap">
             <div class="tap__link">
-              <a href="#">다운로드</a>
+              <a href="#" class="download active">다운로드</a>
             </div>
             <div class="tap__link">
-              <a href="#"  class="active">코멘트(0)</a>
+              <a href="#" class="cmt">코멘트(0)</a>
             </div>
           </div>
         </div>
-        <!-- <div class="beat-info-footer">
+        <div class="beat-info-footer">
           
           <div class="beat-info-footer__row-wrap">
             <div class="beat-info-footer__row">
@@ -124,14 +124,34 @@
               </button>
             </div>
           </div>
-          <button class="button button--tos">이용범위 확인</button> -->
+          <button class="button button--tos">이용범위 확인</button>
           <!-- //row-wrap -->
-          <div class="beat-info-footer__comment-wrap">
-            <div class="beat-info-footer__comment beat-info-footer__comment--none">
+          <div class="beat-info-footer__comment-wrap" style="display: none;">
+            <!-- <div class="beat-info-footer__comment beat-info-footer__comment--none">
               <span>
                 코멘트가 없습니다 <br>
                 첫 번째 코멘트를 남겨보세요
               </span>
+            </div> -->
+            <div class="beat-info-footer__comment">
+              <div class="comment">
+                <div class="comment__row">
+                  <div class="comment__thumb">
+                    <img src="../mobile/img/ex/comment-thumb.png" alt="썸네일">
+                  </div>
+                  <div class="comment__desc">
+                    <h3>닉네임</h3>
+                    <p>
+                      이 비트 정말 제 취향입니다! 무료로 다운 했다가  사용해
+                      보고 안되겠다 싶어서 바로 디럭스로 구매해서 사용 중!
+                    </p>
+                    <span>
+                      2021.02.26
+                    </span>
+                    <button class="button button--comment">답글달기</button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="beat-info-footer__comment-input">
               <input type="text" placeholder="내용을 입력하세요" title="댓글입력창">
@@ -178,6 +198,21 @@
   </div>
   <!-- //app -->
   <script>
+    document.querySelector(".cmt").addEventListener("click",function(){
+      document.querySelector(".download").classList.remove("active")
+      document.querySelector(".cmt").classList.add("active")
+      document.querySelector(".beat-info-footer__row-wrap").style.display = "none"
+      document.querySelector(".button.button--tos").style.display = "none"
+      document.querySelector(".beat-info-footer__comment-wrap").style.display = "block"
+      
+    });
+    document.querySelector(".download").addEventListener("click",function(){
+      document.querySelector(".cmt").classList.remove("active")
+      document.querySelector(".download").classList.add("active")
+      document.querySelector(".beat-info-footer__row-wrap").style.display = "block"
+      document.querySelector(".button.button--tos").style.display = "block"
+      document.querySelector(".beat-info-footer__comment-wrap").style.display = "none"
+    })
   </script>
 </body>
 
