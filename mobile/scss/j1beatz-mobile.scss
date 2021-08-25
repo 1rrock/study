@@ -55,7 +55,7 @@
       color: $light-font-color;
       width: 310px;
       height: 90px;
-      font-size: 18px;
+      font-size: 22px;
 
       &.active {
         background: url(../img/button/tab.png) center center no-repeat;
@@ -69,7 +69,7 @@
 .subTap {
   padding: 20px 0;
   @include flexCenter;
-  gap: 20px;
+  
   background-color: #fff;
   select {
     width: 280px;

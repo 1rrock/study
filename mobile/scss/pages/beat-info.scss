@@ -20,8 +20,8 @@
       padding: 0;
 
       i {
-        width: 25px;
-        height: 28px;
+        width: 31px;
+        height: 33px;
         background: url(../img/button/beatinfo-back.png) center center no-repeat;
         background-size: contain;
       }
@@ -29,20 +29,20 @@
 
     &__txt {
       flex: 1 1 0;
-      font-size: 30px;
+      font-size: 35px;
       font-weight: bold;
       text-align: left;
-      padding-left: 22px;
+      padding: 2px 0 0 22px;
     }
 
     &__like {
       @include flexCenter;
-      flex: 0 0 40px;
+      flex: 0 0 41px;
       height: inherit;
 
       i {
-        width: 31px;
-        height: 28px;
+        width: 41px;
+        height: 36px;
         background: url(../img/button/like-white.png) center center no-repeat;
         background-size: contain;
       }
@@ -50,13 +50,13 @@
 
     &__playlist {
       @include flexCenter;
-      flex: 0 0 40px;
+      flex: 0 0 41px;
       height: inherit;
-      margin: 0 20px;
+      margin: 0 30px;
 
       i {
-        width: 27px;
-        height: 26px;
+        width: 33px;
+        height: 32px;
         background: url(../img/button/play-list-white.png) center center no-repeat;
         background-size: contain;
       }
@@ -64,12 +64,12 @@
 
     &__share {
       @include flexCenter;
-      flex: 0 0 40px;
+      flex: 0 0 41px;
       height: inherit;
 
       i {
-        width: 23px;
-        height: 25px;
+        width: 27px;
+        height: 29px;
         background: url(../img/button/share-white.png) center center no-repeat;
         background-size: contain;
       }
@@ -83,7 +83,13 @@
     align-items: center;
 
     &__figure {
-      margin-top: 30px;
+      margin-top: 35px;
+
+      img {
+        width: 470px;
+        height: 470px;
+        object-fit: contain;
+      }
     }
     &__figcaption {
       display: flex;
@@ -91,15 +97,15 @@
       flex-direction: column;
       h2 {
         margin-top: 37px;
-        font-size: 25px;
+        font-size: 30.5px;
         font-weight: bold;
       }
       span {
         margin: 17px 0 36px;
-        font-size: 18px;
+        font-size: 21px;
       }
       b {
-        font-size: 18px;
+        font-size: 22.5px;
         color: $theme-btn-color;
       }
     }
@@ -112,14 +118,15 @@
       gap: 75px;
       width: 400px;
       height: 80px;
+      font-size: 22.5px;
       .like {
         @include flexCenter;
         gap: 11px;
 
         i {
           display: block;
-          width: 17px;
-          height: 15px;
+          width: 20px;
+          height: 17px;
           background: url(../img/icons/like-small.png) center center no-repeat;
           background-size: contain;
         }
@@ -131,8 +138,8 @@
 
         i {
           display: block;
-          width: 14px;
-          height: 15px;
+          width: 17px;
+          height: 17px;
           background: url(../img/icons/play-small.png) center center no-repeat;
           background-size: contain;
         }
@@ -144,8 +151,8 @@
 
         i {
           display: block;
-          width: 13px;
-          height: 14px;
+          width: 15px;
+          height: 16px;
           background: url(../img/icons/download-small.png) center center no-repeat;
           background-size: contain;
         }
@@ -154,24 +161,22 @@
 
     &__tag-wrap {
       @include flexCenter;
-      width: 400px;
+      width: 470px;
       flex-wrap: wrap;
       padding: 55px 0;
       &--none {
         span {
           color: $theme-txt-color;
-          font-size: 18px;
         }
       }
     }
 
     &__tag {
       @include flexCenter;
-      padding: 5px 10px;
-      height: 30px;
-      border-radius: 10px;
+      padding: 9px 11px 7px;
+      border-radius: 15px;
       background-color: $theme-btn-color;
-      font-size: 18px;
+      font-size: 22.5px;
       margin: 5px;
     }
 
@@ -181,7 +186,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 125px;
+      height: 140px;
       background-color: #fff;
       border-bottom: 1px solid $light-line-color;
       padding: 0 28px 0 35px;
@@ -192,27 +197,28 @@
       gap: 13px;
       b {
         color: #000;
-        font-size: 25px;
+        font-size: 30.5px;
       }
 
       span {
         color: $light-font-color;
-        font-size: 18px;
+        font-size: 22px;
       }
     }
 
     &__sell-btn {
-      width: 180px;
-      height: 50px;
-      border-radius: 25px;
+      width: 230px;
+      height: 70px;
+      border-radius: 50px;
       border: 0;
       background-color: $theme-btn-color;
       color: #fff;
-      font-size: 18px;
+      font-size: 22px;
       &--free {
         background-image: url(../img/button/download-btn.png);
         background-position: center center;
         background-repeat: no-repeat;
+        background-size: 36px 38px;
       }
 
       &--none {
@@ -229,12 +235,12 @@
 
       &--none {
         @include flexCenter;
-        height: 850px;
+        height: 1020px;
 
         span {
           text-align: center;
           line-height: 1.67;
-          font-size: 18px;
+          font-size: 22px;
           color: $weak-font-color;
         }
       }
@@ -245,24 +251,40 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
-      height: 100px;
+      height: 115px;
       border-top: 1px solid $light-line-color;
 
       input {
         flex: 1 1 0;
-        height: 60px;
+        height: 70px;
         border-radius: 30px;
         border: 1px solid $light-line-color;
         padding: 0 35px;
+
+        &::-webkit-input-placeholder {
+          color: $weak-font-color;
+          font-size: 22.5px;
+        }
       }
 
       button {
-        flex: 0 0 60px;
-        height: 60px;
+        flex: 0 0 70px;
+        height: 70px;
         border: 1px solid $light-line-color;
         margin-left: 10px;
         border-radius: 50%;
+        background-image: url(../img/button/comment-icon.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 32px 34px;
+        background-color: $theme-btn-color;
       }
     }
   }
+}
+
+.button--tos {
+  width: 270px;
+  height: 70px;
+  margin: 40px auto;
 }

@@ -10,6 +10,8 @@
   width: 100vw;
   @include flexCenter;
   background-color: $theme-hd-color;
+  padding: 0 0 calc(constant(safe-area-inset-bottom));
+  padding: 0 0 calc(env(safe-area-inset-bottom));
   &__wrap {
     display: flex;
     align-items: center;

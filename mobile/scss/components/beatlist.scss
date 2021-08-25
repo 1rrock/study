@@ -102,9 +102,11 @@
   }
   .like-btn {
     background: url(../img/button/btn-like-off-dark.png) center center no-repeat;
+    background-size: contain;
     border: 0;
   }
   .more-btn {
     background: url(../img/button/btn-option-dark.png) center center no-repeat;
+    background-size: contain;
   }
 }
