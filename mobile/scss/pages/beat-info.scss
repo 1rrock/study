@@ -273,6 +273,8 @@
         border-radius: 30px;
         border: 1px solid $light-line-color;
         padding: 0 35px;
+        font-size: 22.5px;
+        color: $light-font-color;
 
         &::-webkit-input-placeholder {
           color: $weak-font-color;
