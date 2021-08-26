@@ -258,14 +258,11 @@
     }
 
     &__comment-input {
-      position: fixed;
-      bottom: 216px;
-      left: 0;
-      right: 0;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
+      width: 100%;
       height: 115px;
       border-top: 1px solid $light-line-color;
       background-color: #fff;

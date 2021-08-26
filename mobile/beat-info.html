@@ -195,20 +195,21 @@
                 </div>
               </div>
             </div>
-            <div class="beat-info-footer__comment-input">
-              <input id="comment-input" type="text" placeholder="내용을 입력하세요" title="댓글입력창">
-              <button></button>
-              <div class="beat-info-footer__commenting">
-                <span>제1형민에게 답글 남기는 중</span>
-                <a class="cancel" href="javascript:void(0)">취소</a>
-              </div>
-            </div>
           </div>
           <!-- //comment-wrap -->
         </div>
       </div>
       <!-- //footer -->
       <div class="bottomNav">
+        <div class="beat-info-footer__comment-input">
+          <input id="comment-input" type="text" placeholder="내용을 입력하세요" title="댓글입력창">
+          <button></button>
+          <div class="beat-info-footer__commenting">
+            <span>제1형민에게 답글 남기는 중</span>
+            <a class="cancel" href="javascript:void(0)">취소</a>
+          </div>
+        </div>
+        <!-- comment-input -->
         <div class="playbar">
           <div class="playbar__thumb">
             <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
@@ -250,7 +251,7 @@
       document.querySelector(".beat-info-footer__row-wrap").style.display = "none"
       document.querySelector(".button.button--tos").style.display = "none"
       document.querySelector(".beat-info-footer__comment-wrap").style.display = "block"
-
+      document.querySelector(".beat-info-footer__comment-input").style.display = "flex"
     });
     document.querySelector(".download").addEventListener("click", function () {
       document.querySelector(".cmt").classList.remove("active")
