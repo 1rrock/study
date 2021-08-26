@@ -22,6 +22,7 @@
     background-color: #341d65;
   }
 </style>
+
 <body>
   <div class="app">
     <main class="main main--dark">
@@ -43,7 +44,9 @@
         </div>
         <div class="beat-info-main">
           <figure class="beat-info-main__figure">
-            <img src="../mobile/img/ex/beat-info-thumbnail.png" srcset="../mobile/img/ex/beat-info-thumbnail.png 1x, ../mobile/img/ex/beat-info-thumbnail@2x.png 2x, ../mobile/img/ex/beat-info-thumbnail@3x.png 3x" alt="비트 썸네일">
+            <img src="../mobile/img/ex/beat-info-thumbnail.png"
+              srcset="../mobile/img/ex/beat-info-thumbnail.png 1x, ../mobile/img/ex/beat-info-thumbnail@2x.png 2x, ../mobile/img/ex/beat-info-thumbnail@3x.png 3x"
+              alt="비트 썸네일">
             <figcaption class="beat-info-main__figcaption">
               <h2>Deep Dark</h2>
               <span>제 1 형민</span>
@@ -87,7 +90,7 @@
           </div>
         </div>
         <div class="beat-info-footer">
-          
+
           <div class="beat-info-footer__row-wrap">
             <div class="beat-info-footer__row">
               <div class="beat-info-footer__ver">
@@ -142,7 +145,7 @@
                   <div class="comment__desc">
                     <h3>닉네임</h3>
                     <p>
-                      이 비트 정말 제 취향입니다! 무료로 다운 했다가  사용해
+                      이 비트 정말 제 취향입니다! 무료로 다운 했다가 사용해
                       보고 안되겠다 싶어서 바로 디럭스로 구매해서 사용 중!
                     </p>
                     <span>
@@ -151,11 +154,54 @@
                     <button class="button button--comment">답글달기</button>
                   </div>
                 </div>
+                <div class="comment__row">
+                  <div class="comment__thumb">
+                    <img src="../mobile/img/ex/comment-thumb.png" alt="썸네일">
+                  </div>
+                  <div class="comment__desc">
+                    <h3>톡탁</h3>
+                    <p>
+                      이 비트 정말 제 취향입니다! 무료로 다운 했다가 사용해
+                      보고 안되겠다 싶어서 바로 디럭스로 구매해서 사용 중!
+                    </p>
+                    <span>
+                      2021.02.26
+                    </span>
+                    <button class="button button--comment">답글달기</button>
+                    <div class="comment__recomment">
+                      <div class="comment__desc">
+                        <h3>닉네임</h3>
+                        <p>
+                          지금까지 이런 비트는 없었다.
+                          이것은 비트인가 내 심장인가? 정말 초 강추 비트!!
+                        </p>
+                        <span>
+                          2021.02.26
+                        </span>
+                      </div>
+                    </div>
+                    <div class="comment__recomment">
+                      <div class="comment__desc">
+                        <h3>엘사</h3>
+                        <p>
+                          표현력에 오지고 지리고 렛잇고 
+                        </p>
+                        <span>
+                          방금 전
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="beat-info-footer__comment-input">
-              <input type="text" placeholder="내용을 입력하세요" title="댓글입력창">
+              <input id="comment-input" type="text" placeholder="내용을 입력하세요" title="댓글입력창">
               <button></button>
+              <div class="beat-info-footer__commenting">
+                <span>제1형민에게 답글 남기는 중</span>
+                <a class="cancel" href="javascript:void(0)">취소</a>
+              </div>
             </div>
           </div>
           <!-- //comment-wrap -->
@@ -198,20 +244,26 @@
   </div>
   <!-- //app -->
   <script>
-    document.querySelector(".cmt").addEventListener("click",function(){
+    document.querySelector(".cmt").addEventListener("click", function () {
       document.querySelector(".download").classList.remove("active")
       document.querySelector(".cmt").classList.add("active")
       document.querySelector(".beat-info-footer__row-wrap").style.display = "none"
       document.querySelector(".button.button--tos").style.display = "none"
       document.querySelector(".beat-info-footer__comment-wrap").style.display = "block"
-      
+
     });
-    document.querySelector(".download").addEventListener("click",function(){
+    document.querySelector(".download").addEventListener("click", function () {
       document.querySelector(".cmt").classList.remove("active")
       document.querySelector(".download").classList.add("active")
       document.querySelector(".beat-info-footer__row-wrap").style.display = "block"
       document.querySelector(".button.button--tos").style.display = "block"
       document.querySelector(".beat-info-footer__comment-wrap").style.display = "none"
+    })
+    document.querySelector("#comment-input").addEventListener("mouseover", function () {
+      document.querySelector(".beat-info-footer__commenting").classList.add("active")
+    })
+    document.querySelector(".cancel").addEventListener("click", function () {
+      document.querySelector(".beat-info-footer__commenting").classList.remove("active")
     })
   </script>
 </body>

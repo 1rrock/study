@@ -76,6 +76,7 @@
       }
     }
   }
+
   &-main {
     margin-top: 100px;
     background: linear-gradient(to top, $theme-hd-color 45%, #341d65);
@@ -92,19 +93,23 @@
         object-fit: contain;
       }
     }
+
     &__figcaption {
       display: flex;
       align-items: center;
       flex-direction: column;
+
       h2 {
         margin-top: 37px;
         font-size: 30.5px;
         font-weight: bold;
       }
+
       span {
         margin: 17px 0 36px;
         font-size: 21px;
       }
+
       b {
         font-size: 22.5px;
         color: $theme-btn-color;
@@ -119,6 +124,7 @@
       width: 400px;
       height: 80px;
       font-size: 22.5px;
+
       .like {
         @include flexCenter;
 
@@ -165,6 +171,7 @@
       width: 470px;
       flex-wrap: wrap;
       padding: 55px 0;
+
       &--none {
         span {
           color: $theme-txt-color;
@@ -182,6 +189,7 @@
     }
 
   }
+
   &-footer {
     &__row {
       display: flex;
@@ -192,10 +200,12 @@
       border-bottom: 1px solid $light-line-color;
       padding: 0 28px 0 35px;
     }
+
     &__ver {
       display: flex;
       flex-direction: column;
       gap: 13px;
+
       b {
         color: #000;
         font-size: 30.5px;
@@ -215,6 +225,7 @@
       background-color: $theme-btn-color;
       color: #fff;
       font-size: $font-size-base;
+
       &--free {
         background-image: url(../img/button/download-btn.png);
         background-position: center center;
@@ -228,11 +239,10 @@
       }
     }
 
-    &__comment-wrap {
-
-    }
+    &__comment-wrap {}
 
     &__comment {
+      padding-bottom: 114px;
 
       &--none {
         @include flexCenter;
@@ -248,12 +258,17 @@
     }
 
     &__comment-input {
+      position: fixed;
+      bottom: 216px;
+      left: 0;
+      right: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
       height: 115px;
       border-top: 1px solid $light-line-color;
+      background-color: #fff;
 
       input {
         flex: 1 1 0;
@@ -281,6 +296,31 @@
         background-color: $theme-btn-color;
       }
     }
+
+    &__commenting {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 60px;
+      background-color: $theme-btn-color;
+      position: absolute;
+      left: 0;
+      top: -60px;
+      padding: 0 25px;
+
+      span {
+        font-size: $font-size-base;
+      }
+
+      a {
+        font-size: $font-size-base;
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -288,6 +328,7 @@
   &__row {
     padding: 50px 128px 40px 50px;
     display: flex;
+    border-bottom: 1px solid $light-line-color;
   }
 
   &__thumb {
@@ -310,9 +351,16 @@
       line-height: 1.39;
       margin: 13px 0 17px 0;
     }
+
     span {
       color: $weak-font-color;
       font-size: $font-size-base;
     }
+  }
+
+  &__recomment {
+    margin-top: 40px;
+    border-left: 3px solid $theme-btn-color;
+    padding-left: 22px;
   }
 }
