@@ -105,10 +105,11 @@
   align-items: center;
   left: 0;
   right: 0;
-  bottom: 116px;
+  bottom: 114px;
   background: linear-gradient(to left, #000 20%, #341d65);
   width: 100vw;
   z-index: 100;
+  padding-bottom: 2px;
 
   &__thumb {
     flex: 0 0 85px;

@@ -127,7 +127,6 @@
   <script>
     class Event {
       constructor() {
-        this.moodBtnImg = document.querySelectorAll(".mood-choice__btn");
         this.playBar = document.querySelector(".playbar");
         this.playList = document.querySelector(".playlist");
         this.playListClose = document.querySelector(".playlist__close");
@@ -139,23 +138,16 @@
       }
 
       binds() {
-        this.forImg = this.forImg.bind(this);
         this.playbarShow = this.playbarShow.bind(this);
         this.playbarClose = this.playbarClose.bind(this);
       }
 
       events() {
-        this.moodBtnImg.forEach(this.forImg);
         this.playBar.addEventListener("click", this.playbarShow);
         this.playListClose.addEventListener("click", this.playbarClose);
       }
 
       // 이벤트 함수
-      forImg(e, i) {
-        e.setAttribute("style",
-          `background: url('../mobile/img/button/mood-0${i+1}.png') center center no-repeat; background-size:cover;`
-          );
-      }
       playbarShow() {
         this.playList.classList.add("show")
       }
