@@ -1,0 +1,141 @@
+@import "../utils/_variable";
+@import "../utils/_mixin";
+
+.my-page {
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px 60px 30px;
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    margin-left: 32px;
+    h2 {
+      font-size: 30.5px;
+      font-weight: bold;
+    }
+
+    a {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: $font-size-base;
+      color: #d8414c;
+    }
+
+    ul {
+      margin-top: 24px;
+    }
+
+    li {
+      font-size: $font-size-base;
+      &:first-child {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__menu-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+    padding: 65px;
+    width: 100%;
+    height: 738px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 600px;
+    height: 410px;
+    background-color: #fff;
+
+    @media (max-width: 745px) {
+      width: 400px;
+    }
+  }
+
+  &__btn {
+    @include flexCenter;
+    flex-direction: column;
+    flex: 0 0 200px;
+    height: 200px;
+    position: relative;
+    a {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: $font-size-base;
+      color: $light-font-color;
+    }
+    &--playlist {
+      a {
+        width: 92px;
+        height: 83px;
+        background: url(../img/button/menu-playlist.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &--follow {
+      a {
+        width: 92px;
+        height: 96px;
+        background: url(../img/button/menu-follow.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &--chat {
+      a {
+        width: 87px;
+        height: 78px;
+        background: url(../img/button/menu-chat.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &--cart {
+      a {
+        width: 94px;
+        height: 89px;
+        background: url(../img/button/menu-shop.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &--purchased {
+      a {
+        width: 93px;
+        height: 94px;
+        background: url(../img/button/menu-purchased.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &--producer {
+      a {
+        width: 58px;
+        height: 93px;
+        background: url(../img/button/menu-producer.png) center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

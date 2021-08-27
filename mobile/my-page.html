@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=0.1, user-scalable=no, maximum-scale=0.5, minimum-scale=0.5, viewport-fit=cover" />
+  <title>j1beatz - my-page</title>
+</head>
+
+<!-- favicon 에러용 -->
+<link rel="shortcut icon" href="#">
+
+<!-- 공통 css -->
+<link rel="stylesheet" href="./css/fonts.css">
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="../mobile/scss/j1beatz-mobile.min.css">
+<style>
+  body {
+    background-color: #1A192C;
+  }
+</style>
+
+<body>
+  <div class="app">
+    <main class="main main--dark">
+      <header class="header">
+        <div class="header__top">
+          <h1>
+            <a href="#" class="header__logo">
+              <span class="none">J1BEATZ</span>
+            </a>
+          </h1>
+          <div class="header__my-page">
+            <button></button>
+          </div>
+        </div>
+        <div class="my-page">
+          <div class="my-page__top">
+            <img src="../mobile/img/ex/beat-info-thumbnail.png" alt="내 사진">
+            <div class="my-page__info">
+              <h2>톡탁</h2>
+              <ul>
+                <li>example@naver.com</li>
+                <li>010-0000-0000</li>
+              </ul>
+              <a href="#">로그아웃</a>
+            </div>
+          </div>
+        </div>
+        <!-- //my-page -->
+      </header>
+      <!-- //header -->
+      <div class="my-page">
+        <div class="my-page__menu-wrap">
+          <div class="my-page__menu">
+            <div class="my-page__btn my-page__btn--playlist"><a href="#"></a><span>재생목록</span></div>
+            <div class="my-page__btn my-page__btn--follow"><a href="#"></a><span>팔로우</span></div>
+            <div class="my-page__btn my-page__btn--chat"><a href="#"></a><span>채팅</span></div>
+            <div class="my-page__btn my-page__btn--cart"><a href="#"></a><span>장바구니</span></div>
+            <div class="my-page__btn my-page__btn--purchased"><a href="#"></a><span>구매내역</span></div>
+            <div class="my-page__btn my-page__btn--producer"><a href="#"></a><span>프로듀서</span></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <a href="#" class="footer__tos">이용약관</a>
+        <a href="#" class="footer__pc-ver">PC 버전 보기</a>
+      </footer>
+      <!-- //footer -->
+
+      <div class="bottomNav">
+        <div class="playbar">
+          <div class="playbar__thumb">
+            <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+          </div>
+          <div class="playbar__title">
+            <span>Deep Dark</span>
+          </div>
+          <div class="playbar__btn-wrap">
+            <button class="playbar__pause"></button>
+            <button class="playbar__next"></button>
+          </div>
+        </div>
+        <!-- //playbar -->
+        <div class="bottomNav__wrap">
+          <a href="#" class="bottomNav__menu bottomNav__menu--home">
+            <i class="active"></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--top100">
+            <i></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--music">
+            <i></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--prod">
+            <i></i>
+          </a>
+          <a href="#" class="bottomNav__menu bottomNav__menu--mypage">
+            <i></i>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- //app -->
+  <script>
+    class Event {
+      constructor() {
+        this.moodBtnImg = document.querySelectorAll(".mood-choice__btn");
+        this.init();
+      }
+      init() {
+        this.binds();
+        this.events();
+      }
+
+      binds() {
+
+        this.forImg = this.forImg.bind(this);
+      }
+
+      events() {
+        this.moodBtnImg.forEach(this.forImg);
+      }
+
+      // 이벤트 함수
+      forImg(e, i) {
+        e.setAttribute("style",
+          `background: url('../mobile/img/button/mood-0${i+1}.png') center center no-repeat; background-size:cover;`
+          );
+      }
+    }
+    new Event();
+  </script>
+</body>
+
+</html>
