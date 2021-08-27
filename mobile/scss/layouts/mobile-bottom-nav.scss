@@ -2,22 +2,21 @@
 @import "../utils/_mixin";
 
 .bottomNav {
-  position: fixed;
-  flex-direction: column;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  @include flexCenter;
-  background-color: $theme-hd-color;
-  padding: 0 0 calc(constant(safe-area-inset-bottom));
-  padding: 0 0 calc(env(safe-area-inset-bottom));
+  background-color: $theme-bg-color;
+
   &__wrap {
+    position: fixed;
     display: flex;
     align-items: center;
-    height: 116px;
     width: 100%;
-    padding: 0 30px;
+    height: 116px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 30px calc(constant(safe-area-inset-bottom));
+    padding: 0 30px calc(env(safe-area-inset-bottom));
+    background-color: $theme-bg-color;
+    z-index: 1000;
   }
 
   &__menu {
@@ -101,11 +100,15 @@
 }
 
 .playbar {
-  align-items: center;
-  bottom: 98px;
-  background: linear-gradient(to left, #000 20%, #341d65);
+  position: fixed;
   display: flex;
+  align-items: center;
+  left: 0;
+  right: 0;
+  bottom: 116px;
+  background: linear-gradient(to left, #000 20%, #341d65);
   width: 100vw;
+  z-index: 100;
 
   &__thumb {
     flex: 0 0 85px;
@@ -135,7 +138,7 @@
 
   &__pause {
     width: 28px;
-    height: 25px;
+    height: 32px;
     border: 0;
     background: url(../img/button/pause.png) center center no-repeat;
     background-size: contain;
@@ -148,5 +151,90 @@
     border: 0;
     background: url(../img/button/next.png) center center no-repeat;
     background-size: contain;
+  }
+}
+
+.playlist {
+  position: fixed;
+  left: 0;
+  top: 100%;
+  right: 0;
+  height: calc(100vh - 116px);
+  background-color: $theme-hd-color;
+  z-index: 500;
+  visibility: hidden;
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.show {
+    top: 0;
+    visibility: visible
+  }
+
+  &__header {
+    @include flexCenter;
+    height: 116px;
+    background-color: #000;
+  }
+
+  &__close {
+    width: 100%;
+    height: 100%;
+    background: url(../img/button/close.png) center center no-repeat;
+    background-size: 50px 24px;
+    border: 0;
+  }
+
+  &__controller-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    background: linear-gradient(to top, $theme-hd-color, #341d65);
+    figure {
+      text-align: center;
+
+      span {
+        font-size: $font-size-base;
+      }
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 30px 0;
+      border-radius: 15px;
+      object-fit: contain;
+    }
+  }
+
+  &__controller {
+    margin-top: 38px;
+  }
+
+  &__controller-btn {
+    border: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+
+    &--prev {
+      width: 25px;
+      height: 28px;
+      background: url(../img/button/prev.png) center center no-repeat;
+      background-size: contain;
+    }
+
+    &--pause {
+      width: 28px;
+      height: 32px;
+      background: url(../img/button/pause.png) center center no-repeat;
+      background-size: contain;
+      margin: 0 50px;
+    }
+
+    &--next {
+      width: 25px;
+      height: 28px;
+      background: url(../img/button/next.png) center center no-repeat;
+      background-size: contain;
+    }
   }
 }

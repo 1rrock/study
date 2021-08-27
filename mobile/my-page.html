@@ -84,7 +84,24 @@
             <button class="playbar__next"></button>
           </div>
         </div>
-        <!-- //playbar -->
+        <div class="playlist">
+          <div class="playlist__header">
+            <button class="playlist__close"></button>
+          </div>
+          <div class="playlist__controller-wrap">
+            <figure>
+              <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+              <figcaption>
+                <span>Deep Dark</span>
+              </figcaption>
+            </figure>
+            <div class="playlist__controller">
+              <button class="playlist__controller-btn playlist__controller-btn--prev">이전 곡</button>
+              <button class="playlist__controller-btn playlist__controller-btn--pause">정지</button>
+              <button class="playlist__controller-btn playlist__controller-btn--next">다음 곡</button>
+            </div>
+          </div>
+        </div>
         <div class="bottomNav__wrap">
           <a href="#" class="bottomNav__menu bottomNav__menu--home">
             <i class="active"></i>
@@ -103,6 +120,7 @@
           </a>
         </div>
       </div>
+      <!-- //bottomNav -->
     </main>
   </div>
   <!-- //app -->
@@ -110,6 +128,9 @@
     class Event {
       constructor() {
         this.moodBtnImg = document.querySelectorAll(".mood-choice__btn");
+        this.playBar = document.querySelector(".playbar");
+        this.playList = document.querySelector(".playlist");
+        this.playListClose = document.querySelector(".playlist__close");
         this.init();
       }
       init() {
@@ -118,12 +139,15 @@
       }
 
       binds() {
-
         this.forImg = this.forImg.bind(this);
+        this.playbarShow = this.playbarShow.bind(this);
+        this.playbarClose = this.playbarClose.bind(this);
       }
 
       events() {
         this.moodBtnImg.forEach(this.forImg);
+        this.playBar.addEventListener("click", this.playbarShow);
+        this.playListClose.addEventListener("click", this.playbarClose);
       }
 
       // 이벤트 함수
@@ -132,6 +156,14 @@
           `background: url('../mobile/img/button/mood-0${i+1}.png') center center no-repeat; background-size:cover;`
           );
       }
+      playbarShow() {
+        this.playList.classList.add("show")
+      }
+
+      playbarClose() {
+        this.playList.classList.remove("show")
+      }
+
     }
     new Event();
   </script>
