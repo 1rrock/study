@@ -12,8 +12,9 @@
 @import "./pages/my-page.scss";
 
 .main {
-  padding-bottom: 216px;
   background-color: $theme-hd-color;
+  padding: 0 0 calc(216px + constant(safe-area-inset-bottom));
+  padding: 0 0 calc(216px + env(safe-area-inset-bottom));
   
   &--dark {
     background-color: #fff;
