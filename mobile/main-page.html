@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.1, user-scalable=no, maximum-scale=0.5, minimum-scale=0.5, viewport-fit=cover" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=0.1, user-scalable=no, maximum-scale=0.5, minimum-scale=0.5, viewport-fit=cover" />
   <title>j1beatz - main</title>
 </head>
 
@@ -29,8 +30,8 @@
         <div class="header__top">
           <h1>
             <a href="#" class="header__logo">
-            <span class="none">J1BEATZ</span>
-          </a>
+              <span class="none">J1BEATZ</span>
+            </a>
           </h1>
           <div class="header__link-wrap">
             <a href="#" class="header__login">로그인</a>
@@ -47,7 +48,9 @@
       <!-- //header -->
       <div class="banner">
         <a href="#">
-          <img src="../mobile/img/ex/banner-example.png" srcset="../mobile/img/ex/banner-example.png 1x, ../mobile/img/ex/banner-example@2x.png 2x, ../mobile/img/ex/banner-example@3x.png 3x" alt="배너">
+          <img src="../mobile/img/ex/banner-example.png"
+            srcset="../mobile/img/ex/banner-example.png 1x, ../mobile/img/ex/banner-example@2x.png 2x, ../mobile/img/ex/banner-example@3x.png 3x"
+            alt="배너">
         </a>
         <div class="banner__pagenation">
           <a href="#" class="banner__dot active"></a>
@@ -234,7 +237,7 @@
         <a href="#" class="footer__pc-ver">PC 버전 보기</a>
       </footer>
       <!-- //footer -->
-      
+
       <div class="bottomNav">
         <div class="playbar">
           <div class="playbar__thumb">
@@ -248,7 +251,24 @@
             <button class="playbar__next"></button>
           </div>
         </div>
-        <!-- //playbar -->
+        <div class="playlist">
+          <div class="playlist__header">
+            <button class="playlist__close"></button>
+          </div>
+          <div class="playlist__controller-wrap">
+            <figure>
+              <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+              <figcaption>
+                <span>Deep Dark</span>
+              </figcaption>
+            </figure>
+            <div class="playlist__controller">
+              <button class="playlist__controller-btn playlist__controller-btn--prev">이전 곡</button>
+              <button class="playlist__controller-btn playlist__controller-btn--pause">정지</button>
+              <button class="playlist__controller-btn playlist__controller-btn--next">다음 곡</button>
+            </div>
+          </div>
+        </div>
         <div class="bottomNav__wrap">
           <a href="#" class="bottomNav__menu bottomNav__menu--home">
             <i class="active"></i>
@@ -267,35 +287,52 @@
           </a>
         </div>
       </div>
+      <!-- //bottomNav -->
     </main>
   </div>
   <!-- //app -->
   <script>
     class Event {
-  constructor() {
-    this.moodBtnImg = document.querySelectorAll(".mood-choice__btn");
-    this.init();
-  }
-  init() {
-    this.binds();
-    this.events();
-  }
+      constructor() {
+        this.moodBtnImg = document.querySelectorAll(".mood-choice__btn");
+        this.playBar = document.querySelector(".playbar");
+        this.playList = document.querySelector(".playlist");
+        this.playListClose = document.querySelector(".playlist__close");
+        this.init();
+      }
+      init() {
+        this.binds();
+        this.events();
+      }
 
-  binds() {
-    
-    this.forImg = this.forImg.bind(this);
-  }
+      binds() {
+        this.forImg = this.forImg.bind(this);
+        this.playbarShow = this.playbarShow.bind(this);
+        this.playbarClose = this.playbarClose.bind(this);
+      }
 
-  events() {
-    this.moodBtnImg.forEach(this.forImg);
-  }
+      events() {
+        this.moodBtnImg.forEach(this.forImg);
+        this.playBar.addEventListener("click", this.playbarShow);
+        this.playListClose.addEventListener("click", this.playbarClose);
+      }
 
-  // 이벤트 함수
-  forImg(e, i) {
-    e.setAttribute("style", `background: url('../mobile/img/button/mood-0${i+1}.png') center center no-repeat; background-size:cover;`);
-  }
-}
-new Event();
+      // 이벤트 함수
+      forImg(e, i) {
+        e.setAttribute("style",
+          `background: url('../mobile/img/button/mood-0${i+1}.png') center center no-repeat; background-size:cover;`
+          );
+      }
+      playbarShow() {
+        this.playList.classList.add("show")
+      }
+
+      playbarClose() {
+        this.playList.classList.remove("show")
+      }
+
+    }
+    new Event();
   </script>
 </body>
 
