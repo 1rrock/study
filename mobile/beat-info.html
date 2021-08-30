@@ -184,7 +184,7 @@
                       <div class="comment__desc">
                         <h3>엘사</h3>
                         <p>
-                          표현력에 오지고 지리고 렛잇고 
+                          표현력에 오지고 지리고 렛잇고
                         </p>
                         <span>
                           방금 전
@@ -222,25 +222,114 @@
             <button class="playbar__next"></button>
           </div>
         </div>
+        <!-- //playbar -->
         <div class="playlist">
           <div class="playlist__header">
             <button class="playlist__close"></button>
           </div>
           <div class="playlist__controller-wrap">
-            <figure>
-              <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
-              <figcaption>
-                <span>Deep Dark</span>
-              </figcaption>
-            </figure>
+            <div class="playlist__beat">
+              <figure>
+                <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+                <figcaption>
+                  <span>Deep Dark</span>
+                </figcaption>
+              </figure>
+            </div>
+            <!-- <div class="playlist__beat playlist__beat--none">
+              <span>재생중인 비트가 없습니다</span>
+            </div> -->
             <div class="playlist__controller">
               <button class="playlist__controller-btn playlist__controller-btn--prev">이전 곡</button>
               <button class="playlist__controller-btn playlist__controller-btn--pause">정지</button>
               <button class="playlist__controller-btn playlist__controller-btn--next">다음 곡</button>
             </div>
           </div>
+          <div class="playlist__bar">
+            <span class="playlist__bar-time playlist__bar-time--now">0:00</span>
+            <div class="playlist__bar-range range">
+              <label for="playtime" class="none">재생시간</label>
+              <input class="range__bar range__bar--play" type="range" min="0" max="214" value="0" step="any"
+                title="재생시간" id="playtime">
+              <span class="range__value"></span>
+            </div>
+            <span class="playlist__bar-time playlist__bar-time--total">3:34</span>
+          </div>
+          <div class="playlist__list-wrap">
+            <div class="playlist__list">
+              <div class="list">
+                <div class="list__btn">
+                  <button></button>
+                </div>
+                <div class="list__thumb">
+                  <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+                </div>
+                <div class="list__title">
+                  <h4>Deep Dark</h4>
+                  <span>제 1 형민</span>
+                </div>
+                <div class="list__delete">
+                  <button></button>
+                </div>
+              </div>
+            </div>
+            <div class="playlist__list">
+              <div class="list">
+                <div class="list__btn">
+                  <button></button>
+                </div>
+                <div class="list__thumb">
+                  <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+                </div>
+                <div class="list__title">
+                  <h4>Deep Dark</h4>
+                  <span>제 1 형민</span>
+                </div>
+                <div class="list__delete">
+                  <button></button>
+                </div>
+              </div>
+            </div>
+            <div class="playlist__list">
+              <div class="list">
+                <div class="list__btn">
+                  <button></button>
+                </div>
+                <div class="list__thumb">
+                  <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+                </div>
+                <div class="list__title">
+                  <h4>Deep Dark</h4>
+                  <span>제 1 형민</span>
+                </div>
+                <div class="list__delete">
+                  <button></button>
+                </div>
+              </div>
+            </div>
+            <div class="playlist__list">
+              <div class="list">
+                <div class="list__btn">
+                  <button></button>
+                </div>
+                <div class="list__thumb">
+                  <img src="../mobile/img/imgs/thumbnail.png" alt="비트 썸네일">
+                </div>
+                <div class="list__title">
+                  <h4>Deep Dark</h4>
+                  <span>제 1 형민</span>
+                </div>
+                <div class="list__delete">
+                  <button></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="playlist__list-wrap playlist__list-wrap--none">
+            <span>비트 리스트가 없습니다</span>
+          </div> -->
         </div>
-        <!-- //playbar -->
+        <!-- //playlist -->
         <div class="bottomNav__wrap">
           <a href="#" class="bottomNav__menu bottomNav__menu--home">
             <i class="active"></i>
@@ -318,6 +407,64 @@
       }
     }
     new Event();
+
+    function slideRange() {
+      const settings = {
+        fill: '#8500ff',
+        background: '#28283F'
+      }
+      const sliders = document.querySelectorAll('.range');
+
+
+      sliders.forEach(slider => {
+        slider.addEventListener('input', (event) => {
+          applyFill(event.target);
+        });
+
+        // play--bar 분 표시
+        document.querySelector('.range__bar--play').addEventListener('input', (event) => {
+          document.querySelector('.playlist__bar-time--now').innerHTML = getTimeStringSeconds(parseInt(event
+            .target.value));
+        });
+        applyFill(slider);
+      })
+
+      // Array.prototype.forEach.call(sliders, (slider) => {
+      //   slider.querySelector('.range__bar').addEventListener('input', (event) => {
+      //     applyFill(event.target);
+      //   });
+
+      //   // play--bar 분 표시
+      //   slider.querySelector('.range__bar--play').addEventListener('input', (event) => {
+      //     document.querySelector('.playlist__bar-time').innerHTML = getTimeStringSeconds(parseInt(event.target.value));
+      //   });
+      //   applyFill(slider.querySelector('input'));
+      // });
+
+      // 레인지 배경
+      function applyFill(slider) {
+        const percentage = 100 * (slider.value - slider.min) / (slider.max - slider.min);
+        const bg = `linear-gradient(90deg, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%)`;
+        slider.style.background = bg;
+      }
+
+
+
+      // 초를 (분 : 초)로 변환
+      function getTimeStringSeconds(seconds) {
+
+        var min, sec
+
+        min = parseInt((seconds % 3600) / 60);
+        sec = seconds % 60;
+
+        if (min.toString().length == 1) min = min;
+        if (sec.toString().length == 1) sec = "0" + sec;
+
+        return min + ":" + sec;
+      }
+    }
+    slideRange()
   </script>
 </body>
 

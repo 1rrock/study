@@ -191,6 +191,17 @@
     flex-direction: column;
     height: 300px;
     background: linear-gradient(to top, $theme-hd-color, #341d65);
+  }
+
+  &__beat {
+
+    &--none {
+      @include flexCenter;
+      height: 190px;
+      span {
+        font-size: $font-size-base;
+      }
+    }
     figure {
       text-align: center;
 
@@ -198,6 +209,7 @@
         font-size: $font-size-base;
       }
     }
+
     img {
       width: 100px;
       height: 100px;
@@ -238,4 +250,150 @@
       background-size: contain;
     }
   }
+  
+  &__bar {
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+    &-time {
+      @include flexCenter;
+      height: 50%;
+      font-size: $font-size-base;
+      color: #fff;
+
+      &:first-child {
+        margin-left: 30px;
+      }
+
+      &:last-child {
+        margin-right: 30px;
+      }
+    }
+
+    &-range {
+      @include flexCenter;
+      height: 50%;
+      position: relative;
+      flex: 1 1 790px;
+      margin: 0 16px;
+    }
+  }
+
+  &__list-wrap {
+    height: calc(100% - 516px);
+    overflow-y: scroll;
+
+    &--none {
+      @include flexCenter;
+      font-size: $font-size-base;
+    }
+  }
+
+  &__list {
+    height: 140px;
+    border-bottom: 1px solid $theme-bg-color;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 100px 100px 1fr 100px;
+  align-items: center;
+  height: 100%;
+
+  &__btn {
+    @include flexCenter;
+    button {
+      width: 31px;
+      height: 38px;
+      border: 0;
+      background: url(../img/button/btn-play.png) center center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__thumb {
+    img {
+      width: 100px;
+      height: 100px;
+      vertical-align: top;
+      border-radius: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h4 {
+      font-size: $font-size-base;
+      margin-bottom: 11px;
+    }
+
+    span {
+      font-size: $font-size-base;
+    }
+  }
+
+  &__delete {
+    @include flexCenter;
+    button {
+      width: 25px;
+      height: 26px;
+      border: 0;
+      background: url(../img/button/delete.png) center center no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+// Range Slider
+$range-width: 100% !default;
+
+$range-handle-size: 17px !default;
+
+$range-track-height: 5px !default;
+
+.range {
+  width: $range-width;
+}
+
+.range__bar {
+  -webkit-appearance: none;
+  width: 100%;
+  height: $range-track-height;
+  border-radius: 5px;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background: $theme-bg-color;
+
+  // Range Handle
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: $range-handle-size;
+    height: $range-handle-size;
+    border-radius: 50%;
+    background: url(../img/icon/playlist-handle.png) center center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+  }
+
+  &::-moz-range-thumb {
+    width: $range-handle-size;
+    height: $range-handle-size;
+    border: 0;
+    border-radius: 50%;
+    background: url(../img/icon/playlist-handle.png) center center no-repeat;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+  }
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
 }
